@@ -1,0 +1,9 @@
+{
+  "categories": ["work", "personal"],
+  "statuses": ["todo", "in_progress", "blocked", "done"],
+  "github": {
+    "owner": "DubiWork",
+    "repo": "personal-dashboard",
+    "branch": "main"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "goals": [
+    {
+      "id": "goal-1",
+      "title": "Technical Leadership & Project Ownership",
+      "description": "Evolve from key contributor to project leader",
+      "measurements": [
+        {"label": "Leadership workshops completed", "target": 2, "current": 0, "deadline": "2026-12-31"},
+        {"label": "Epic end-to-end delivery", "target": 1, "current": 0, "deadline": "2026-12-31"},
+        {"label": "Bi-weekly mentoring sessions", "target": 24, "current": 0, "deadline": "2026-12-31"},
+        {"label": "Stakeholder feedback score", "target": 80, "current": 0, "unit": "%", "deadline": "2026-12-31"}
+      ],
+      "activities": [],
+      "category": "leadership"
+    },
+    {
+      "id": "goal-2",
+      "title": "Advanced QA & First-Time Excellence",
+      "description": "Master advanced QA methodologies, minimize defects",
+      "measurements": [
+        {"label": "Defect rate reduction", "target": 15, "current": 0, "unit": "%", "deadline": "2026-12-31"},
+        {"label": "QA training completed", "target": 1, "current": 0, "deadline": "2026-05-31"},
+        {"label": "Team testing process contribution", "target": 1, "current": 0, "deadline": "2026-10-31"},
+        {"label": "Complex test cases documented", "target": 3, "current": 0, "deadline": "2026-08-31"}
+      ],
+      "activities": [],
+      "category": "quality"
+    },
+    {
+      "id": "goal-3",
+      "title": "Influence on Team Technical Challenges",
+      "description": "Proactive contributor to team technical strategy",
+      "measurements": [
+        {"label": "Design meeting contributions", "target": 50, "current": 0, "unit": "%", "deadline": "2026-12-31"},
+        {"label": "Constructive PR reviews", "target": 10, "current": 0, "deadline": "2026-12-31"},
+        {"label": "Knowledge-sharing session led", "target": 1, "current": 0, "deadline": "2026-12-31"}
+      ],
+      "activities": [],
+      "category": "influence"
+    }
+  ]
+}

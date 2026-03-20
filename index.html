@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dubi's Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav id="main-nav">
+    <div class="nav-brand">Dashboard</div>
+    <div class="nav-tabs">
+      <button class="nav-tab active" data-view="kanban">Board</button>
+      <button class="nav-tab" data-view="daily-log">Daily Log</button>
+      <button class="nav-tab" data-view="goals">Goals</button>
+      <button class="nav-tab" data-view="stats">Stats</button>
+    </div>
+  </nav>
+
+  <main id="app">
+    <section id="view-kanban" class="view active"></section>
+    <section id="view-daily-log" class="view"></section>
+    <section id="view-goals" class="view"></section>
+    <section id="view-stats" class="view"></section>
+  </main>
+
+  <div id="modal-overlay" class="modal-overlay hidden">
+    <div id="modal" class="modal"></div>
+  </div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/kanban.js"></script>
+  <script src="js/daily-log.js"></script>
+  <script src="js/goals.js"></script>
+  <script src="js/stats.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
