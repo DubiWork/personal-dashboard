@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <nav id="main-nav">
+  <nav id="main-nav" class="nav">
     <div class="nav-brand">Dashboard</div>
     <div class="nav-tabs">
       <button class="nav-tab active" data-view="kanban">Board</button>
@@ -15,6 +15,7 @@
       <button class="nav-tab" data-view="goals">Goals</button>
       <button class="nav-tab" data-view="stats">Stats</button>
     </div>
+    <button class="nav-settings-btn" id="btn-settings" aria-label="Settings">&#9881;</button>
   </nav>
 
   <main id="app">
@@ -26,6 +27,27 @@
 
   <div id="modal-overlay" class="modal-overlay hidden">
     <div id="modal" class="modal"></div>
+  </div>
+
+  <div id="settings-overlay" class="modal-overlay hidden">
+    <div id="settings-modal" class="modal">
+      <div class="modal-header">
+        <span class="modal-title">Settings</span>
+        <button class="modal-close" id="settings-close-btn" aria-label="Close">&times;</button>
+      </div>
+      <div class="form-group">
+        <label>GitHub Token</label>
+        <p id="settings-token-status" class="settings-token-status"></p>
+      </div>
+      <div class="form-group">
+        <label for="settings-token-input">New Token</label>
+        <input type="password" id="settings-token-input" placeholder="ghp_...">
+      </div>
+      <div class="modal-footer">
+        <button class="btn-secondary" id="settings-clear-token">Clear Token</button>
+        <button class="btn-primary" id="settings-save-token">Save Token</button>
+      </div>
+    </div>
   </div>
 
   <script src="js/utils.js"></script>

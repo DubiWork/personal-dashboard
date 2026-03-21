@@ -47,5 +47,62 @@ const DataStore = {
 
   deleteTask(id) {
     this.tasks.tasks = this.tasks.tasks.filter(t => t.id !== id);
+  },
+
+  async saveToGitHub(path, content, message) {
+    const config = this.config.github;
+    const token = localStorage.getItem('gh_token');
+    if (!token) {
+      this.showTokenPrompt();
+      return false;
+    }
+
+    try {
+      // Get current file SHA (required for updates)
+      const fileResp = await fetch(
+        `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${path}`,
+        { headers: { 'Authorization': `token ${token}`, 'Accept': 'application/vnd.github.v3+json' } }
+      );
+
+      const sha = fileResp.ok ? (await fileResp.json()).sha : undefined;
+
+      // Create/update file
+      const resp = await fetch(
+        `https://api.github.com/repos/${config.owner}/${config.repo}/contents/${path}`,
+        {
+          method: 'PUT',
+          headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            message,
+            content: btoa(unescape(encodeURIComponent(JSON.stringify(content, null, 2)))),
+            sha,
+            branch: config.branch
+          })
+        }
+      );
+
+      if (!resp.ok) throw new Error(`GitHub API error: ${resp.status}`);
+      return true;
+    } catch (err) {
+      console.error('GitHub save failed:', err);
+      alert('Failed to save: ' + err.message);
+      return false;
+    }
+  },
+
+  showTokenPrompt() {
+    const token = prompt('Enter your GitHub Personal Access Token (needs repo scope):');
+    if (token) {
+      localStorage.setItem('gh_token', token.trim());
+      alert('Token saved! Try again.');
+    }
+  },
+
+  async saveTasks() {
+    return this.saveToGitHub('data/tasks.json', this.tasks, 'update: tasks');
+  },
+
+  async saveGoals() {
+    return this.saveToGitHub('data/goals.json', this.goals, 'update: goals');
   }
 };

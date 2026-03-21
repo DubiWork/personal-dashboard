@@ -176,6 +176,9 @@ const Kanban = {
       if (task && task.status !== newStatus) {
         DataStore.updateTask(taskId, { status: newStatus });
         this.render();
+        DataStore.saveTasks().then(ok => {
+          if (ok) showToast('Saved');
+        });
       }
     });
   },
@@ -254,6 +257,9 @@ const Kanban = {
       if (task && task.status !== newStatus) {
         DataStore.updateTask(this._touchTask, { status: newStatus });
         this.render();
+        DataStore.saveTasks().then(ok => {
+          if (ok) showToast('Saved');
+        });
       }
     }
 
@@ -298,6 +304,9 @@ const Kanban = {
     if (confirm('Delete this task?')) {
       DataStore.deleteTask(id);
       this.render();
+      DataStore.saveTasks().then(ok => {
+        if (ok) showToast('Saved');
+      });
     }
   },
 
@@ -417,6 +426,9 @@ const Kanban = {
 
       this.closeModal();
       this.render();
+      DataStore.saveTasks().then(ok => {
+        if (ok) showToast('Saved');
+      });
     });
   },
 

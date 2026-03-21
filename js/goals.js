@@ -118,6 +118,9 @@ const Goals = {
       });
       this.render();
       this.closeModal();
+      DataStore.saveGoals().then(ok => {
+        if (ok) showToast('Saved');
+      });
     });
 
     const cancelBtn = createElement('button', 'btn-cancel', 'Cancel');
