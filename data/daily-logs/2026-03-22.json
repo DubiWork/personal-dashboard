@@ -115,6 +115,20 @@
         "Is the investigation complete? If so, I'll write the report and update the knowledge base"
       ],
       "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "16:37",
+      "category": "work",
+      "project": "idx-cdp",
+      "summary": "Session activity",
+      "accomplishments": [
+        "That's the core mystery — the S2S change with hardcoded siteId=123 was deployed Nov 2025, but failures only hit specific customers recently",
+        "The CdpIDXService `develop` branch was last updated **Feb 17, 2026** with version bumps and Jenkinsfile updates",
+        "The service was being actively set up through Dec 2025 - Feb 2026 (PRs #6-#16: pipeline fixes, SQL additions, version bumps, interface renames, excluding failing tests)",
+        "This strongly suggests CdpIDXService was deployed to production (eu5) around Feb 2026** — which aligns with the timing of failures starting for these customers",
+        "Here's my updated understanding of the complete timeline:"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
