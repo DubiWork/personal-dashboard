@@ -98,6 +98,30 @@ const DataStore = {
     }
   },
 
+  getTaskById(id) {
+    if (!this.tasks || !this.tasks.tasks) return null;
+    return this.tasks.tasks.find(t => t.id === id) || null;
+  },
+
+  findTaskByJiraId(jiraId) {
+    if (!jiraId || !this.tasks || !this.tasks.tasks) return null;
+    return this.tasks.tasks.find(t => t.jiraId && t.jiraId.toLowerCase() === jiraId.toLowerCase()) || null;
+  },
+
+  linkSessionToTask(date, sessionIndex, taskId) {
+    const log = this.dailyLogs[date];
+    if (!log || !Array.isArray(log.sessions)) return false;
+    if (sessionIndex < 0 || sessionIndex >= log.sessions.length) return false;
+    log.sessions[sessionIndex].taskId = taskId;
+    return true;
+  },
+
+  async saveDailyLog(date) {
+    const log = this.dailyLogs[date];
+    if (!log) return false;
+    return this.saveToGitHub(`data/daily-logs/${date}.json`, log, `log: update ${date}`);
+  },
+
   async saveTasks() {
     return this.saveToGitHub('data/tasks.json', this.tasks, 'update: tasks');
   },

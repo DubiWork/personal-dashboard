@@ -1004,6 +1004,192 @@ input, textarea, select {
   font-size: 0.9rem;
 }
 
+/* ── Task-grouped Daily Log ── */
+
+.task-log-card {
+  background-color: var(--bg-secondary);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.task-log-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+  padding-bottom: var(--spacing-sm);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.task-log-title {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+
+.task-log-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-shrink: 0;
+}
+
+.task-log-status {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 2px var(--spacing-xs);
+  border-radius: 3px;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: var(--text-secondary);
+}
+
+.task-log-total {
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--accent-green);
+  white-space: nowrap;
+}
+
+.task-log-entries {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.time-entry {
+  background-color: var(--bg-card);
+  border-radius: var(--radius);
+  padding: var(--spacing-sm) var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.time-entry-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.time-entry-time {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  font-family: 'Courier New', monospace;
+}
+
+.time-entry-duration {
+  font-size: 0.7rem;
+  font-weight: 600;
+  padding: 1px 6px;
+  border-radius: 10px;
+  background-color: rgba(67, 97, 238, 0.2);
+  color: var(--accent-blue);
+}
+
+.time-entry-summary {
+  font-size: 0.875rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.btn-add-time-entry {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  padding: 3px 10px;
+  min-height: unset;
+  border: 1px dashed rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius);
+  color: var(--text-secondary);
+  background: none;
+  cursor: pointer;
+  transition: border-color 0.15s ease, color 0.15s ease;
+}
+
+.btn-add-time-entry:hover {
+  border-color: var(--accent-blue);
+  color: var(--accent-blue);
+}
+
+/* Unlinked section */
+
+.unlinked-section {
+  background-color: var(--bg-secondary);
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius);
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.unlinked-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-sm);
+  flex-wrap: wrap;
+  padding: var(--spacing-xs) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.unlinked-row:last-child {
+  border-bottom: none;
+}
+
+.unlinked-info {
+  flex: 1;
+  font-size: 0.85rem;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.unlinked-actions {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.link-task-dropdown {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius);
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  margin-top: var(--spacing-xs);
+  width: 100%;
+}
+
+.link-task-dropdown:focus {
+  outline: none;
+  border-color: var(--accent-blue);
+}
+
+/* Jira push section */
+
+.jira-push-section {
+  display: flex;
+  justify-content: center;
+  padding: var(--spacing-md) 0 var(--spacing-sm);
+}
+
 /* ============================================================
    12. STATS VIEW
    ============================================================ */
