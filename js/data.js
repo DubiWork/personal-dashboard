@@ -108,6 +108,54 @@ const DataStore = {
     return this.tasks.tasks.find(t => t.jiraId && t.jiraId.toLowerCase() === jiraId.toLowerCase()) || null;
   },
 
+  findTaskByProject(project) {
+    if (!project || !this.tasks?.tasks) return null;
+    const normalized = project.toLowerCase();
+    return this.tasks.tasks.find(t =>
+      t.title && t.title.toLowerCase() === normalized
+    ) || null;
+  },
+
+  ensureTaskForSession(session) {
+    if (session.taskId) {
+      if (this.getTaskById(session.taskId)) return session.taskId;
+    }
+
+    // Try matching by Jira ID first
+    if (Array.isArray(session.tasksWorkedOn)) {
+      for (const jiraId of session.tasksWorkedOn) {
+        const task = this.findTaskByJiraId(jiraId);
+        if (task) return task.id;
+      }
+    }
+
+    // Try matching by project name
+    if (session.project) {
+      const task = this.findTaskByProject(session.project);
+      if (task) {
+        if (!task.jiraId && session.tasksWorkedOn?.length) {
+          task.jiraId = session.tasksWorkedOn[0];
+        }
+        return task.id;
+      }
+
+      // No match — create new task
+      const jiraId = session.tasksWorkedOn?.length ? session.tasksWorkedOn[0] : '';
+      const newTask = {
+        title: session.project,
+        category: session.category || 'work',
+        status: 'in_progress',
+        jiraId,
+        tags: [],
+        description: ''
+      };
+      this.addTask(newTask);
+      return newTask.id;
+    }
+
+    return null;
+  },
+
   linkSessionToTask(date, sessionIndex, taskId) {
     const log = this.dailyLogs[date];
     if (!log || !Array.isArray(log.sessions)) return false;

@@ -38,6 +38,9 @@ const DailyLog = {
       return;
     }
 
+    // Auto-create/link tasks from sessions before grouping
+    await this._autoLinkSessions(sessions);
+
     // Group sessions by taskId
     const grouped = this._groupByTask(sessions);
 
@@ -74,6 +77,27 @@ const DailyLog = {
   goToDate(date) {
     this.currentDate = date;
     this.render();
+  },
+
+  // ── Auto-link ───────────────────────────────────────────────────────────
+
+  async _autoLinkSessions(sessions) {
+    let changed = false;
+    sessions.forEach(session => {
+      if (!session.taskId || !DataStore.getTaskById(session.taskId)) {
+        const taskId = DataStore.ensureTaskForSession(session);
+        if (taskId) {
+          session.taskId = taskId;
+          changed = true;
+        }
+      }
+    });
+    if (changed) {
+      await Promise.all([
+        DataStore.saveDailyLog(this.currentDate),
+        DataStore.saveTasks()
+      ]);
+    }
   },
 
   // ── Grouping ──────────────────────────────────────────────────────────────
