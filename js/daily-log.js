@@ -131,13 +131,17 @@ const DailyLog = {
   prevDay() {
     const d = new Date(this.currentDate + 'T00:00:00');
     d.setDate(d.getDate() - 1);
-    this.goToDate(d.toISOString().split('T')[0]);
+    this.goToDate(this._localISO(d));
   },
 
   nextDay() {
     const d = new Date(this.currentDate + 'T00:00:00');
     d.setDate(d.getDate() + 1);
-    this.goToDate(d.toISOString().split('T')[0]);
+    this.goToDate(this._localISO(d));
+  },
+
+  _localISO(d) {
+    return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
   },
 
   goToDate(date) {
