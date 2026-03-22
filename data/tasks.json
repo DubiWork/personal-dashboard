@@ -1,3 +1,15 @@
 {
-  "tasks": []
+  "tasks": [
+    {
+      "id": "477ea55d-39ad-4bf5-93ce-5e99096c9138",
+      "title": "idx-cdp",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-22T15:02:14.750Z",
+      "updatedAt": "2026-03-22T15:02:14.750Z"
+    }
+  ]
 }

@@ -129,6 +129,21 @@
         "Here's my updated understanding of the complete timeline:"
       ],
       "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "17:02",
+      "category": "work",
+      "project": "idx-cdp",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Permission update request** — you want `mcp__playwright__*` and `mcp__chrome-devtools__*` added to allowed permissions",
+        "The key unanswered question is **when CdpIDXService was deployed to eu5**, which would explain why failures started recently despite the S2S change being from Nov 2025",
+        "Let me send the agent updated instructions",
+        "\"we deployed major idx client change last week\"** — So there was a recent deployment of the **idx-cdp Java client** (not CdpIDXService backend)",
+        "The recent deployment last week added S2S to **additional paths** — and those new S2S paths also use the hardcoded siteId=123"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "477ea55d-39ad-4bf5-93ce-5e99096c9138"
     }
   ]
 }
