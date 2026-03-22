@@ -176,5 +176,29 @@ const DataStore = {
 
   async saveGoals() {
     return this.saveToGitHub('data/goals.json', this.goals, 'update: goals');
+  },
+
+  // Returns { totalMinutes, sessionCount, lastSummary } for a task from loaded daily logs
+  getTaskSessionStats(taskId) {
+    let totalMinutes = 0;
+    let sessionCount = 0;
+    let lastSummary = '';
+    let lastTimestamp = '';
+
+    for (const log of Object.values(this.dailyLogs)) {
+      if (!Array.isArray(log.sessions)) continue;
+      for (const s of log.sessions) {
+        if (s.taskId !== taskId) continue;
+        sessionCount++;
+        totalMinutes += s.duration || 0;
+        const ts = (log.date || '') + (s.timestamp || '');
+        if (ts >= lastTimestamp) {
+          lastTimestamp = ts;
+          lastSummary = s.summary || '';
+        }
+      }
+    }
+
+    return { totalMinutes, sessionCount, lastSummary };
   }
 };

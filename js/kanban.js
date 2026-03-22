@@ -85,18 +85,25 @@ const Kanban = {
       : '';
 
     const jiraHtml = task.jiraId
-      ? `<div class="card-jira">${task.jiraId}</div>`
+      ? `<div class="card-jira">${this._esc(task.jiraId)}</div>`
       : '';
 
-    const timeHtml = task.timeSpent
-      ? `<div class="card-time">${task.timeSpent}</div>`
+    // Compute time from session data
+    const stats = DataStore.getTaskSessionStats(task.id);
+    const timeHtml = stats.totalMinutes > 0
+      ? `<div class="card-time">${this._formatDuration(stats.totalMinutes)}</div>`
+      : (task.timeSpent ? `<div class="card-time">${this._esc(task.timeSpent)}</div>` : '');
+
+    const summaryHtml = stats.lastSummary && stats.lastSummary !== 'Session activity'
+      ? `<div class="card-summary">${this._esc(stats.lastSummary)}</div>`
       : '';
 
     card.innerHTML = `
       <span class="card-category ${categoryClass}">${categoryLabel}</span>
-      <div class="card-title">${task.title}</div>
+      <div class="card-title">${this._esc(task.title)}</div>
       ${jiraHtml}
       ${timeHtml}
+      ${summaryHtml}
       ${tagsHtml}
       <div class="card-actions">
         <button class="btn-edit" data-id="${task.id}">Edit</button>
@@ -449,5 +456,14 @@ const Kanban = {
       .replace(/"/g, '&quot;')
       .replace(/</g, '&lt;')
       .replace(/>/g, '&gt;');
+  },
+
+  _formatDuration(minutes) {
+    if (!minutes || minutes <= 0) return '0m';
+    const h = Math.floor(minutes / 60);
+    const m = minutes % 60;
+    if (h > 0 && m > 0) return `${h}h ${m}m`;
+    if (h > 0) return `${h}h`;
+    return `${m}m`;
   }
 };

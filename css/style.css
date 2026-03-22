@@ -349,8 +349,20 @@ input, textarea, select {
 
 .card-time {
   font-size: 0.75rem;
+  color: var(--accent-green);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.card-summary {
+  font-size: 0.75rem;
   color: var(--text-secondary);
   margin-bottom: var(--spacing-xs);
+  line-height: 1.3;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
 }
 
 .card-tags {
