@@ -88,6 +88,20 @@
         "If the new validation is only deployed in eu5, that explains the pattern"
       ],
       "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "14:18",
+      "category": "work",
+      "project": "idx-cdp",
+      "summary": "Session activity",
+      "accomplishments": [
+        "So the developer who wrote this assumed the backend only used partnerId/siteId for logging",
+        "Gradual rollout** — The backend fix might be deployed to only some pods/DCs",
+        "If the new validation is only deployed in eu5, that explains the pattern",
+        "Dataflow was fetched **before** the backend validation was deployed",
+        "These dataflows were **updated/modified** after the backend validation was deployed"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
