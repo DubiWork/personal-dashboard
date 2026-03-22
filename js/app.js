@@ -1,6 +1,16 @@
 document.addEventListener('DOMContentLoaded', async () => {
   await DataStore.init();
 
+  // Auto-link today's sessions so Board shows tasks on first load
+  if (typeof DailyLog !== 'undefined') {
+    const today = todayISO();
+    const log = await DataStore.loadDailyLog(today);
+    const sessions = Array.isArray(log.sessions) ? log.sessions : [];
+    if (sessions.length > 0) {
+      await DailyLog._autoLinkSessions(sessions);
+    }
+  }
+
   $$('.nav-tab').forEach(tab => {
     tab.addEventListener('click', async () => {
       $$('.nav-tab').forEach(t => t.classList.remove('active'));

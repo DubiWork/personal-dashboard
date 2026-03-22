@@ -49,11 +49,11 @@ const DataStore = {
     this.tasks.tasks = this.tasks.tasks.filter(t => t.id !== id);
   },
 
-  async saveToGitHub(path, content, message) {
+  async saveToGitHub(path, content, message, { silent = false } = {}) {
     const config = this.config.github;
     const token = localStorage.getItem('gh_token');
     if (!token) {
-      this.showTokenPrompt();
+      if (!silent) this.showTokenPrompt();
       return false;
     }
 
@@ -85,7 +85,7 @@ const DataStore = {
       return true;
     } catch (err) {
       console.error('GitHub save failed:', err);
-      alert('Failed to save: ' + err.message);
+      if (!silent) alert('Failed to save: ' + err.message);
       return false;
     }
   },
@@ -164,14 +164,14 @@ const DataStore = {
     return true;
   },
 
-  async saveDailyLog(date) {
+  async saveDailyLog(date, opts) {
     const log = this.dailyLogs[date];
     if (!log) return false;
-    return this.saveToGitHub(`data/daily-logs/${date}.json`, log, `log: update ${date}`);
+    return this.saveToGitHub(`data/daily-logs/${date}.json`, log, `log: update ${date}`, opts);
   },
 
-  async saveTasks() {
-    return this.saveToGitHub('data/tasks.json', this.tasks, 'update: tasks');
+  async saveTasks(opts) {
+    return this.saveToGitHub('data/tasks.json', this.tasks, 'update: tasks', opts);
   },
 
   async saveGoals() {

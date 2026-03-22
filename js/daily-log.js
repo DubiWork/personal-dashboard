@@ -94,8 +94,8 @@ const DailyLog = {
     });
     if (changed) {
       await Promise.all([
-        DataStore.saveDailyLog(this.currentDate),
-        DataStore.saveTasks()
+        DataStore.saveDailyLog(this.currentDate, { silent: true }),
+        DataStore.saveTasks({ silent: true })
       ]);
     }
   },
