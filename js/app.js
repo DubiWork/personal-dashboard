@@ -7,8 +7,15 @@ document.addEventListener('DOMContentLoaded', async () => {
       $$('.view').forEach(v => v.classList.remove('active'));
       tab.classList.add('active');
       $(`#view-${tab.dataset.view}`).classList.add('active');
-      if (tab.dataset.view === 'stats' && typeof Stats !== 'undefined') {
+      const view = tab.dataset.view;
+      if (view === 'daily-log' && typeof DailyLog !== 'undefined') {
+        await DailyLog.render();
+      } else if (view === 'stats' && typeof Stats !== 'undefined') {
         await Stats.render();
+      } else if (view === 'kanban' && typeof Kanban !== 'undefined') {
+        Kanban.render();
+      } else if (view === 'goals' && typeof Goals !== 'undefined') {
+        Goals.render();
       }
     });
   });
