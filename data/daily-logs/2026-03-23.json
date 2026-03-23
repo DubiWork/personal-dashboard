@@ -176,6 +176,27 @@
         "Rewrite SOFI dashboard from template + populate from NotebookLM (157 sources)"
       ],
       "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "22:30",
+      "duration": 60,
+      "category": "personal",
+      "project": "VIRE",
+      "summary": "Add GOOGL IR scraper and fix EDGAR downloader to fetch full filing history",
+      "accomplishments": [
+        "Built vire/ir/googl.py — Alphabet IR scraper using Q4 Inc feed APIs (no Cloudflare issues)",
+        "Discovered abc.xyz uses Q4 platform with open /feed/ APIs for press releases, events, financial reports",
+        "Scraper collects 27 downloadable PDFs + 14 HTML transcripts (Q1 2022 - Q1 2026)",
+        "Fixed EdgarClient.get_submissions() to merge overflow filing pages — was only reading 'recent' section, missing older filings",
+        "Added LEGACY_CIKS config for multi-CIK companies (Google Inc CIK 0001288776 for pre-2015 filings)",
+        "Updated step1_collect.py to download from legacy CIKs and verify against all CIKs",
+        "All 126 tests passing after changes"
+      ],
+      "nextSteps": [
+        "Verify GOOGL Step 1 re-run downloads full history (~20 10-Ks instead of 4)",
+        "Run only Step 1 next time (accidentally ran all 9 steps on first attempt)"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
