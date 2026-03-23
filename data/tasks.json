@@ -11,6 +11,114 @@
       "description": "",
       "createdAt": "2026-03-23T16:14:01.071Z",
       "updatedAt": "2026-03-23T16:14:01.071Z"
+    },
+    {
+      "id": "1e7e4e9f-7632-45c2-9a8c-ef558b268a73",
+      "title": "Set up personal productivity dashboard",
+      "project": "SAPDevelop",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.254Z",
+      "updatedAt": "2026-03-23T17:57:20.260Z"
+    },
+    {
+      "id": "35536d70-d774-4e1b-a50c-965fc981f9aa",
+      "title": "Configure development environment",
+      "project": "I543234",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.263Z",
+      "updatedAt": "2026-03-23T17:57:20.263Z"
+    },
+    {
+      "id": "f4cd6cbf-df78-422b-ab93-c6771c82b195",
+      "title": "VIRE data pipeline - item filtering",
+      "project": "VIRE",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.263Z",
+      "updatedAt": "2026-03-23T17:57:20.263Z"
+    },
+    {
+      "id": "fd9d5a8c-7fb6-4323-a651-e80735bca083",
+      "title": "SOFI 10-K and DEF14A document processing",
+      "project": "SOFI",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.264Z",
+      "updatedAt": "2026-03-23T17:57:20.264Z"
+    },
+    {
+      "id": "b0b2858c-17d3-4fcb-ad70-14f727de5bdc",
+      "title": "Set up Stitch MCP and VIRE dashboard design",
+      "project": "_upload_to_notebooklm",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.264Z",
+      "updatedAt": "2026-03-23T17:57:20.264Z"
+    },
+    {
+      "id": "c414b525-9c76-4715-98b7-aab1de3aa338",
+      "title": "Update Emarsys knowledge base and add missing tests",
+      "project": "cdfldispatcherservice",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.265Z",
+      "updatedAt": "2026-03-23T17:57:20.265Z"
+    },
+    {
+      "id": "57880e03-be43-46f0-b802-357b42462ebf",
+      "title": "Set up browser automation for value investing tool",
+      "project": "Value Investing",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.265Z",
+      "updatedAt": "2026-03-23T17:57:20.265Z"
+    },
+    {
+      "id": "ef1f19de-2b68-422d-879b-a8fe91b3cc59",
+      "title": "Investigate idx-cdp S2S auth failures for specific customers",
+      "project": "idx-cdp",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.265Z",
+      "updatedAt": "2026-03-23T17:57:20.265Z"
+    },
+    {
+      "id": "d605232d-3449-4d90-8fa1-c52b20f0ef5b",
+      "title": "Fix PreCompact hook and debug Board startup",
+      "project": "personal-dashboard",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-03-23T17:57:20.265Z",
+      "updatedAt": "2026-03-23T17:57:20.265Z"
     }
   ]
 }

@@ -17,7 +17,8 @@
       "nextSteps": [
         "Verify Board populates on hard refresh"
       ],
-      "tasksWorkedOn": []
+      "tasksWorkedOn": [],
+      "taskId": "d605232d-3449-4d90-8fa1-c52b20f0ef5b"
     },
     {
       "timestamp": "18:14",
@@ -34,7 +35,9 @@
       "nextSteps": [
         "Verify schema change in staging"
       ],
-      "tasksWorkedOn": ["CXCDP-33814"],
+      "tasksWorkedOn": [
+        "CXCDP-33814"
+      ],
       "taskId": "aa3f1412-132a-4e70-a04e-f035c7cc6dad"
     },
     {
@@ -53,7 +56,8 @@
         "Verify Board populates on hard refresh (may be browser cache)",
         "Consider improving hook summary quality if API key becomes available"
       ],
-      "tasksWorkedOn": []
+      "tasksWorkedOn": [],
+      "taskId": "d605232d-3449-4d90-8fa1-c52b20f0ef5b"
     }
   ]
 }
