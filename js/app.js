@@ -3,12 +3,16 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Load all daily logs and auto-link sessions so Board is fully populated
   if (typeof DailyLog !== 'undefined') {
-    await DataStore.loadAllDailyLogs();
-    for (const log of Object.values(DataStore.dailyLogs)) {
-      const sessions = Array.isArray(log.sessions) ? log.sessions : [];
-      if (sessions.length > 0) {
-        await DailyLog._autoLinkSessions(sessions);
+    try {
+      await DataStore.loadAllDailyLogs();
+      for (const [date, log] of Object.entries(DataStore.dailyLogs)) {
+        const sessions = Array.isArray(log.sessions) ? log.sessions : [];
+        if (sessions.length > 0) {
+          await DailyLog._autoLinkSessions(sessions, date);
+        }
       }
+    } catch (e) {
+      console.error('Auto-link startup failed:', e);
     }
   }
 

@@ -81,7 +81,7 @@ const DailyLog = {
 
   // ── Auto-link ───────────────────────────────────────────────────────────
 
-  async _autoLinkSessions(sessions) {
+  async _autoLinkSessions(sessions, date) {
     let changed = false;
     sessions.forEach(session => {
       if (!session.taskId || !DataStore.getTaskById(session.taskId)) {
@@ -93,10 +93,11 @@ const DailyLog = {
       }
     });
     if (changed) {
+      const saveDate = date || this.currentDate;
       await Promise.all([
-        DataStore.saveDailyLog(this.currentDate, { silent: true }),
+        DataStore.saveDailyLog(saveDate, { silent: true }),
         DataStore.saveTasks({ silent: true })
-      ]);
+      ]).catch(() => {});
     }
   },
 
