@@ -197,12 +197,15 @@ const DataStore = {
     return this.saveToGitHub('data/goals.json', this.goals, 'update: goals');
   },
 
-  // Returns { totalMinutes, sessionCount, lastSummary } for a task from loaded daily logs
+  // Returns rich stats for a task from all loaded daily logs
   getTaskSessionStats(taskId) {
     let totalMinutes = 0;
     let sessionCount = 0;
     let lastSummary = '';
     let lastTimestamp = '';
+    const accomplishments = [];
+    const nextSteps = [];
+    const dates = [];
 
     for (const log of Object.values(this.dailyLogs)) {
       if (!Array.isArray(log.sessions)) continue;
@@ -210,14 +213,26 @@ const DataStore = {
         if (s.taskId !== taskId) continue;
         sessionCount++;
         totalMinutes += s.duration || 0;
+        if (log.date && !dates.includes(log.date)) dates.push(log.date);
         const ts = (log.date || '') + (s.timestamp || '');
         if (ts >= lastTimestamp) {
           lastTimestamp = ts;
           lastSummary = s.summary || '';
         }
+        if (Array.isArray(s.accomplishments)) {
+          for (const a of s.accomplishments) {
+            if (a && !accomplishments.includes(a)) accomplishments.push(a);
+          }
+        }
+        if (Array.isArray(s.nextSteps)) {
+          for (const n of s.nextSteps) {
+            if (n && !nextSteps.includes(n)) nextSteps.push(n);
+          }
+        }
       }
     }
 
-    return { totalMinutes, sessionCount, lastSummary };
+    dates.sort();
+    return { totalMinutes, sessionCount, lastSummary, accomplishments, nextSteps, dates };
   }
 };

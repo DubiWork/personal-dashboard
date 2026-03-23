@@ -80,35 +80,44 @@ const Kanban = {
     const categoryClass = task.category === 'personal' ? 'badge-personal' : 'badge-work';
     const categoryLabel = task.category === 'personal' ? 'Personal' : 'Work';
 
-    const tagsHtml = Array.isArray(task.tags) && task.tags.length
-      ? `<div class="card-tags">${task.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>`
-      : '';
+    const stats = DataStore.getTaskSessionStats(task.id);
+
+    // Meta line: category + sessions + time
+    const sessionsBadge = stats.sessionCount > 0
+      ? `<span class="card-meta-item">${stats.sessionCount} session${stats.sessionCount > 1 ? 's' : ''}</span>` : '';
+    const timeBadge = stats.totalMinutes > 0
+      ? `<span class="card-meta-item card-meta-time">${this._formatDuration(stats.totalMinutes)}</span>` : '';
+    const dateBadge = stats.dates.length > 0
+      ? `<span class="card-meta-item">${stats.dates[stats.dates.length - 1]}</span>` : '';
 
     const jiraHtml = task.jiraId
-      ? `<div class="card-jira">${this._esc(task.jiraId)}</div>`
-      : '';
+      ? `<span class="card-jira-badge">${this._esc(task.jiraId)}</span>` : '';
 
-    // Compute time from session data
-    const stats = DataStore.getTaskSessionStats(task.id);
-    const timeHtml = stats.totalMinutes > 0
-      ? `<div class="card-time">${this._formatDuration(stats.totalMinutes)}</div>`
-      : (task.timeSpent ? `<div class="card-time">${this._esc(task.timeSpent)}</div>` : '');
+    // Accomplishments list (max 4)
+    const accs = stats.accomplishments.slice(-4);
+    const accsHtml = accs.length > 0
+      ? `<ul class="card-accomplishments">${accs.map(a =>
+          `<li>${this._esc(a.replace(/^Did:\s*/i, ''))}</li>`
+        ).join('')}</ul>` : '';
 
-    const summaryHtml = stats.lastSummary && stats.lastSummary !== 'Session activity'
-      ? `<div class="card-summary">${this._esc(stats.lastSummary)}</div>`
-      : '';
+    // Next steps (max 2)
+    const ns = stats.nextSteps.slice(-2);
+    const nsHtml = ns.length > 0
+      ? `<div class="card-next"><span class="card-next-label">Next:</span> ${ns.map(n => this._esc(n)).join(' | ')}</div>` : '';
 
-    const projectHtml = task.project
-      ? `<div class="card-project">${this._esc(task.project)}</div>`
-      : '';
+    const tagsHtml = Array.isArray(task.tags) && task.tags.length
+      ? `<div class="card-tags">${task.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>` : '';
 
     card.innerHTML = `
-      <span class="card-category ${categoryClass}">${categoryLabel}</span>
+      <div class="card-header">
+        <span class="card-category ${categoryClass}">${categoryLabel}</span>
+        ${jiraHtml}
+        <span class="card-project-label">${this._esc(task.project || '')}</span>
+      </div>
       <div class="card-title">${this._esc(task.title)}</div>
-      ${projectHtml}
-      ${jiraHtml}
-      ${timeHtml}
-      ${summaryHtml}
+      <div class="card-meta">${sessionsBadge}${timeBadge}${dateBadge}</div>
+      ${accsHtml}
+      ${nsHtml}
       ${tagsHtml}
       <div class="card-actions">
         <button class="btn-edit" data-id="${task.id}">Edit</button>
