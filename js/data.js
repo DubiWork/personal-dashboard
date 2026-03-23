@@ -63,7 +63,7 @@ const DataStore = {
     this.tasks.tasks = this.tasks.tasks.filter(t => t.id !== id);
   },
 
-  async saveToGitHub(path, content, message, { silent = false } = {}) {
+  async saveToGitHub(path, content, message, { silent = true } = {}) {
     const config = this.config.github;
     const token = localStorage.getItem('gh_token');
     if (!token) {
