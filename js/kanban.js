@@ -98,9 +98,14 @@ const Kanban = {
       ? `<div class="card-summary">${this._esc(stats.lastSummary)}</div>`
       : '';
 
+    const projectHtml = task.project
+      ? `<div class="card-project">${this._esc(task.project)}</div>`
+      : '';
+
     card.innerHTML = `
       <span class="card-category ${categoryClass}">${categoryLabel}</span>
       <div class="card-title">${this._esc(task.title)}</div>
+      ${projectHtml}
       ${jiraHtml}
       ${timeHtml}
       ${summaryHtml}

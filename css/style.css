@@ -340,6 +340,14 @@ input, textarea, select {
   line-height: 1.4;
 }
 
+.card-project {
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  opacity: 0.7;
+  margin-bottom: var(--spacing-xs);
+  font-family: 'Courier New', monospace;
+}
+
 .card-jira {
   font-size: 0.75rem;
   color: var(--accent-blue);

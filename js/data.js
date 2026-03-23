@@ -112,7 +112,8 @@ const DataStore = {
     if (!project || !this.tasks?.tasks) return null;
     const normalized = project.toLowerCase();
     return this.tasks.tasks.find(t =>
-      t.title && t.title.toLowerCase() === normalized
+      (t.project && t.project.toLowerCase() === normalized) ||
+      (t.title && t.title.toLowerCase() === normalized)
     ) || null;
   },
 
@@ -141,8 +142,12 @@ const DataStore = {
 
       // No match — create new task
       const jiraId = session.tasksWorkedOn?.length ? session.tasksWorkedOn[0] : '';
+      const summary = session.summary && session.summary !== 'Session activity'
+        ? session.summary.substring(0, 60)
+        : session.project;
       const newTask = {
-        title: session.project,
+        title: summary,
+        project: session.project,
         category: session.category || 'work',
         status: 'in_progress',
         jiraId,
