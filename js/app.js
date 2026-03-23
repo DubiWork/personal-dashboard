@@ -1,13 +1,14 @@
 document.addEventListener('DOMContentLoaded', async () => {
   await DataStore.init();
 
-  // Auto-link today's sessions so Board shows tasks on first load
+  // Load all daily logs and auto-link sessions so Board is fully populated
   if (typeof DailyLog !== 'undefined') {
-    const today = todayISO();
-    const log = await DataStore.loadDailyLog(today);
-    const sessions = Array.isArray(log.sessions) ? log.sessions : [];
-    if (sessions.length > 0) {
-      await DailyLog._autoLinkSessions(sessions);
+    await DataStore.loadAllDailyLogs();
+    for (const log of Object.values(DataStore.dailyLogs)) {
+      const sessions = Array.isArray(log.sessions) ? log.sessions : [];
+      if (sessions.length > 0) {
+        await DailyLog._autoLinkSessions(sessions);
+      }
     }
   }
 

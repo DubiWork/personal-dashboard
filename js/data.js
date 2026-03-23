@@ -29,6 +29,20 @@ const DataStore = {
     }
   },
 
+  async loadAllDailyLogs() {
+    try {
+      const dates = await fetch('data/daily-logs/index.json').then(r => {
+        if (!r.ok) throw new Error('Not found');
+        return r.json();
+      });
+      if (Array.isArray(dates)) {
+        await Promise.all(dates.map(d => this.loadDailyLog(d)));
+      }
+    } catch {
+      // No index — fall back to nothing
+    }
+  },
+
   getTasksByStatus(status) {
     return this.tasks.tasks.filter(t => t.status === status);
   },
