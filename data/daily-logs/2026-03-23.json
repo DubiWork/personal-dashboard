@@ -98,16 +98,23 @@
       ]
     },
     {
-      "timestamp": "20:51",
-      "duration": 351,
-      "category": "work",
-      "project": "SAPDevelop",
-      "summary": "Session activity",
+      "timestamp": "23:15",
+      "duration": 15,
+      "category": "personal",
+      "project": "personal-dashboard",
+      "summary": "Add localStorage persistence and fix drag-drop column targeting",
       "accomplishments": [
-        "Pushed. Now hard refresh (Ctrl+Shift+R) the dashboard — you should see 10 tasks on the Board, all in the \"In Progress\" column, with project labels and session data."
+        "Added localStorage save/load to DataStore so browser task edits survive page refresh without GitHub token",
+        "Implemented merge strategy: localStorage wins when updatedAt is newer than fetched data",
+        "Fixed drag-drop to work on full column area by adding min-height and flex:1 to .column-cards CSS",
+        "Committed and pushed 7cdbab5"
+      ],
+      "nextSteps": [
+        "Test drag-drop on live site after GitHub Pages deploy",
+        "Verify localStorage persistence across hard refresh"
       ],
       "tasksWorkedOn": [],
-      "taskId": "1e7e4e9f-7632-45c2-9a8c-ef558b268a73"
+      "taskId": "d605232d-3449-4d90-8fa1-c52b20f0ef5b"
     }
   ]
 }
