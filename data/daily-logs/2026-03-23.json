@@ -15,6 +15,22 @@
         "Removed debug console.logs from app.js"
       ],
       "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "18:14",
+      "duration": 308,
+      "category": "work",
+      "project": "CdpPublisherService",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Done. `businessAreas` added to `event.schema.properties` in `emarsys_cdfl.schema.change.json` as an optional array of objects with `additionalProperties: true`.",
+        "Committed and pushed. `1a4d345` on branch `us/CXCDP-33814-...`.",
+        "Done. Added v2.2.2 changelog entry above v2.2.1.",
+        "Pushed. `cd42745`.",
+        "Pushed. `f9b7af5`."
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "aa3f1412-132a-4e70-a04e-f035c7cc6dad"
     }
   ]
 }
