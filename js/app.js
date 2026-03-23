@@ -5,16 +5,12 @@ document.addEventListener('DOMContentLoaded', async () => {
   if (typeof DailyLog !== 'undefined') {
     try {
       await DataStore.loadAllDailyLogs();
-      const logDates = Object.keys(DataStore.dailyLogs);
-      console.log('[startup] loaded logs:', logDates);
       for (const [date, log] of Object.entries(DataStore.dailyLogs)) {
         const sessions = Array.isArray(log.sessions) ? log.sessions : [];
-        console.log(`[startup] ${date}: ${sessions.length} sessions`);
         if (sessions.length > 0) {
           await DailyLog._autoLinkSessions(sessions, date);
         }
       }
-      console.log('[startup] tasks after auto-link:', DataStore.tasks.tasks.length, DataStore.tasks.tasks.map(t => t.title));
     } catch (e) {
       console.error('Auto-link startup failed:', e);
     }
