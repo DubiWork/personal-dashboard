@@ -10,9 +10,40 @@ const DataStore = {
       fetch('data/goals.json').then(r => r.json()),
       fetch('data/config.json').then(r => r.json())
     ]);
+
+    // Merge localStorage overrides (browser edits) on top of fetched data
+    const localTasks = this._loadLocal('tasks');
+    if (localTasks && localTasks.tasks) {
+      // Use local version for tasks that were modified in browser
+      const fetchedMap = new Map(tasks.tasks.map(t => [t.id, t]));
+      for (const lt of localTasks.tasks) {
+        const fetched = fetchedMap.get(lt.id);
+        if (!fetched || (lt.updatedAt && fetched.updatedAt && lt.updatedAt > fetched.updatedAt)) {
+          fetchedMap.set(lt.id, lt);
+        }
+      }
+      tasks.tasks = Array.from(fetchedMap.values());
+    }
+
     this.tasks = tasks;
     this.goals = goals;
     this.config = config;
+  },
+
+  // localStorage helpers for browser-side persistence
+  _saveLocal(key, data) {
+    try { localStorage.setItem(`dash_${key}`, JSON.stringify(data)); } catch {}
+  },
+
+  _loadLocal(key) {
+    try {
+      const raw = localStorage.getItem(`dash_${key}`);
+      return raw ? JSON.parse(raw) : null;
+    } catch { return null; }
+  },
+
+  _persistTasks() {
+    this._saveLocal('tasks', this.tasks);
   },
 
   async loadDailyLog(date) {
@@ -52,15 +83,20 @@ const DataStore = {
     task.createdAt = new Date().toISOString();
     task.updatedAt = task.createdAt;
     this.tasks.tasks.push(task);
+    this._persistTasks();
   },
 
   updateTask(id, updates) {
     const task = this.tasks.tasks.find(t => t.id === id);
-    if (task) Object.assign(task, updates, { updatedAt: new Date().toISOString() });
+    if (task) {
+      Object.assign(task, updates, { updatedAt: new Date().toISOString() });
+      this._persistTasks();
+    }
   },
 
   deleteTask(id) {
     this.tasks.tasks = this.tasks.tasks.filter(t => t.id !== id);
+    this._persistTasks();
   },
 
   async saveToGitHub(path, content, message, { silent = true } = {}) {
