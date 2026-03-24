@@ -1,22 +1,44 @@
-[
-  {
-    "timestamp": "12:20",
-    "duration": 35,
-    "category": "work",
-    "project": "SAPDevelop",
-    "summary": "Analyze AudienceService pipeline failure and update Jira ticket CXCDP-35182 with staging status",
-    "accomplishments": [
-      "Analyzed AudienceService build 2.20.2.1926 pipeline log — identified BlackDuck scan failure (group 'customer_data_solutions' does not exist)",
-      "Drafted message for CI/CD team support channel about the BlackDuck issue",
-      "Added comment to CXCDP-35182 via Playwright MCP: staging deployed v2.20.2.1925 + BlackDuck scan note",
-      "Logged 16h work on CXCDP-35182 (analysis, implementation, E2E tests, staging verification)",
-      "Documented Playwright MCP lesson: verify connection before dispatching, ask user to /mcp reconnect if needed"
-    ],
-    "nextSteps": [
-      "Wait for CI/CD team to fix BlackDuck group 'customer_data_solutions'",
-      "Staging dry run verification for CXCDP-35182 fix",
-      "Retrigger build 2.20.2.1926 after BlackDuck fix"
-    ],
-    "tasksWorkedOn": ["CXCDP-35182"]
-  }
-]
+{
+  "date": "2026-03-24",
+  "sessions": [
+    {
+      "timestamp": "12:20",
+      "duration": 35,
+      "category": "work",
+      "project": "SAPDevelop",
+      "summary": "Analyze AudienceService pipeline failure and update Jira ticket CXCDP-35182 with staging status",
+      "accomplishments": [
+        "Analyzed AudienceService build 2.20.2.1926 pipeline log — identified BlackDuck scan failure (group 'customer_data_solutions' does not exist)",
+        "Drafted message for CI/CD team support channel about the BlackDuck issue",
+        "Added comment to CXCDP-35182 via Playwright MCP: staging deployed v2.20.2.1925 + BlackDuck scan note",
+        "Logged 16h work on CXCDP-35182 (analysis, implementation, E2E tests, staging verification)",
+        "Documented Playwright MCP lesson: verify connection before dispatching, ask user to /mcp reconnect if needed"
+      ],
+      "nextSteps": [
+        "Wait for CI/CD team to fix BlackDuck group 'customer_data_solutions'",
+        "Staging dry run verification for CXCDP-35182 fix",
+        "Retrigger build 2.20.2.1926 after BlackDuck fix"
+      ],
+      "tasksWorkedOn": ["CXCDP-35182"]
+    },
+    {
+      "timestamp": "14:00",
+      "duration": 45,
+      "category": "personal",
+      "project": "personal-dashboard",
+      "summary": "Fix Kanban drag-drop to work on full column area and add localStorage persistence",
+      "accomplishments": [
+        "Added localStorage persistence to DataStore — browser task edits survive refresh without GitHub token (commit 7cdbab5)",
+        "Rewrote drag-drop to use bounding-box hit testing via _colAtPoint() instead of e.target.closest() which was unreliable (commit 2f55b8c)",
+        "Fixed column heights with align-items:stretch on .kanban-board so empty columns match tallest column (commit 7bfebb0)",
+        "Reverted broken pointer-events:none approach that prevented dragend from firing",
+        "Replaced previous session's stale 'Session activity' hook entry with proper scrum-daily log"
+      ],
+      "nextSteps": [
+        "Completed - drag-drop and persistence both working"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "d605232d-3449-4d90-8fa1-c52b20f0ef5b"
+    }
+  ]
+}
