@@ -146,7 +146,6 @@ const Kanban = {
     const board = $('#kanban-board');
     if (!board) return;
 
-    // Drag events on cards (delegated from board)
     board.addEventListener('dragstart', (e) => {
       const card = e.target.closest('.task-card');
       if (!card) return;
@@ -163,46 +162,37 @@ const Kanban = {
       $$('.kanban-column.drag-over').forEach(col => col.classList.remove('drag-over'));
     });
 
-    // Drop zone events on columns (delegated)
+    // Find column by checking which column's bounding box contains the point
+    const _colAtPoint = (x, y) => {
+      for (const col of $$('.kanban-column')) {
+        const r = col.getBoundingClientRect();
+        if (x >= r.left && x <= r.right && y >= r.top && y <= r.bottom) return col;
+      }
+      return null;
+    };
+
     board.addEventListener('dragover', (e) => {
       e.preventDefault();
       e.dataTransfer.dropEffect = 'move';
-      let col = e.target.closest('.kanban-column');
-      if (!col) {
-        const el = document.elementFromPoint(e.clientX, e.clientY);
-        col = el && el.closest('.kanban-column');
-      }
-      if (col) {
-        $$('.kanban-column.drag-over').forEach(c => {
-          if (c !== col) c.classList.remove('drag-over');
-        });
-        col.classList.add('drag-over');
-      }
+      const col = _colAtPoint(e.clientX, e.clientY);
+      $$('.kanban-column.drag-over').forEach(c => {
+        if (c !== col) c.classList.remove('drag-over');
+      });
+      if (col) col.classList.add('drag-over');
     });
 
     board.addEventListener('dragleave', (e) => {
-      const col = e.target.closest('.kanban-column');
-      if (!col) return;
-      // Only remove highlight when the cursor leaves the column's bounding box
-      const rect = col.getBoundingClientRect();
-      const x = e.clientX;
-      const y = e.clientY;
-      if (x <= rect.left || x >= rect.right || y <= rect.top || y >= rect.bottom) {
-        col.classList.remove('drag-over');
+      // Only clean up when leaving the board entirely
+      if (!board.contains(e.relatedTarget)) {
+        $$('.kanban-column.drag-over').forEach(c => c.classList.remove('drag-over'));
       }
     });
 
     board.addEventListener('drop', (e) => {
       e.preventDefault();
-      // Resolve from e.target first, then fall back to coordinate lookup so
-      // drops on the column-cards empty area and all child elements are caught
-      let col = e.target.closest('.kanban-column');
-      if (!col) {
-        const el = document.elementFromPoint(e.clientX, e.clientY);
-        col = el && el.closest('.kanban-column');
-      }
+      const col = _colAtPoint(e.clientX, e.clientY);
+      $$('.kanban-column.drag-over').forEach(c => c.classList.remove('drag-over'));
       if (!col) return;
-      col.classList.remove('drag-over');
 
       const taskId = e.dataTransfer.getData('text/plain') || this._draggedId;
       if (!taskId) return;
