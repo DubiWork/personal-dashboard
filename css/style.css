@@ -221,7 +221,7 @@ input, textarea, select {
   gap: var(--spacing-md);
   overflow-x: auto;
   padding-bottom: var(--spacing-md);
-  align-items: flex-start;
+  align-items: stretch;
 }
 
 .kanban-column {
