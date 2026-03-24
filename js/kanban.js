@@ -167,7 +167,11 @@ const Kanban = {
     board.addEventListener('dragover', (e) => {
       e.preventDefault();
       e.dataTransfer.dropEffect = 'move';
-      const col = e.target.closest('.kanban-column');
+      let col = e.target.closest('.kanban-column');
+      if (!col) {
+        const el = document.elementFromPoint(e.clientX, e.clientY);
+        col = el && el.closest('.kanban-column');
+      }
       if (col) {
         $$('.kanban-column.drag-over').forEach(c => {
           if (c !== col) c.classList.remove('drag-over');
@@ -178,14 +182,25 @@ const Kanban = {
 
     board.addEventListener('dragleave', (e) => {
       const col = e.target.closest('.kanban-column');
-      if (col && !col.contains(e.relatedTarget)) {
+      if (!col) return;
+      // Only remove highlight when the cursor leaves the column's bounding box
+      const rect = col.getBoundingClientRect();
+      const x = e.clientX;
+      const y = e.clientY;
+      if (x <= rect.left || x >= rect.right || y <= rect.top || y >= rect.bottom) {
         col.classList.remove('drag-over');
       }
     });
 
     board.addEventListener('drop', (e) => {
       e.preventDefault();
-      const col = e.target.closest('.kanban-column');
+      // Resolve from e.target first, then fall back to coordinate lookup so
+      // drops on the column-cards empty area and all child elements are caught
+      let col = e.target.closest('.kanban-column');
+      if (!col) {
+        const el = document.elementFromPoint(e.clientX, e.clientY);
+        col = el && el.closest('.kanban-column');
+      }
       if (!col) return;
       col.classList.remove('drag-over');
 
