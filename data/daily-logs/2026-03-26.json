@@ -18,7 +18,8 @@
         "Check if fix PRs #17-#20 on CdpIDXService address this specific Hades connection issue",
         "Determine if issue affects only st1 or broader tenants"
       ],
-      "tasksWorkedOn": []
+      "tasksWorkedOn": [],
+      "taskId": "97a2f65a-a2c9-4c28-9d3c-d29e3df55a42"
     }
   ]
 }

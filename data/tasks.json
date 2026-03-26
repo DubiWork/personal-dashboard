@@ -119,6 +119,18 @@
       "description": "",
       "createdAt": "2026-03-23T17:57:20.265Z",
       "updatedAt": "2026-03-23T17:57:20.265Z"
+    },
+    {
+      "id": "97a2f65a-a2c9-4c28-9d3c-d29e3df55a42",
+      "title": "Investigate CdpIDXService Hades baseUri null \u2014 Engagement Cloud email events 500 error",
+      "project": "CdpIDXService",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "Hades baseUri is null in CdpIDXService when querying dataflow status for email events (opened/bounced/complaint). Likely related to CXCDP-30666 S2S migration.",
+      "createdAt": "2026-03-26T08:00:00.000Z",
+      "updatedAt": "2026-03-26T08:00:00.000Z"
     }
   ]
 }
