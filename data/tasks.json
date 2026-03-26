@@ -131,6 +131,18 @@
       "description": "Hades baseUri is null in CdpIDXService when querying dataflow status for email events (opened/bounced/complaint). Likely related to CXCDP-30666 S2S migration.",
       "createdAt": "2026-03-26T08:00:00.000Z",
       "updatedAt": "2026-03-26T08:00:00.000Z"
+    },
+    {
+      "id": "d43e209e-4064-4828-aa2a-dc5a93304ef9",
+      "title": "auth flow name UI bug - Universe sends flowName on WSSE auth",
+      "project": "SAPDevelop",
+      "category": "work",
+      "status": "done",
+      "jiraId": "",
+      "tags": [],
+      "description": "Universe UI sends flowName=clientCredentials on WSSE auth PUT calls. FlowParameterValidator rejects it. Affects us5/st1 and eu5/prod.",
+      "createdAt": "2026-03-26T12:00:00.000Z",
+      "updatedAt": "2026-03-26T12:55:00.000Z"
     }
   ]
 }
