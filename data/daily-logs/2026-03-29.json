@@ -22,6 +22,18 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
+    },
+    {
+      "timestamp": "12:30",
+      "duration": 95,
+      "category": "work",
+      "project": "SAPDevelop",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Removed the vague \"EMS integration maintenance\" — replaced with the real ticket"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "1e7e4e9f-7632-45c2-9a8c-ef558b268a73"
     }
   ]
 }
