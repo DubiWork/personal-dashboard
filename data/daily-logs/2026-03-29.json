@@ -10,6 +10,18 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "1e7e4e9f-7632-45c2-9a8c-ef558b268a73"
+    },
+    {
+      "timestamp": "10:47",
+      "duration": 2400,
+      "category": "personal",
+      "project": "edgar-value-miner",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Fixed — Edgar/VIRE entry is now under Personal Projects where it belongs."
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
     }
   ]
 }
