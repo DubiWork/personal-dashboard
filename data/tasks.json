@@ -179,6 +179,18 @@
       "description": "",
       "createdAt": "2026-04-16T16:19:01.184Z",
       "updatedAt": "2026-04-16T16:19:01.184Z"
+    },
+    {
+      "id": "db3d7fa3-d71b-4989-9c63-739e24865d82",
+      "title": "cdp-mp-fix",
+      "project": "cdp-mp-fix",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-04-20T08:49:47.478Z",
+      "updatedAt": "2026-04-20T08:49:47.478Z"
     }
   ]
 }
