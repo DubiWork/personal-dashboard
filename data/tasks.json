@@ -191,6 +191,18 @@
       "description": "",
       "createdAt": "2026-04-20T08:49:47.478Z",
       "updatedAt": "2026-04-20T08:49:47.478Z"
+    },
+    {
+      "id": "31501bdd-707b-470d-9bcd-c6ab31405949",
+      "title": "sap-sales-cloud-and-sap-service-cloud-version-2",
+      "project": "sap-sales-cloud-and-sap-service-cloud-version-2",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-04-23T11:15:53.929Z",
+      "updatedAt": "2026-04-23T11:15:53.929Z"
     }
   ]
 }
