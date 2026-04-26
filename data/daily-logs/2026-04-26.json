@@ -1,0 +1,15 @@
+{
+  "date": "2026-04-26",
+  "sessions": [
+    {
+      "timestamp": "14:14",
+      "duration": 113,
+      "category": "work",
+      "project": "SAPDevelop",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "1e7e4e9f-7632-45c2-9a8c-ef558b268a73"
+    }
+  ]
+}
