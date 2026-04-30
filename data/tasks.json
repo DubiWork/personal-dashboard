@@ -203,6 +203,18 @@
       "description": "",
       "createdAt": "2026-04-23T11:15:53.929Z",
       "updatedAt": "2026-04-23T11:15:53.929Z"
+    },
+    {
+      "id": "8ac92175-5746-4b25-9919-f49f83f8923f",
+      "title": "farm-manager",
+      "project": "farm-manager",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-04-30T11:29:33.137Z",
+      "updatedAt": "2026-04-30T11:29:33.137Z"
     }
   ]
 }
