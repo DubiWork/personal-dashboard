@@ -1,0 +1,15 @@
+{
+  "date": "2026-05-01",
+  "sessions": [
+    {
+      "timestamp": "12:08",
+      "duration": 169,
+      "category": "personal",
+      "project": "farm-manager",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "8ac92175-5746-4b25-9919-f49f83f8923f"
+    }
+  ]
+}
