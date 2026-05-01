@@ -10,6 +10,16 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "8ac92175-5746-4b25-9919-f49f83f8923f"
+    },
+    {
+      "timestamp": "12:30",
+      "duration": 123,
+      "category": "personal",
+      "project": "VIRE",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "f4cd6cbf-df78-422b-ab93-c6771c82b195"
     }
   ]
 }
