@@ -30,6 +30,18 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "f4cd6cbf-df78-422b-ab93-c6771c82b195"
+    },
+    {
+      "timestamp": "15:01",
+      "duration": 41,
+      "category": "personal",
+      "project": "I543234",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Done. The skill works. Let me do a quick test query:"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "35536d70-d774-4e1b-a50c-965fc981f9aa"
     }
   ]
 }
