@@ -78,6 +78,19 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "31501bdd-707b-470d-9bcd-c6ab31405949"
+    },
+    {
+      "timestamp": "23:32",
+      "duration": 481,
+      "category": "personal",
+      "project": "VIRE",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Done. After restart, you can click any step box to re-run just that step. It'll show the glow and log output same as a full run.",
+        "Done. Now single-ticker runs also use the in-process orchestrator — you'll get:"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "f4cd6cbf-df78-422b-ab93-c6771c82b195"
     }
   ]
 }
