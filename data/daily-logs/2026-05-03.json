@@ -26,6 +26,18 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "f4cd6cbf-df78-422b-ab93-c6771c82b195"
+    },
+    {
+      "timestamp": "15:00",
+      "duration": 164,
+      "category": "personal",
+      "project": "VIRE",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Fixed three things:"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "f4cd6cbf-df78-422b-ab93-c6771c82b195"
     }
   ]
 }
