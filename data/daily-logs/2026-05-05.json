@@ -20,6 +20,18 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "8ac92175-5746-4b25-9919-f49f83f8923f"
+    },
+    {
+      "timestamp": "22:23",
+      "duration": 588,
+      "category": "personal",
+      "project": "VIRE",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Done. Now future sessions will know:"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "f4cd6cbf-df78-422b-ab93-c6771c82b195"
     }
   ]
 }
