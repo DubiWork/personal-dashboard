@@ -22,6 +22,16 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "1e7e4e9f-7632-45c2-9a8c-ef558b268a73"
+    },
+    {
+      "timestamp": "11:20",
+      "duration": 955,
+      "category": "work",
+      "project": "AudienceService",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "f9c77626-d69c-46bb-aaaa-911ab831df5a"
     }
   ]
 }

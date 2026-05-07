@@ -227,6 +227,18 @@
       "description": "",
       "createdAt": "2026-05-06T12:28:52.224Z",
       "updatedAt": "2026-05-06T12:28:52.224Z"
+    },
+    {
+      "id": "f9c77626-d69c-46bb-aaaa-911ab831df5a",
+      "title": "AudienceService",
+      "project": "AudienceService",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-05-07T08:20:41.970Z",
+      "updatedAt": "2026-05-07T08:20:41.970Z"
     }
   ]
 }
