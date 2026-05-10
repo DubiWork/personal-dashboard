@@ -239,6 +239,18 @@
       "description": "",
       "createdAt": "2026-05-07T08:20:41.970Z",
       "updatedAt": "2026-05-07T08:20:41.970Z"
+    },
+    {
+      "id": "c0380e38-4858-4ea6-bef8-72eae5fd0d33",
+      "title": "cdp-connectors-marketplace",
+      "project": "cdp-connectors-marketplace",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-05-10T14:40:32.295Z",
+      "updatedAt": "2026-05-10T14:40:32.295Z"
     }
   ]
 }

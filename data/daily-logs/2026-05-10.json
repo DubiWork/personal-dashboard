@@ -57,6 +57,21 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "1e7e4e9f-7632-45c2-9a8c-ef558b268a73"
+    },
+    {
+      "timestamp": "17:40",
+      "duration": 81,
+      "category": "work",
+      "project": "cdp-connectors-marketplace",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Done. No more per-commit `getCommit` calls. The heuristic: if there's any commit after the comment → addressed. This uses only the `listCommits` data we already have — zero extra API calls.",
+        "Done. Unknown rule IDs are now skipped early with `continue` — no corrupted metadata, no orphaned changes.",
+        "Done. All 7 findings addressed:",
+        "Pushed. PR #30 is updated with all fixes. The commit addresses all 7 review findings plus the deduplication improvement."
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "c0380e38-4858-4ea6-bef8-72eae5fd0d33"
     }
   ]
 }
