@@ -23,5 +23,20 @@
       "tasksWorkedOn": [],
       "taskId": "f5802872-4843-4055-a8d4-4496a3ffda6d"
     }
+    ,
+    {
+      "timestamp": "22:15",
+      "duration": 600,
+      "category": "personal",
+      "project": "farm-manager-2026",
+      "summary": "Farm Manager 2026 strategy session — updated equipment and ops philosophy",
+      "accomplishments": [
+        "Decided Mega Yield 4000 (50 ha/h, $5M) for Shnoozy Pitman, replacing 3x FieldKing 750",
+        "Updated Obsidian note: cash $15M, batch ops strategy, 7x GrainForce 9000 at Buzzing Grass Dam",
+        "Strategy shift captured: one tool at a time (no stacking) + crop diversification"
+      ],
+      "tasksWorkedOn": ["Farm Manager 2026 equipment optimization"],
+      "taskId": "fm2026-session-20260511"
+    }
   ]
 }
