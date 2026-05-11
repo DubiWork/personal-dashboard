@@ -61,6 +61,29 @@
       ],
       "tasksWorkedOn": ["Application Upgrade feature documentation"],
       "taskId": "app-upgrade-wiki-20260511"
+    },
+    {
+      "timestamp": "23:55",
+      "duration": 3600,
+      "category": "work",
+      "project": "cdp-investigate-plugin",
+      "summary": "Built cdp-kibana-mcp server, rewrote investigation skill to parallel-first, investigated EC group sync",
+      "accomplishments": [
+        "Built cdp-kibana-mcp MCP server — headless Kibana/ES queries via HTTP, VPN-only auth",
+        "Discovered Kibana needs only VPN (no SSO) — eliminated cookie/browser dependency",
+        "Ran LLM Council on plugin improvement — unanimous: parallel-first replaces sequential tracing",
+        "Rewrote SKILL.md: Phase 0 pattern match, Phase 1 parallel scan, Phase 2 targeted deep dive",
+        "Auto-save now mandatory — findings pushed to knowledge base without confirmation",
+        "Investigated EC Connector group sync: account schema not acked, groups dropped silently",
+        "Found pspanID trace diagnostic for CDFLDispatcher ack gate messages",
+        "PRs #32 and #33 merged to cdp-connectors-marketplace main"
+      ],
+      "nextSteps": [
+        "Enable Corporate Account API on EC connector app for group sync",
+        "Test plugin on a fresh unknown issue to validate parallel-first"
+      ],
+      "tasksWorkedOn": ["cdp-kibana-mcp", "cdp-investigate parallel-first rewrite", "EC group sync investigation"],
+      "taskId": "cdp-investigate-v110-20260511"
     }
   ]
 }
