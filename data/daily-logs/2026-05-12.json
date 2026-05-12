@@ -1,0 +1,23 @@
+{
+  "date": "2026-05-12",
+  "sessions": [
+    {
+      "title": "CHUB Code Reviewer v0.3.0 — Self-Learning Mechanism",
+      "duration_hours": 4,
+      "category": "SAP",
+      "summary": "Designed, implemented, and shipped self-learning for CHUB Code Reviewer plugin. LLM Council validated design (3 sessions). Learning agent runs in parallel, persists to shared kb-store branch via GitHub API. Tested on real PRs (AudienceService#14, idx-cdp#22).",
+      "outcomes": [
+        "Plugin v0.3.0 merged to main (PRs #35, #37, #38)",
+        "Self-learning operational — 10 rules exposed, state persisting to kb-store branch",
+        "New skills: promote-rule, rule-summary",
+        "Confidence formula with proper denominator validated by council"
+      ],
+      "blockers": [],
+      "next": [
+        "Run more reviews to pass 5-observation provisional threshold",
+        "Test on Java PR for JAVA-rule exposures",
+        "Test promote-rule flow when a candidate emerges"
+      ]
+    }
+  ]
+}
