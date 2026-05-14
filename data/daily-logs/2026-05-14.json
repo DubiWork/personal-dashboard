@@ -48,6 +48,14 @@
       "summary": "Fixed 3 bugs that broke hebrew-dictate: (1) enqueue_chunk() removed from listen_loop — audio recorded but never transcribed, (2) ctypes CallNextHookEx lParam overflow on 64-bit Windows — crashed hook and froze keyboard, (3) model hardcoded to CPU instead of CUDA. Final fix: run from repo dir which uses keyboard library (not ctypes hook) and CUDA-first loading.",
       "tools": ["python", "ctypes", "faster-whisper", "CUDA"],
       "tags": ["hebrew-dictate", "bugfix", "speech-to-text", "whisper"]
+    },
+    {
+      "start": "2026-05-12T14:00:00Z",
+      "end": "2026-05-14T23:00:00Z",
+      "project": "CHUB Slack Bot — Full Build",
+      "summary": "Built chub-slack-bot from scratch. Full pipeline: 4 parallel AI review agents (conventions, safety, tests, general code quality), inline GitHub PR comments with why + fix suggestions, self-learning agent (comment signals at 0.5x, re-engagement at 1.5x), periodic sweep for merged PRs, iterate.js for re-review on dev responses. 3 LLM Councils guided architecture decisions. Pushed to CDP/chub-slack-bot. Plugin bumped to v0.4.0 with README and presentation.",
+      "tools": ["Slack Socket Mode", "GitHub API", "hai proxy", "LLM Council", "Node.js"],
+      "tags": ["chub-reviewer", "slack-bot", "self-learning", "code-review-automation", "ai-agents"]
     }
   ]
 }
