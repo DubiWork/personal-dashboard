@@ -32,6 +32,14 @@
       "summary": "Fixed MCP -32000 launch failure. Root cause: plugin framework doesn't resolve relative .mcp.json paths from plugin root. Solution: esbuild bundle (945KB, zero runtime deps) + bash glob path for version-independent resolution. PR #41 review addressed, PR #45 opened with zero-setup approach.",
       "tools": ["esbuild", "GitHub MCP", "npm link", "cdp-kibana"],
       "tags": ["plugin-dev", "mcp", "packaging", "debugging"]
+    },
+    {
+      "start": "2026-05-14T20:00:00Z",
+      "end": "2026-05-14T21:30:00Z",
+      "project": "C4C V2 Connector (CXCDP-36055)",
+      "summary": "Updated Jira subtasks (9d logged, Foundation+Account+IndivCustomer→Done, Contact→InProgress). Investigated Create Contact mapping: organizationCrmId UUID mapped to displayId (maxLength 10) instead of accountId. Also found curl ingests don't create profiles vs CDP UI test button. Root cause: JourneyService 'MapParameters V2 failed' with MaximumLength validation.",
+      "tools": ["SAP Jira MCP", "Kibana", "curl", "cdp-investigate"],
+      "tags": ["c4c-v2", "connector-testing", "mapping-fix", "jira-update"]
     }
   ]
 }
