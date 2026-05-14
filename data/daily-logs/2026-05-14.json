@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-14",
+  "sessions": [
+    {
+      "start": "2026-05-11T09:00:00Z",
+      "end": "2026-05-14T08:00:00Z",
+      "project": "C4C V2 Connector (CXCDP-36055)",
+      "summary": "Tested Create Account and Create Contact actions end-to-end. Create Account works. Create Contact blocked by accountId DataTypeMismatch — Organization Relationship not populating correctly. Also found and fixed multiple ingest issues (country enum, phone format, firstLineName mapping).",
+      "tools": ["CDP API", "Kibana", "curl", "cdp-investigate plugin"],
+      "tags": ["c4c-v2", "connector-testing", "cdp-ingest", "cx-flow"]
+    }
+  ]
+}
