@@ -40,6 +40,14 @@
       "summary": "Updated Jira subtasks (9d logged, Foundation+Account+IndivCustomer→Done, Contact→InProgress). Investigated Create Contact mapping: organizationCrmId UUID mapped to displayId (maxLength 10) instead of accountId. Also found curl ingests don't create profiles vs CDP UI test button. Root cause: JourneyService 'MapParameters V2 failed' with MaximumLength validation.",
       "tools": ["SAP Jira MCP", "Kibana", "curl", "cdp-investigate"],
       "tags": ["c4c-v2", "connector-testing", "mapping-fix", "jira-update"]
+    },
+    {
+      "start": "2026-05-14T22:00:00Z",
+      "end": "2026-05-14T22:45:00Z",
+      "project": "Hebrew Dictation App",
+      "summary": "Fixed 3 bugs that broke hebrew-dictate: (1) enqueue_chunk() removed from listen_loop — audio recorded but never transcribed, (2) ctypes CallNextHookEx lParam overflow on 64-bit Windows — crashed hook and froze keyboard, (3) model hardcoded to CPU instead of CUDA. Final fix: run from repo dir which uses keyboard library (not ctypes hook) and CUDA-first loading.",
+      "tools": ["python", "ctypes", "faster-whisper", "CUDA"],
+      "tags": ["hebrew-dictate", "bugfix", "speech-to-text", "whisper"]
     }
   ]
 }
