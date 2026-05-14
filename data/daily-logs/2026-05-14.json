@@ -24,6 +24,14 @@
       "summary": "Designed and implemented iterate.js re-engagement module. LLM Council evaluated architecture (B vs C vs event-driven). Final design: poll review_requested timeline events (5min) + Slack ptal trigger. Per-finding fix validation, dev reply handling, never auto-resolve threads. Spec written, reviewed, implemented.",
       "tools": ["LLM Council", "GitHub MCP", "Slack Socket Mode"],
       "tags": ["chub-reviewer", "iterate", "self-learning", "code-review-bot"]
+    },
+    {
+      "start": "2026-05-14T18:30:00Z",
+      "end": "2026-05-14T20:00:00Z",
+      "project": "cdp-investigate plugin",
+      "summary": "Fixed MCP -32000 launch failure. Root cause: plugin framework doesn't resolve relative .mcp.json paths from plugin root. Solution: esbuild bundle (945KB, zero runtime deps) + bash glob path for version-independent resolution. PR #41 review addressed, PR #45 opened with zero-setup approach.",
+      "tools": ["esbuild", "GitHub MCP", "npm link", "cdp-kibana"],
+      "tags": ["plugin-dev", "mcp", "packaging", "debugging"]
     }
   ]
 }
