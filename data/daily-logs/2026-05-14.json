@@ -8,6 +8,22 @@
       "summary": "Tested Create Account and Create Contact actions end-to-end. Create Account works. Create Contact blocked by accountId DataTypeMismatch — Organization Relationship not populating correctly. Also found and fixed multiple ingest issues (country enum, phone format, firstLineName mapping).",
       "tools": ["CDP API", "Kibana", "curl", "cdp-investigate plugin"],
       "tags": ["c4c-v2", "connector-testing", "cdp-ingest", "cx-flow"]
+    },
+    {
+      "start": "2026-05-14T16:00:00Z",
+      "end": "2026-05-14T17:00:00Z",
+      "project": "Alert Triage Initiative",
+      "summary": "Ran LLM Council on idea for intelligent alert triage bot + Grafana improvements. Council validated the idea but recommended: audit 30-day alert volume first, get team lead buy-in, start with one suppression rule (not a bot). Grafana improvements as phase 2.",
+      "tools": ["LLM Council"],
+      "tags": ["observability", "alerts", "dev-goals", "strategy"]
+    },
+    {
+      "start": "2026-05-14T17:00:00Z",
+      "end": "2026-05-14T18:30:00Z",
+      "project": "CHUB Code Reviewer — iterate.js",
+      "summary": "Designed and implemented iterate.js re-engagement module. LLM Council evaluated architecture (B vs C vs event-driven). Final design: poll review_requested timeline events (5min) + Slack ptal trigger. Per-finding fix validation, dev reply handling, never auto-resolve threads. Spec written, reviewed, implemented.",
+      "tools": ["LLM Council", "GitHub MCP", "Slack Socket Mode"],
+      "tags": ["chub-reviewer", "iterate", "self-learning", "code-review-bot"]
     }
   ]
 }
