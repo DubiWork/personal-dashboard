@@ -56,6 +56,14 @@
       "summary": "Built chub-slack-bot from scratch. Full pipeline: 4 parallel AI review agents (conventions, safety, tests, general code quality), inline GitHub PR comments with why + fix suggestions, self-learning agent (comment signals at 0.5x, re-engagement at 1.5x), periodic sweep for merged PRs, iterate.js for re-review on dev responses. 3 LLM Councils guided architecture decisions. Pushed to CDP/chub-slack-bot. Plugin bumped to v0.4.0 with README and presentation.",
       "tools": ["Slack Socket Mode", "GitHub API", "hai proxy", "LLM Council", "Node.js"],
       "tags": ["chub-reviewer", "slack-bot", "self-learning", "code-review-automation", "ai-agents"]
+    },
+    {
+      "start": "2026-05-14T23:00:00Z",
+      "end": "2026-05-14T23:45:00Z",
+      "project": "CHUB Code Reviewer — live review + goal strategy",
+      "summary": "Ran CHUB review on AudienceService PR #14 (CXCDP-37911 defensive null-checks). Found 1 moderate issue (CROSS-002: missing unit tests). Posted inline comment to GitHub. LLM Council on goal attribution — verdict: CHUB work routes to Goal 2 (tooling), personal reviews stay Goal 3.",
+      "tools": ["GitHub MCP", "CHUB Code Reviewer", "LLM Council"],
+      "tags": ["chub-reviewer", "code-review", "goal-strategy", "llm-council"]
     }
   ]
 }
