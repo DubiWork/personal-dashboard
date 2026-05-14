@@ -1,0 +1,13 @@
+{
+  "date": "2026-05-15",
+  "sessions": [
+    {
+      "start": "2026-05-15T19:00:00Z",
+      "end": "2026-05-15T20:30:00Z",
+      "project": "Top Eleven Football Manager",
+      "summary": "Prepared double match day for Saturday. Optimized starting XI from OVR 79.1 to 86.0 by promoting Alinejad (ST 95), Niv (MC 89), and Zak (DC 72) from bench/reserves. Set tactics for HerthaMahlow (unattended) and CF Cholargós (live). Failed auction bids on MC/MR targets — strategy: save tokens to 15-20 for next cycle.",
+      "tools": ["Top Eleven game analysis"],
+      "tags": ["top-eleven", "gaming", "tactics"]
+    }
+  ]
+}
