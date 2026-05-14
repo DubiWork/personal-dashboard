@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-13",
+  "sessions": [
+    {
+      "time": "16:00-17:30",
+      "category": "SAP",
+      "project": "CDP Investigation Plugin",
+      "summary": "Investigated CX Flow activation failure for Olka Spor Malzemeleri. Root cause: Emarsys invalid field id 4032. Documented CX Flow path (JourneyService → cdp-connectors → Emarsys). Saved case + learnings to shared knowledge base.",
+      "outcomes": [
+        "Root cause found: Emarsys error 2006 Invalid field id 4032",
+        "CX Flow activation path documented (not CDFLDispatcher path)",
+        "Knowledge base case + learnings pushed to team repo",
+        "Identified enforcement gap for knowledge saving across plugin users"
+      ],
+      "blockers": ["cdp-kibana MCP failed to connect (-32000), used Playwright fallback"]
+    }
+  ]
+}
