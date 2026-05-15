@@ -64,6 +64,14 @@
       "summary": "Ran CHUB review on AudienceService PR #14 (CXCDP-37911 defensive null-checks). Found 1 moderate issue (CROSS-002: missing unit tests). Posted inline comment to GitHub. LLM Council on goal attribution — verdict: CHUB work routes to Goal 2 (tooling), personal reviews stay Goal 3.",
       "tools": ["GitHub MCP", "CHUB Code Reviewer", "LLM Council"],
       "tags": ["chub-reviewer", "code-review", "goal-strategy", "llm-council"]
+    },
+    {
+      "start": "2026-05-15T00:00:00Z",
+      "end": "2026-05-15T00:30:00Z",
+      "project": "LLM Council Gym — Research",
+      "summary": "Traced installed LLM Council skill source: ~/Downloads/llm-council.zip from okjpg/llm-council (or aiwithremy fork, 136 stars). Compared against Karpathy's original (18.7K stars, Python+React, real multi-model). Identified gym rewrite moat: runtime knowledge loading, configurable roster, tiered depth, cross-session memory, integration with existing CTO/CFO/QA gyms. Considering public repo with credit.",
+      "tools": ["GitHub CLI", "diff"],
+      "tags": ["llm-council", "agent-gym", "research", "open-source"]
     }
   ]
 }
