@@ -16,6 +16,14 @@
       "summary": "Designed 5-agent personal finance system via 3 rounds of LLM Council. Analyzed RiseUp CSV (5,163 transactions), Mislaka Pensionit (1.82M across 14 products), HaTmuna HaMleia (deposits). Council rejected skills.sh and raw CFO gym. Spec approved with 6 critical fixes (formula, tax modeling, conflicts, staleness). Architecture: self-contained repo, JSON data layer, 4 parallel agents + synthesizer. Ready for subagent-driven build.",
       "tools": ["LLM Council", "skills.sh search", "pdfplumber", "xlrd", "Python"],
       "tags": ["personal-finance", "agent-gym", "architecture", "council"]
+    },
+    {
+      "start": "2026-05-15T23:30:00Z",
+      "end": "2026-05-16T01:30:00Z",
+      "project": "Claude Code Tooling",
+      "summary": "Redesigned Obsidian vault architecture from journal-as-hub to concept-first. Ran LLM Council for architecture validation and spec review. Shipped /wrap v2.0.0 with concept-first write order, SESSION_ID idempotency, and canonical Current State schema.",
+      "tools": ["LLM Council", "subagent-driven-development", "brainstorming skill"],
+      "tags": ["obsidian", "knowledge-graph", "wrap-skill", "architecture"]
     }
   ]
 }
