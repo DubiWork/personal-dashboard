@@ -8,6 +8,14 @@
       "summary": "Prepared double match day for Saturday. Optimized starting XI from OVR 79.1 to 86.0 by promoting Alinejad (ST 95), Niv (MC 89), and Zak (DC 72) from bench/reserves. Set tactics for HerthaMahlow (unattended) and CF Cholargós (live). Failed auction bids on MC/MR targets — strategy: save tokens to 15-20 for next cycle.",
       "tools": ["Top Eleven game analysis"],
       "tags": ["top-eleven", "gaming", "tactics"]
+    },
+    {
+      "start": "2026-05-15T21:00:00Z",
+      "end": "2026-05-15T23:30:00Z",
+      "project": "Personal Finance Agents",
+      "summary": "Designed 5-agent personal finance system via 3 rounds of LLM Council. Analyzed RiseUp CSV (5,163 transactions), Mislaka Pensionit (1.82M across 14 products), HaTmuna HaMleia (deposits). Council rejected skills.sh and raw CFO gym. Spec approved with 6 critical fixes (formula, tax modeling, conflicts, staleness). Architecture: self-contained repo, JSON data layer, 4 parallel agents + synthesizer. Ready for subagent-driven build.",
+      "tools": ["LLM Council", "skills.sh search", "pdfplumber", "xlrd", "Python"],
+      "tags": ["personal-finance", "agent-gym", "architecture", "council"]
     }
   ]
 }
