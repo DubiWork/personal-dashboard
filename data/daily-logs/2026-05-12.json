@@ -18,6 +18,29 @@
         "Test on Java PR for JAVA-rule exposures",
         "Test promote-rule flow when a candidate emerges"
       ]
+    },
+    {
+      "title": "EC Connector — Account Schema Ack Investigation + PR to Slack",
+      "duration_hours": 1.5,
+      "category": "SAP",
+      "summary": "Investigated callID db5c3bfb failing to sync accounts to Engagement Cloud. CDFLDispatcher dropped full-groups because Corporate Account API was disabled. Found CdpReceiverService holds EC-side NAck identifiers. Contacted EC developers, they enabled API, confirmed data flowing. Sent connectors PR #4 to Slack.",
+      "outcomes": [
+        "Root cause: Corporate Account API disabled on EC connector app HMyOvinDT0aERcfmhTpKyg",
+        "EC devs (Mauro Greco, Nicolae Ciumac) enabled the API",
+        "Group Schema + Relationship Schema both acked — CdpPublisher now has hits",
+        "Discovered CdpReceiverService as source of EC-side NAck identifiers",
+        "Kibana3 board for ack/nack: https://cdp-kibana.gigya.net/kibana3/#dashboard/temp/fEwRG54BobmHZ-9bsHa1",
+        "Knowledge base updated with CdpReceiverService learnings",
+        "PR #4 posted to Slack with fyi @Yedidyah",
+        "Fixed newline bug in slack-pr-notification (jq --arg vs jq -Rs)"
+      ],
+      "blockers": [
+        "cdp-kibana MCP server still failing (-32000) — used direct curl workaround"
+      ],
+      "next": [
+        "Verify account data visible in EC UI",
+        "Wait for PR #4 review feedback"
+      ]
     }
   ]
 }
