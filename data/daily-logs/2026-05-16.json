@@ -1,0 +1,15 @@
+{
+  "date": "2026-05-16",
+  "sessions": [
+    {
+      "start": "2026-05-16T21:15:00Z",
+      "end": "2026-05-16T23:30:00Z",
+      "category": "personal",
+      "project": "Top Eleven",
+      "summary": "Won Level 12 league championship (3-0 vs Cholargos) and association tournament. Assigned x40 coach to T. Malka (DMC, 106 OVR). Decided formation change to 2-2-1-3-2 for Level 13. Sold dead weight players. Geva (DR, 83) promoted to starter. Ran LLM Council twice for investment decision.",
+      "achievements": ["League Champion Level 12", "Association Tournament Winner", "Malka x40 coach secured"],
+      "blockers": [],
+      "next_steps": ["Sell Mond (MC, 57)", "Find MR upgrade for Barda", "Feed Duek for Top Scorer next season"]
+    }
+  ]
+}
