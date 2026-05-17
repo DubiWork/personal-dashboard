@@ -1,0 +1,31 @@
+{
+  "date": "2026-05-17",
+  "sessions": [
+    {
+      "id": "2026-05-17-104500",
+      "category": "Personal",
+      "project": "Top Eleven",
+      "summary": "Level 13 season strategy: Duek Tier Up (83 OVR, Shooting 119), Cup 1st leg 4-0 W, FK/Captain reassigned, Malka Creativity 118 confirmed (SA decision reopened), Kovalio coaching for AMC, training optimized with World-Class Shooting Technique drill",
+      "outcomes": [
+        "Duek Tier Up completed: 77→83, Shooting 119",
+        "Cup 1st round 1st leg won 4-0 vs Galatasaray",
+        "FK taker changed to Duek, Captain to Malka",
+        "Malka DC position training started",
+        "Kovalio sent to Focused Attacking x2 coach (Shooting 65→89-99)",
+        "Shooting Technique drill upgraded to World-Class",
+        "SA mechanics fully researched and saved to memory",
+        "Hard Workers sponsor task completed (20 pts)"
+      ],
+      "blockers": [
+        "MR replacement for Barda still needed (transfer market)",
+        "Malka SA decision pending (revisit with Creativity 118 data)"
+      ],
+      "next": [
+        "Kovalio coach result check",
+        "Cup 2nd leg tomorrow — try AMC formation",
+        "MR transfer search",
+        "Malka SA decision council rerun"
+      ]
+    }
+  ]
+}
