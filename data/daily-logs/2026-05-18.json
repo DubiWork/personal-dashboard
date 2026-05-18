@@ -1,0 +1,20 @@
+{
+  "date": "2026-05-18",
+  "sessions": [
+    {
+      "id": "2026-05-18-210000",
+      "category": "Personal",
+      "project": "Top Eleven",
+      "summary": "Shot efficiency analysis (Hard Attacking + arrows fix), 2x 6-0 wins (Elite League + Cup R32), 4 training sessions (Crossing/Heading focus), MR transfer hunt (lost Jansen 88 OVR and Broomfield 84 OVR in bidding wars)",
+      "outcomes": [
+        "Diagnosed shot efficiency problem: green arrows on midfielders + Hard Attacking",
+        "Advanced to Cup Round of 32 (10-0 aggregate)",
+        "Won Elite League match 6-0 (Duek hat-trick)",
+        "Confirmed training gives +1/attribute/session/player",
+        "MR transfer budget set at 5-10 tokens (24 available)"
+      ],
+      "blockers": ["MR replacement still needed — market too expensive today"],
+      "next": ["Set arrows before Wednesday Elite League vs RIAL MADRID", "Keep scouting MR market for 5-10T range"]
+    }
+  ]
+}
