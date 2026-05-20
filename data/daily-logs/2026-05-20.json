@@ -42,6 +42,25 @@
         "Wait for Duek AMC 50/50 then power-train Finishing",
         "Test new MR in next match"
       ]
+    },
+    {
+      "id": "2026-05-15-065400",
+      "category": "SAP",
+      "summary": "CHUB bot bugfixes: sweep findings gap, pushback handling, 409 retry, broken constants restoration",
+      "achievements": [
+        "Fixed sweep.js to load findings from review-cursors.json (learning loop unblocked)",
+        "Fixed iterate.js to acknowledge pushback replies and update cursor",
+        "Fixed learning.js 409 SHA conflict with retry-with-refresh",
+        "Restored broken index.js constants after abandoned refactor",
+        "Bot confirmed healthy: polling 8 PRs, no crashes"
+      ],
+      "blockers": [
+        "k8s deployment pending cluster/registry details"
+      ],
+      "next": [
+        "Resume k8s deployment design",
+        "Present learning signals to team"
+      ]
     }
   ]
 }
