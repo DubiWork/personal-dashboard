@@ -20,6 +20,28 @@
         "Deliver team presentation",
         "Slack poll rule promotion"
       ]
+    },
+    {
+      "id": "2026-05-18-210000",
+      "category": "Personal",
+      "project": "Top Eleven",
+      "summary": "Power-training discovery, league+cup wins, MR signed, tactics confirmed",
+      "achievements": [
+        "Discovered power-training prerequisite: no active position/SA training",
+        "Won League 5-0 and Cup 5-0 with 42% shot efficiency (up from 33%)",
+        "Signed new MR replacing Barda",
+        "Confirmed Left Flank + Normal + Counter ON as working tactical setup",
+        "Learned Teamplay Drill mechanics (consumable, player count requirements)"
+      ],
+      "blockers": [
+        "Power-training blocked on most players (active position/SA tracks)",
+        "Rest pack stockpile too low (59) for meaningful power-training"
+      ],
+      "next": [
+        "Farm 25 rest packs/day from ads",
+        "Wait for Duek AMC 50/50 then power-train Finishing",
+        "Test new MR in next match"
+      ]
     }
   ]
 }
