@@ -61,6 +61,27 @@
         "Resume k8s deployment design",
         "Present learning signals to team"
       ]
+    },
+    {
+      "id": "2026-05-20-120000",
+      "category": "Personal",
+      "project": "Top Eleven",
+      "summary": "Donoso signed (MR, 3T), won league 5-0, tested 1-slot exploit (debunked for attributes)",
+      "achievements": [
+        "Signed Raúl Donoso (MR, 70 OVR, age 19, 3 tokens) as Barda replacement",
+        "Won League 5-0 vs Sfc Opava — Donoso scored on debut",
+        "Tested 1-slot Very Easy drill exploit: +3 attributes in 10 sessions = not viable",
+        "Confirmed real power-training needs full 6-slot sessions + rest packs",
+        "Duek AMC position training accelerated to 27/50"
+      ],
+      "blockers": [
+        "No shortcut for attribute grinding — rest pack farming is required"
+      ],
+      "next": [
+        "Start daily 25 ads for rest pack farming",
+        "Regular full training sessions for squad development",
+        "Wait for Duek AMC 50/50 then power-train Finishing"
+      ]
     }
   ]
 }
