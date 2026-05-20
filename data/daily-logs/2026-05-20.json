@@ -1,0 +1,25 @@
+{
+  "date": "2026-05-20",
+  "sessions": [
+    {
+      "id": "2026-05-15-063000",
+      "category": "SAP",
+      "summary": "CHUB bot: pushback handling + sweep fix + presentation + re-review with AI dedup",
+      "achievements": [
+        "Built team presentation (8 slides, HTML, developer-agency framing)",
+        "Council-approved design: acknowledge pushback, no AI counter-arguments, learn at merge",
+        "Implemented full re-review with AI deduplication on new commits",
+        "Fixed 422 error with parseDiffLines + file-level fallback",
+        "Planned Slack poll promotion + webhook auto-review as post-k8s features"
+      ],
+      "blockers": [
+        "Slack Socket Mode pong timeouts on SAP VPN — needs k8s with stable network"
+      ],
+      "next": [
+        "k8s deployment",
+        "Deliver team presentation",
+        "Slack poll rule promotion"
+      ]
+    }
+  ]
+}
