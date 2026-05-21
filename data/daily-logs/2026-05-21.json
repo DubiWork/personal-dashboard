@@ -114,6 +114,28 @@
         "Activities (same schemas as V2, different endpoint)",
         "Default mappings for all actions and events in connector JSON"
       ]
+    },
+    {
+      "id": "2026-05-21-080000",
+      "category": "Personal",
+      "project": "Top Eleven",
+      "summary": "Duek VERY FAST trainer confirmed, 180 Rule power-training (+99 attrs), squad re-tested",
+      "achievements": [
+        "Confirmed Duek as only VERY FAST trainer in squad (+3 on test)",
+        "Re-tested all youngsters: Donoso, Kovalio, Ya'acobi, Zak, Geva all slow",
+        "Power-trained Duek: Finishing 85→118, Shooting 119→152, Strength 109→142",
+        "Analyzed TopElevenGrandpa videos: 180 Rule + fast trainer test method documented",
+        "Won League 5-0 + Elite League 4-0 away"
+      ],
+      "blockers": [
+        "Rest packs depleted — need daily farming (40/day) to continue"
+      ],
+      "next": [
+        "Farm 40 rest packs/day after chag",
+        "Continue Duek Shooting Technique until 537",
+        "Switch to Pass Go and Shoot next",
+        "Test Malka when DC training finishes"
+      ]
     }
   ]
 }
