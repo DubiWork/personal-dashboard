@@ -2,6 +2,29 @@
   "date": "2026-05-21",
   "sessions": [
     {
+      "id": "2026-05-21-200000",
+      "category": "Personal",
+      "project": "Video Analyzer Skill",
+      "summary": "LLM Council pre-flight on the design spec — caught a chunking-math correctness bug + drove spike-before-plan; spec patched and ready for writing-plans",
+      "achievements": [
+        "Ran full LLM Council (5 advisors + 3 peer reviewers) against the design spec",
+        "Contrarian flagged ffmpeg `-c copy -segment_time 300` keyframe-snap drift as correctness bug, not polish",
+        "Executor demanded 30-min spike before any plan; First Principles challenged the fork premise outright",
+        "User ran size-ladder probe (60s/5min/12min/18min) — single-call works to 18min/21MB/286K tokens",
+        "User ran drift probe on 37-min source — measured ~4s cumulative drift by chunk 7",
+        "Patched spec: cumulative ffprobe offsets, single-call default ≤18min/20MB, glossary added, real transcript.md sample inlined",
+        "Resolved 75% threshold debate: kept threshold but augmented with inline gap-marker segments (Option B over raise-to-90%)",
+        "Pinned gap-marker reason vocabulary to 4-value enum (chunk_failed_http/json_parse/max_tokens/timeout) to prevent free-form leakage",
+        "Recommended FAA-style cushion: operate at 15min/17MB, document max-observed 18min/21MB separately",
+        "Acceptance #7 rewritten as format-shape assertions (timestamp monotonicity, valid scene tags, frame paths resolve)"
+      ],
+      "blockers": [],
+      "next": [
+        "Apply gap-marker patch + 15/17 cushion + duration_sec example fix + run-id/.base/scene-tag glossary additions",
+        "Then invoke superpowers:writing-plans to break spec into ordered implementation steps"
+      ]
+    },
+    {
       "id": "2026-05-21-072000",
       "category": "Personal",
       "project": "Video Analyzer Skill",
