@@ -25,6 +25,21 @@
         "If passing: add slot logic + auto-display (Phases 2-3)",
         "If failing: delete project, no sunk cost"
       ]
+    },
+    {
+      "id": "2026-05-12-100000",
+      "category": "Personal",
+      "project": "Hebrew Dictation App",
+      "summary": "Manual restart of hebrew-dictate — hotkey launcher wasn't running after reboot, Startup folder unreliable",
+      "achievements": [
+        "Confirmed hotkey launcher (hebrew-dictate-hotkey.pyw) not running post-reboot",
+        "Manually started launcher — double-tap Right Ctrl restored",
+        "Documented Startup folder unreliability as known issue"
+      ],
+      "blockers": [],
+      "next": [
+        "Consider Windows Task Scheduler instead of Startup folder for reliability"
+      ]
     }
   ]
 }
