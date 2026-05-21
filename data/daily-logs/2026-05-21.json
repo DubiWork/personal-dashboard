@@ -40,6 +40,28 @@
       "next": [
         "Consider Windows Task Scheduler instead of Startup folder for reliability"
       ]
+    },
+    {
+      "id": "2026-05-17-140000",
+      "category": "SAP",
+      "project": "C4C V2 Connector — CXCDP-36055",
+      "summary": "Fixed Create Contact mapping, resolved PATCH Content-Type issue via JourneyService feature flag, verified Update IndivCustomer and Update Account end-to-end",
+      "achievements": [
+        "Create Contact fixed: removed accountDisplayId mapping (maxLength 10 blocker)",
+        "PATCH Content-Type root cause: JourneyService customContentType flag gates custom headers",
+        "Traced Kafka message payload to confirm Content-Type was hardcoded application/json",
+        "Enabled customContentType flag for workspace 51231123 in eu5-prod",
+        "PATCH Update Individual Customer verified (gabriel.bailey → Gabe)",
+        "PATCH Update Account verified (Contoso Corp name update via PATCH)",
+        "CX Flow architecture: single flow with Group Condition routes Create vs Update"
+      ],
+      "blockers": [],
+      "next": [
+        "PATCH Update Contact — configure CX Flow + test",
+        "CloudEvents — Account/IndivCustomer/ContactPerson Created/Updated",
+        "Activities (same schemas as V2, different endpoint)",
+        "Default mappings for all actions and events in connector JSON"
+      ]
     }
   ]
 }
