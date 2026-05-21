@@ -2,6 +2,35 @@
   "date": "2026-05-21",
   "sessions": [
     {
+      "id": "2026-05-21-072000",
+      "category": "Personal",
+      "project": "Video Analyzer Skill",
+      "summary": "Forked docusphere/video-analyzer for SAP LiteLLM proxy + local Whisper; Phase 1 v0.1.0 shipped end-to-end with 56 passing tests in ~2.5 hours",
+      "achievements": [
+        "Scanned upstream repo, mapped architecture (8 Python scripts, ~250 line surgical fork plan)",
+        "Spike probe confirmed video-via-base64 works through LiteLLM up to 18min/21MB/286K tokens",
+        "Drift probe found chunk_index*300 timestamp math is wrong by ~4s on chunk 7 of 37-min video",
+        "Wrote spec at C:\\SAPDevelop\\docs\\superpowers\\plans\\ with empirical findings + drift-bug fix",
+        "Council critique applied: relaxed snapshot-equality acceptance, raised gap-marker visibility (inline + pinned enum)",
+        "Built skill at ~/.claude/skills/analyze/ with 15 conventional commits, 56 passing tests, 1 skipped (real-LiteLLM passes when env set)",
+        "Implemented chunker.py with cumulative ffprobe-derived offsets — drift-assertion test enforces correctness",
+        "Implemented understand_litellm.py with parallel ThreadPoolExecutor + 75% threshold gate",
+        "Implemented vault_writer.py with slugify + frontmatter cache lookup + videos.base scaffolding",
+        "Modified avt.py with obsidian_mode toggle for ![[]] embeds + YAML frontmatter",
+        "Created whisper_local.py with ivrit-ai auto-selection for Hebrew, Systran-medium fallback",
+        "Live e2e on real 37-min video: 8 chunks parallel through SAP LiteLLM → 128 segments, 0 failures, transcript landed in vault",
+        "Cache hit confirmed: re-running on same URL returns cached path in <1s without LiteLLM calls"
+      ],
+      "blockers": [
+        "Edge App-Bound Encryption (v148) breaks --cookies-from-browser; bypass is to disconnect VPN entirely (residential IP not bot-blocked)",
+        "Big Buck Bunny test hit YouTube 429 on subtitles — used local file path with --no-whisper instead"
+      ],
+      "next": [
+        "Use the skill on real videos for a week",
+        "Phase 2 reconsidered after week of personal use: public extraction, Hebrew video real test, smart chunk-boundary handling, sliding-window VTT cleanup"
+      ]
+    },
+    {
       "id": "2026-05-21-093000",
       "category": "Personal",
       "project": "Time Task Orchestrator",
