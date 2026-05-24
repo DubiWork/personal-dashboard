@@ -108,6 +108,25 @@
         "Consider whether to merge Hyperspace PR #2 on AudienceService",
         "Evaluate complementary usage: Hyperspace for broad coverage + CHUB for domain depth"
       ]
+    },
+    {
+      "id": "2026-05-20-150000",
+      "category": "SAP",
+      "summary": "CHUB bot resolution-aware dedup: fixed duplicate re-posting bug reported by Janos",
+      "achievements": [
+        "Built fetchAddressedBotFindings helper (checks for developer replies on bot threads)",
+        "Built mergeFindings helper (cursor accumulation, existing entries win)",
+        "Applied addressed filter in both re-review and initial review paths",
+        "Fixed pagination bug (per_page=100) — was only fetching 30 of 91 comments",
+        "Live-verified against PR #7: 9 addressed findings correctly filtered",
+        "Added README.md and CHANGELOG.md to repo",
+        "Restarted bot with all fixes, confirmed healthy"
+      ],
+      "blockers": [],
+      "next": [
+        "Monitor rule confidence as PRs merge with sweep fix live",
+        "k8s deployment (pending cluster details)"
+      ]
     }
   ]
 }
