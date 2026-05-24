@@ -1,0 +1,18 @@
+{
+  "date": "2026-05-24",
+  "sessions": [
+    {
+      "id": "2026-05-24-135900",
+      "name": "WICO",
+      "category": "SAP",
+      "duration_minutes": 120,
+      "summary": "WICO investigation of INC27451201 — disabled data event schedule still triggers idx jobs. Traced through AudienceService/idx code, found DisableScheduling only flags Enabled=false without removing cron trigger. Also investigated transient 502s on manual ingestion (nginx-level, self-resolved). Reviewed internal cdp-investigator plugin architecture. Awaiting customer clarification.",
+      "artifacts": [
+        "itsm-response-INC27451201.txt",
+        "slack-yedidyah-scheduler-bug.txt"
+      ],
+      "tools_used": ["cdp-kibana-mcp", "Kibana", "idx API", "AudienceService source code", "Jira", "ITSM"],
+      "blockers": ["Waiting for customer clarification", "Waiting for Yedidyah's decision on bug vs feature request"]
+    }
+  ]
+}
