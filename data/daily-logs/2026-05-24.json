@@ -13,6 +13,18 @@
       ],
       "tools_used": ["cdp-kibana-mcp", "Kibana", "idx API", "AudienceService source code", "Jira", "ITSM"],
       "blockers": ["Waiting for customer clarification", "Waiting for Yedidyah's decision on bug vs feature request"]
+    },
+    {
+      "id": "2026-05-24-080000",
+      "name": "Top Eleven",
+      "category": "Personal",
+      "duration_minutes": 45,
+      "summary": "Top Eleven session: Duek reached OVR 102 (Shooting 185). Bought Tzach Sharkat MC from auction — failed fast-trainer test, selling. Analyzed TopElevenGrandpa Campus video (46 min) — documented Perfect Conditions strategy and new daily training routine (4 video-boosted sessions on main squad after matches). Got free DR from event. Playstyle mechanics researched: no playstyle = stays forever unless coach bought.",
+      "artifacts": [
+        "VideoTranscripts/topelevengrandpa/2026-05-24--top-eleven-campus-and-what-we-need-from-it/transcript.md"
+      ],
+      "tools_used": ["Video Analyzer Skill", "Obsidian Vault", "WebFetch"],
+      "blockers": []
     }
   ]
 }
