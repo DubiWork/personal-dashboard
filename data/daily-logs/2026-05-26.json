@@ -47,6 +47,21 @@
       ],
       "tasksWorkedOn": ["chub-slack-bot", "CHUB Code Reviewer Plugin", "iterate.js poller fix", "stale-cursor cooldown floor"],
       "taskId": "wrap-2026-05-26-170000"
+    },
+    {
+      "timestamp": "20:00",
+      "duration": 600,
+      "category": "work",
+      "project": "idx-cdp-deployment",
+      "summary": "Diagnosed Jenkins idx-cdp-deployment #1042 EU5-ST1 failure. ServiceNow suggested generic 'review logs / verify staging / validate terraform-vault-consul' checklist; actual cause was Harbor verify-labels gate missing 'WS' label on chart 1.0.2535. Fix is upstream in idx-cdp CI build, not in the deployment pipeline or staging.",
+      "accomplishments": [
+        "Identified root cause from log: `WS not exists in Harbor labels: ['CM', 'ITG']` at validations stage",
+        "Pushed back on irrelevant ServiceNow checklist (build logs depth / staging health / terraform-puppet-vault-consul) — none in failure path",
+        "Created idx-cdp-deployment concept note + updated idx-cdp Blockers field",
+        "Saved feedback memory: read-error-before-running-checklists"
+      ],
+      "tasksWorkedOn": ["idx-cdp-deployment", "idx-cdp"],
+      "taskId": "wrap-2026-05-26-pipeline-1042"
     }
   ]
 }
