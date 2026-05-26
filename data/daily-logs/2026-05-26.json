@@ -25,6 +25,28 @@
       ],
       "tasksWorkedOn": ["INC27451201", "CXCDP-38626"],
       "taskId": "tm-wrap-2026-05-26"
+    },
+    {
+      "timestamp": "18:30",
+      "duration": 5400,
+      "category": "work",
+      "project": "chub-slack-bot",
+      "summary": "Resumed mid-flow chub-slack-bot poller fix, ran PM synthesizer (verdict: APPROVED with 6-test blocker), refactored runIterationCycle for DI, added 6 tests + pushed. Bot then went runaway on stale cursors — TL complained — killed bot, ran cs-product-manager who picked Option C (24h stale-cursor floor), shipped fix as 78b1dbb. Bot restarted clean with 2 stale cursors correctly deferred.",
+      "accomplishments": [
+        "Ran pm-report-synthesizer on 5 PM agent reports for poller-starvation-fix — verdict APPROVED with 6-spec-tests as only blocker",
+        "Refactored startIterationPoller into testable runIterationCycle with DI bag (fetchTimeline, fetchPRState, handleReReviewTrigger, removePRCursor, checkForNewReplies)",
+        "Added explicit removePRCursor call for closed/merged PRs (was silently skipped)",
+        "Added 6 vitest tests for poll-loop behavior (all-PRs polled, new-commit fires, cooldown, kill-switch, review_requested priority, closed-PR cleanup) — iterate.test.js grew 15→21 passing",
+        "Pushed 4 commits (bbbbb5c, 2b8923b, ad4bb18, 57737fd) to origin/master",
+        "TL reported bot reviewing non-stop after fix shipped — killed PID 35900",
+        "Diagnosed: 13 stale cursors with reviewed_at days/weeks old were all eligible to fire on first cycle; 5min cooldown didn't help (cursorAge >> 5min); 10min WIP threshold didn't help (commits also old)",
+        "cs-product-manager picked Option C — 24h STALE_CURSOR_THRESHOLD_MS floor — over per-cycle cap, reviewed_at reset, and dry-run cycle alternatives",
+        "Shipped 78b1dbb: stale guard before intervalMs check, 7th vitest test, spec edge-cases corrected",
+        "Bot restarted clean: idx-cdp#26 (30h old) and JourneyService#17 (29h old) deferred with clear log line",
+        "Saved feedback memory: poll-loop-data-distribution — check first-cycle behavior against persisted state before shipping"
+      ],
+      "tasksWorkedOn": ["chub-slack-bot", "CHUB Code Reviewer Plugin", "iterate.js poller fix", "stale-cursor cooldown floor"],
+      "taskId": "wrap-2026-05-26-170000"
     }
   ]
 }
