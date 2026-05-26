@@ -263,6 +263,18 @@
       "description": "",
       "createdAt": "2026-05-11T14:24:39.030Z",
       "updatedAt": "2026-05-11T14:24:39.030Z"
+    },
+    {
+      "id": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69",
+      "title": "chub-slack-bot",
+      "project": "chub-slack-bot",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-05-26T08:44:38.107Z",
+      "updatedAt": "2026-05-26T08:44:38.107Z"
     }
   ]
 }
