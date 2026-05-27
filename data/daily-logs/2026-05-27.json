@@ -57,6 +57,20 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+    },
+    {
+      "time": "15:30",
+      "category": "Personal",
+      "project": "Claude Code Tooling",
+      "summary": "Enabled Claude Code auto mode on SAP LiteLLM proxy + fixed invalid haiku model ID + restored WebFetch",
+      "accomplishments": [
+        "Added modelOverrides block to ~/.claude/settings.json mapping canonical Anthropic names to SAP proxy IDs",
+        "Fixed haiku model ID from anthropic--claude-4.6-haiku (invalid) to anthropic--claude-4.5-haiku",
+        "Set permissions.defaultMode to auto for startup auto-mode",
+        "Verified WebFetch works post-fix using example.com",
+        "Documented SAP proxy model ID convention to memory (reference-sap-proxy-model-ids.md)"
+      ],
+      "blockers": "none"
     }
   ]
 }
