@@ -71,6 +71,35 @@
         "Documented SAP proxy model ID convention to memory (reference-sap-proxy-model-ids.md)"
       ],
       "blockers": "none"
+    },
+    {
+      "time": "16:00",
+      "category": "SAP",
+      "project": "INC27569035",
+      "summary": "Re-checked TEAG EAC Sources URL — all sources visible from my side; drafted reply asking customer to confirm reproduction status",
+      "accomplishments": [
+        "Pulled INC27569035 from ServiceNow; confirmed BU 4_lFSzTdCBIY9w-_3Z6M76zg context",
+        "Reproduced customer URL — all source applications (Sales/Service Cloud, S/4) currently visible",
+        "Drafted reply to Shane Corless asking customer to confirm if still reproducing + screenshot/timestamp/browser/user details",
+        "Updated INC27569035 concept note Changelog and SAP Work Board"
+      ],
+      "blockers": "none"
+    },
+    {
+      "time": "17:00",
+      "category": "SAP",
+      "project": "INC27080102",
+      "summary": "Root caused Astra Toyota TDMS activity-not-created — missing event-to-activity mapping for UPDATEPROFILE on BU 4_X0kZScj8HXubbR1ogRzufA, NOT a payload schema mismatch",
+      "accomplishments": [
+        "Pulled INC27080102 + linked case CS20260012378398 from ServiceNow; confirmed Astra TDMS - Profile event context",
+        "Verified inbound ingestion is healthy — sample callID dbd7c79536ae481bb164e952fc392637 traced cleanly through HEP with errCode=0 and Success response",
+        "Confirmed activity type UPDATEPROFILE is NOT configured for the BU — hades_query_activities returned not-found with empty availableTypes",
+        "Identified separate cdp-connectors HTTP 404 storm to Astra-owned stg-pss4wextension endpoint — different bug, downstream from this incident",
+        "Caught and corrected own misdirection (latched onto loud cdp-connectors errors before user pushback); saved feedback memory: trust-customer-symptom-before-loud-errors",
+        "Confirmed cdp-investigator subagent on Windows still cannot access mcp__plugin_cdp-investigator_* tools; haiku model id rejected by SAP LiteLLM proxy",
+        "Created INC27080102 concept note with full evidence chain; updated CDP Investigator Plugin note with subagent MCP gap + haiku model failure"
+      ],
+      "blockers": "none"
     }
   ]
 }
