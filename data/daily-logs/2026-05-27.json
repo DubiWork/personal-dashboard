@@ -170,6 +170,20 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "c0380e38-4858-4ea6-bef8-72eae5fd0d33"
+    },
+    {
+      "time": "18:00",
+      "category": "SAP",
+      "project": "INC27080102",
+      "summary": "Re-traced customer callID 3d52ad61... successfully — blocked on customer tenant access for final UI verification",
+      "accomplishments": [
+        "Widened time range and found 30 log entries for callID 3d52ad61c959490bb5887f0924d42b3c on 2026-05-13 04:54 UTC (earlier 7-day window had missed it)",
+        "Reconstructed full pipeline path: Gator -> ApplicationService -> IngestorService -> PreProcessService -> HEP -> Kafka publish to eu5-prod-IDRBus_35_328711272, all errCode=0",
+        "Confirmed BU is [UTT] PT Astra International Tbk in EU5 prod with workspace 92863001",
+        "Built data event UI link for Yedidyah/Levente to inspect Activities/Mapping config",
+        "Corrected earlier mistaken finding that customer callIDs were TDMS-internal — they are valid CDP callIDs"
+      ],
+      "blockers": "no permission to customer tenant; cannot inspect Activities/Mapping in UI to confirm missing event-to-activity mapping; resume tomorrow"
     }
   ]
 }
