@@ -1,0 +1,24 @@
+{
+  "date": "2026-05-28",
+  "sessions": [
+    {
+      "time": "11:40",
+      "category": "Personal",
+      "project": "Top Eleven",
+      "summary": "Zak power-trained 66→72 OVR via 30-session Press the Play blitz; discovered paused-SA unblocks attribute power-training; won Elite League 4-0 with new 4-4-1-1 lineup designed for T. Malka suspension",
+      "accomplishments": [
+        "Power-trained Din Zak from OVR 66 to 72 (+6) via 30 sessions of Press the Play (Hard) × 6 slots over an extended live coaching session",
+        "Defense rating jumped 91 to 107; every bright Defense attribute gained +20 (Tackling, Marking, Positioning, Bravery, Aggression); Heading untouched (drill doesn't hit it)",
+        "Discovered new mechanic: pausing SA (not just maxing) unblocks attribute power-training, overrides 2026-05-19 'must be maxed' rule",
+        "Documented 27-session rotation pattern: Group A (Tackling+Bravery) and Group B (Marking+Positioning) alternate with Aggression appearing independently; full-sweep (+5) sessions alternate with partial (+2/+3) sessions; ~3.7 attrs/session average",
+        "Redefined fast trainer per user feedback: +3-4 TOTAL attrs/session across any combo, NOT +3 per single attribute",
+        "Designed 4-4-1-1 lineup for T. Malka red-card suspension: Sarabia GK, Kim/Vicedomini/Zak/Sponar back 4, Niv+Sharkat MC, Poitrinal ML, Donoso MR, Duek ST",
+        "Won Elite League match 4-0 with the new lineup",
+        "Identified pack budget tradeoff: 40 packs/day shared between full-squad match restore (~11 packs/match) and single-player power training; realistic Zak budget = 15-20 sessions/day not 40",
+        "Updated memory file top-eleven-game.md with Zak's new stats, paused-SA rule, and session pattern findings",
+        "Updated Obsidian Top Eleven concept note with two changelog entries (114000 baseline + 180000 result + late-session additions)"
+      ],
+      "blockers": "Daily ad limit reached after session 30; Vicedomini SA (4/50) blocks his power-training; Heading 72 still weak on Zak (Press the Play doesn't hit it)"
+    }
+  ]
+}
