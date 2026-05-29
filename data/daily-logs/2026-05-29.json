@@ -1,0 +1,27 @@
+{
+  "date": "2026-05-29",
+  "sessions": [
+    {
+      "time": "10:30",
+      "category": "Personal",
+      "project": "Supreme LLM Council",
+      "summary": "Shipped Supreme LLM Council v0.1.1 to github.tools.sap/CDP/supreme-llm-council; B6 (timing.sh shell-var state lost across Bash invocations) caught during acceptance ceremony, fixed via disk-backed state at $SESSION_DIR/.timing/; second cold ceremony passed all 8 acceptance criteria in 13m 22s; council registered as on-demand tool in 6 strategic dispatcher gyms (PM + CEO/CFO/CTO/QA/Solution/Visual); manual share to Arthur drafted, marketplace registration deferred to post-review",
+      "accomplishments": [
+        "Shipped v0.1.1 of Supreme LLM Council to github.tools.sap/CDP/supreme-llm-council",
+        "Caught B6 during v0.1.1 acceptance test: timing.sh shell variables don't survive across separate Bash tool invocations in Claude Code",
+        "Rewrote timing.sh as disk-backed state at $SESSION_DIR/.timing/ with run_start, current_phase, <phase>.start, phases.jsonl",
+        "Added tests/smoke/test-timing.sh as B6 regression guard exercising 5+ subprocess invocations",
+        "Re-ran cold ceremony after B6 fix: 13m 22s (under 15min budget), all 8 acceptance criteria passed cleanly with no manual workarounds",
+        "Registered Supreme LLM Council as 'Council Pressure-Test' on-demand tool in 7 dispatcher SKILL.md files: Product Manager, CEO Advisor, CFO Advisor, CTO Advisor, QA Expert, Solution Designer, Visual Designer",
+        "Skipped Code Standards Reviewer, Deployment Engineer, Git Workflow Manager — too mechanical to benefit from council ceremony",
+        "Drafted Slack DM to Arthur for peer review with repo link + install steps",
+        "Documented WSL/Windows install issue (PowerShell finds broken WSL bash.exe before Git Bash); workaround: invoke Git Bash explicitly",
+        "Documented mid-session install failure mode: agents copied to ~/.claude/agents/ are not registered until Claude Code restart; fallback path (general-purpose agent reads agent file directly) works without restart",
+        "Created Obsidian concept note Supreme LLM Council.md with v0.1.1 status and 13 related entity links",
+        "Updated Personal Projects Board: added Supreme LLM Council to Done; superseded LLM Council Gym row pointing to it",
+        "Updated MEMORY.md index with new Active: Supreme LLM Council section and supreme-llm-council-project.md detail file"
+      ],
+      "blockers": "Awaiting Arthur peer review feedback before marketplace plugin registration"
+    }
+  ]
+}
