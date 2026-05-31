@@ -14,6 +14,19 @@
         "kafka",
         "handoff"
       ]
+    },
+    {
+      "sessionId": "2026-05-31-150000",
+      "category": "Personal",
+      "title": "VoiceMode research \u2014 deferred install",
+      "summary": "Reviewed VoiceMode (MIT-licensed MCP server adding voice STT/TTS to Claude Code) via /analyze on creator's YouTube demo. Decided to skip install: requires WSL2 on Windows, project is 3 weeks old, demos only on macOS, would duplicate existing /analyze local Whisper pipeline. Reinforced CLAUDE.md 'chewable chunks' conversational rule by adding it to mistakes-lessons.md after violating it multiple times in the discussion.",
+      "tags": [
+        "claude-code",
+        "voice",
+        "research",
+        "deferred",
+        "conversational-style"
+      ]
     }
   ]
 }
