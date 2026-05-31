@@ -1,0 +1,19 @@
+{
+  "date": "2026-05-31",
+  "sessions": [
+    {
+      "sessionId": "2026-05-31-130000",
+      "category": "SAP",
+      "title": "INC27080102 \u2014 root cause located, handed off to infra team",
+      "summary": "Re-investigated Astra Toyota TDMS activity-not-created with tenant access. Verified mapping is correct (187 attrs, schema deployed, payload contains required fields). Pipeline trace by businessUnitId revealed stream-combiner stopped consuming this BU on 2026-05-21 06:58 UTC \u2014 clean stop, no errors, while globally healthy at 209K hits/hour. Suspected Kafka consumer-group / partition issue. Drafted Slack handoff for infra/data team.",
+      "tags": [
+        "incident",
+        "cdp",
+        "astra",
+        "stream-combiner",
+        "kafka",
+        "handoff"
+      ]
+    }
+  ]
+}
