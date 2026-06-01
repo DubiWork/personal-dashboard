@@ -53,6 +53,23 @@
         "CXCDP-38893",
         "CXCDP-38896"
       ]
+    },
+    {
+      "sessionId": "2026-05-31-troubleshooting-fixing-bot",
+      "category": "SAP",
+      "title": "chub-slack-bot — May 27 flooding-fixes review fully shipped (M0+M1+M2+M3)",
+      "summary": "Bot was offline 4 days after May 27 crash with `toPost is not defined` errors. Read the canonical 22-commit roadmap (pm-roadmap-health-reviewer.md) instead of the auto-handoff summary. Shipped all remaining M2+M3 work: H1 cursor-save circuit breaker, H3 newIssueCount split into regressionCount + freshFindingsPosted, H5 classifyError sanitizer, M2 review_requested dedup by event-id, M3 sweep atomic write, M4 parseDiffLines + only, M5 concurrency cap (max 3) + fetchWithBackoff, M6 addMonitoredRepo atomic, M7 callAI throws on empty content, Finding-M1 thread_id capture from /comments, L1 test refactor to call real function, L2 poller tests as integration, L3 detectDevDismissals stub deletion, L4 processed_events 500-cap, L5 alreadyReviewed throws on non-404, L6 sliceAtNewline UTF-16-safe. Anchored sweep test merged_at to Date.now()-24h to prevent date decay. 4 commits pushed (57b5b88, f80aa81, f3291c5, 4e2fbee), 46 vitest tests green, bot restarted on PID 31021. 5 leftovers acknowledged but out of scope (sweep.test.js refactor, dependabot vuln, regressionCount=0 first cycle, existing cursors lack thread_id).",
+      "tags": [
+        "chub-slack-bot",
+        "code-review",
+        "bot",
+        "vitest",
+        "github-api",
+        "concurrency",
+        "circuit-breaker",
+        "atomic-writes",
+        "ship"
+      ]
     }
   ]
 }
