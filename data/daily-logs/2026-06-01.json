@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-01",
+  "sessions": [
+    {
+      "sessionId": "2026-06-01-100000",
+      "category": "SAP",
+      "title": "INC27080102 \u2014 corrected diagnosis, handed activity-id hypothesis to Niv",
+      "summary": "Reopened INC27080102. Bumped global MCP_TIMEOUT to 120s to reconnect hades MCP. Queried Hades directly: profile is at _version 3 with lastUpdatingCallId matching the May 30 test event \u2014 stream-combiner is processing this BU correctly. Yesterday's stream-combiner-stopped theory was wrong. Real issue: activity doc id=7006487039 stuck at _version 1 since May 28; mapping uses customerNo as activity.id, suspect create-only suppression. Drafted handoff to Niv's infra team to verify whether any cdpActivities doc has _version > 1.",
+      "tags": [
+        "incident",
+        "cdp",
+        "astra",
+        "hades",
+        "stream-combiner",
+        "handoff",
+        "correction"
+      ]
+    }
+  ]
+}
