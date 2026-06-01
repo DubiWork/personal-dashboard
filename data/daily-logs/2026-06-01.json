@@ -4,8 +4,8 @@
     {
       "sessionId": "2026-06-01-100000",
       "category": "SAP",
-      "title": "INC27080102 — corrected diagnosis, handed activity-id hypothesis to Niv",
-      "summary": "Reopened INC27080102. Bumped global MCP_TIMEOUT to 120s to reconnect hades MCP. Queried Hades directly: profile is at _version 3 with lastUpdatingCallId matching the May 30 test event — stream-combiner is processing this BU correctly. Yesterday's stream-combiner-stopped theory was wrong. Real issue: activity doc id=7006487039 stuck at _version 1 since May 28; mapping uses customerNo as activity.id, suspect create-only suppression. Drafted handoff to Niv's infra team to verify whether any cdpActivities doc has _version > 1.",
+      "title": "INC27080102 \u2014 corrected diagnosis, handed activity-id hypothesis to Niv",
+      "summary": "Reopened INC27080102. Bumped global MCP_TIMEOUT to 120s to reconnect hades MCP. Queried Hades directly: profile is at _version 3 with lastUpdatingCallId matching the May 30 test event \u2014 stream-combiner is processing this BU correctly. Yesterday's stream-combiner-stopped theory was wrong. Real issue: activity doc id=7006487039 stuck at _version 1 since May 28; mapping uses customerNo as activity.id, suspect create-only suppression. Drafted handoff to Niv's infra team to verify whether any cdpActivities doc has _version > 1.",
       "tags": [
         "incident",
         "cdp",
@@ -19,14 +19,29 @@
     {
       "sessionId": "2026-06-01-110000",
       "category": "SAP",
-      "title": "C4C V2 Connector — PATCH Update Contact verified, all 3 PATCH actions done",
-      "summary": "Closed out the PATCH testing phase for CXCDP-36055. Verified PATCH Update Contact end-to-end on John Doe (1622470, Contoso Corp): firstName updated to 'Johnny', academicTitle set to code '0001' (Dr.). Two ingest calls: callID bb9fb4aa50b24142b027cffa999f64fc (firstName-only success), then callID 27c10067f7ab4b82b31f11a7911573dc (with academicTitle code). Key learning: C4C code-list fields (academicTitle, etc.) require 4-char codes per OpenAPI maxLength:4, not free-text labels — first attempt with 'Dr.' landed in CDP but C4C silently dropped it. Reusing existing Group-condition CX Flow worked for Contact PATCH — organizationId in ingest triggers Group event. All three PATCH actions (IndivCustomer, Account, Contact) now verified end-to-end. Memory file added: reference-c4c-code-list-fields. Next: CloudEvents phase.",
+      "title": "C4C V2 Connector \u2014 PATCH Update Contact verified, all 3 PATCH actions done",
+      "summary": "Closed out the PATCH testing phase for CXCDP-36055. Verified PATCH Update Contact end-to-end on John Doe (1622470, Contoso Corp): firstName updated to 'Johnny', academicTitle set to code '0001' (Dr.). Two ingest calls: callID bb9fb4aa50b24142b027cffa999f64fc (firstName-only success), then callID 27c10067f7ab4b82b31f11a7911573dc (with academicTitle code). Key learning: C4C code-list fields (academicTitle, etc.) require 4-char codes per OpenAPI maxLength:4, not free-text labels \u2014 first attempt with 'Dr.' landed in CDP but C4C silently dropped it. Reusing existing Group-condition CX Flow worked for Contact PATCH \u2014 organizationId in ingest triggers Group event. All three PATCH actions (IndivCustomer, Account, Contact) now verified end-to-end. Memory file added: reference-c4c-code-list-fields. Next: CloudEvents phase.",
       "tags": [
         "c4c",
         "cxcdp-36055",
         "patch",
         "contact",
         "milestone"
+      ]
+    },
+    {
+      "sessionId": "2026-06-01-130000",
+      "category": "SAP",
+      "title": "INC27665093 root-cause confirmed, CXCDP-38893 repro pushed",
+      "summary": "Re-investigated INC27665093 with hades MCP back online. Pulled CDC accounts.search response from idx job logs (jobId 65915377925046e6a92a5abfce29c20f) \u2014 confirmed valo IS in payload as 1-level leaf alongside 2-level marketing/terms. Walker drops it because outer loop passes leaf as innerPref, then casts Boolean.TRUE to JSONObject on line 360. Added productionMixedShape_topLevelValoLeaf_isDropped test (commit 57306158, PR #29). Posted comment 38557039 on CXCDP-38893 with structural failure mode and fix direction. Customer linked CXCDP-38893 to the incident. Yesterdays diagnosis (CDC outbound config issue) was wrong \u2014 saved lessons to shared KB and personal memory: when you have a jobId, find the payload in the job logs (not by re-deriving from upstream/downstream observations).",
+      "tags": [
+        "incident",
+        "cdp",
+        "valio",
+        "idx-cdp",
+        "bug-repro",
+        "kb",
+        "correction"
       ]
     }
   ]
