@@ -19,6 +19,22 @@
         "Updated Obsidian Top Eleven concept note with two changelog entries (114000 baseline + 180000 result + late-session additions)"
       ],
       "blockers": "Daily ad limit reached after session 30; Vicedomini SA (4/50) blocks his power-training; Heading 72 still weak on Zak (Press the Play doesn't hit it)"
+    },
+    {
+      "time": "14:15",
+      "category": "SAP",
+      "project": "INC27727425 — Emarsys Activity Ingestion",
+      "summary": "Investigated INC27727425 (D&H Distributing — Emarsys Email Opened/Clicked not ingesting to CDP); captured Yedidyah's gold tip identifying missing primaryCdpId on Emarsys contacts as likely root cause; drafted external info reply",
+      "accomplishments": [
+        "Pulled INC27727425 from ServiceNow — D&H Distributing, BU 4_eaBA7wtAcLO5GybFa6iwMg on eu5, routed from Igor Ladnik (CX GY 2nd Level) to CX GY DEV CDP Hub Team with note 'no callId, need more expertise'",
+        "Mapped customer symptoms: green Emarsys source connector, schema mapped, listener generated, Postman/playground 3/3 success, but zero real-event ingestion in CDP monitoring",
+        "Captured Yedidyah's tip mid-investigation: Email Opened/Clicked events only ingest if Emarsys profile carries cd_id (primaryCdpId); fix path is automatic CDP↔Emarsys sync OR a legacy action sending primaryCdpId in payload",
+        "Saved tip as memory reference-emarsys-cdp-activity-ingestion.md and indexed in MEMORY.md for future Emarsys investigations",
+        "Drafted external info reply for the incident explaining the cd_id requirement and asking customer to confirm sync path + cd_id presence on the two sample contacts",
+        "Confirmed ServiceNow MCP in this session is read-only (no comment/update tool) — reply must be pasted manually into ITSM",
+        "Created concept notes for INC27727425, Emarsys, primaryCdpId, and Yedidyah; added INC27727425 to SAP Work Board In Progress; appended thin SAP journal section"
+      ],
+      "blockers": "Awaiting customer confirmation on Emarsys sync path (automatic vs legacy) and cd_id presence on chaitanya.atchutuni@gmail.com / achaisa0688@gmail.com; user sign-off name still unconfirmed"
     }
   ]
 }

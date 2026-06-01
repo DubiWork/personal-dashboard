@@ -27,6 +27,32 @@
         "deferred",
         "conversational-style"
       ]
+    },
+    {
+      "sessionId": "2026-05-31-211512",
+      "timestamp": "21:15",
+      "duration": 240,
+      "category": "work",
+      "project": "I543234",
+      "summary": "Investigate INC27665093 (Valio Oy 'valo' consent missing on CDC->CDP batch ingestion) and decide CDP-side vs CDC-side root cause",
+      "accomplishments": [
+        "Did: Pulled CDC outbound payload from Gator (@type:request, callID 78f6731c71564adab07d87a3fdaeb0b9) \u2014 confirmed only 3 preferences (marketing.survey/email, terms.TermsOfService), no valo",
+        "Did: Verified CDP-side mapping for data event HLp2uGSFSgifiLqaY48J8w iterates $.preferences[] generically \u2014 would carry valo if CDC sent it",
+        "Did: Compared Hades profiles \u2014 auto-ingest profile y9oOzRAE...P has valo (purposeId HC5p0LI0E43DBHxbLWxZ5g), batch-ingest profile sRZHGa6l... (ciamId 1147493) does not",
+        "Did: Filed CXCDP-38893 (idx-cdp AddNestedPreferenceToList silent consent drop, 308K WARN/30d), assigned to Yedidyah, linked 'relates to' Shai's CXCDP-38896",
+        "Did: Wrote JUnit repro test (NestedPreferencesBugReproTest) demonstrating bug class, pushed branch bug/CXCDP-38893-idx-walker-silent-consent-drop, opened draft PR #29",
+        "Did: Posted reply on incident with verified SAP help URLs (configure-get-full-accounts-scheduled-ingestion-event + Preferences Object REST) and CDC-side checklist for customer",
+        "Did: Updated team KB (~/.cdp-investigate-knowledge/) with CDC docs root + reusable 'specific consent missing in CDP via batch event' investigation pattern",
+        "Did: Saved feedback memory feedback-verify-before-reversing-position.md after mid-session reversal cost time"
+      ],
+      "nextSteps": [
+        "Watch INC27665093 for customer follow-up after CDC team checks outbound config",
+        "Yedidyah/Shai to coordinate CXCDP-38893 + CXCDP-38896 fix; production-shape exact repro still pending"
+      ],
+      "tasksWorkedOn": [
+        "CXCDP-38893",
+        "CXCDP-38896"
+      ]
     }
   ]
 }
