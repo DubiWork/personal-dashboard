@@ -14,6 +14,24 @@
         "blocked",
         "milestone"
       ]
+    },
+    {
+      "sessionId": "2026-06-08-cxcdp-38626-close",
+      "category": "SAP",
+      "title": "CXCDP-38626 closed — PR #31 + PR #28 verified in dev, prod deployed; new follow-up bug prepared",
+      "summary": "Closed out the 502 retry follow-up: verified both PR #31 (CXCDP-38626 — onFailureMaxRetryAttempts 3->8, log demotion to WARN, JobExecutionContext.success reset on retry) and PR #28 (CXCDP-38893 — depth-1 consent leaf fix) are present in origin/dev HEAD before prod deploy on 2026-06-07. End-to-end verification on jobId 0b450bf81ba04aa8b4d969c03725c732 (eu5-st1, 8 attempts, success on attempt 8, all logs WARN with 0 ERROR). Drafted Jira closing-stage description. Investigated remaining 'Completed With Errors' UI residue: traced to CustomerLogsService write-on-every-retry pattern (GenericApiReader.java:183 fires customerLogger.writeCustomerLog on every retryable failure, accumulates in <env>-CustomerLogsBus Kafka topic) + AudienceService IDXJobStatusService.cs:273 override pattern (forces 'Completed with errors' when ErrorsCount.Any() regardless of idx Succeeded). Three fix options identified, recommendation: option (b) — add IsRetry tag in Kafka write payload + filter RecordModelsRetries in AudienceService FullResultModel read path (finishes half-built feature). New bug pending file under epic CXCDP-36831 assigned to Yedidyah. Renamed CHUB Reviewer Slack app to 'CHUB Bot' with new geometric icon designed via Stitch (hub-and-spoke + retry loop motif on SAP blue). Pattern documented: chub-slack-bot's existing SLACK_BOT_TOKEN can be reused via curl for ad-hoc posts on sap.enterprise workspace, working around the official Slack MCP being on a different workspace.",
+      "tags": [
+        "cxcdp-38626",
+        "idx-cdp",
+        "pr-31",
+        "pr-28",
+        "prod-deploy",
+        "customerlogsservice",
+        "audienceservice",
+        "chub-bot",
+        "rebrand",
+        "milestone"
+      ]
     }
   ]
 }
