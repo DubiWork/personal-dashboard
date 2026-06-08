@@ -1,0 +1,19 @@
+{
+  "date": "2026-06-08",
+  "sessions": [
+    {
+      "sessionId": "2026-06-08-cloudevents",
+      "category": "SAP",
+      "title": "C4C V3 OrganizationSync — schema + listener mapping done; blocked on Branden",
+      "summary": "Built CloudEvents OrganizationSync for the C4C V3 connector. Three commits on us/CXCDP-36055_new_connecotr_v3 branch: (1) 00acf7e fixed duplicate listener id between ContactSync and IndividualCustomerSync, (2) bb521aa added the sap.crm.md.accountservice.entity.account schema to components.schemas with $ref pattern matching EC/Emarsys conventions, OrganizationSync wrapper using {data: {currentImage, beforeImage}}, (3) 09befc3 stripped 210 nullable type unions and removed top-level title bleed-through. Manually mapped 23 fields in CDP UI (8 identity + 4 communication + 10 address + 1 industry). Compiled ~25 unmapped fields into questions list for Branden. Created Communication System CDP_C4C_V3_Dubi_Org in C4C admin with OAuth2 client credentials. BLOCKED at C4C Communication Configuration step — Account event not present in Asynchronous Outbound dropdown, likely needs separate event subscription enablement step. Awaiting Branden response on three questions: (1) account event enablement, (2) ~25 unmapped fields, (3) isPrimary literal value setting.",
+      "tags": [
+        "c4c",
+        "cxcdp-36055",
+        "cloudevents",
+        "organizationsync",
+        "blocked",
+        "milestone"
+      ]
+    }
+  ]
+}
