@@ -1,0 +1,20 @@
+{
+  "date": "2026-06-09",
+  "sessions": [
+    {
+      "sessionId": "2026-06-09-cxcdp-38893-regression-merge",
+      "category": "SAP",
+      "title": "CXCDP-38893 closed — PR #29 regression coverage merged after CHUB review + thread resolve",
+      "summary": "Closed out CXCDP-38893 by getting PR #29 merged into idx-cdp dev as commit 6e64de78. Workflow: rebased on dev (PR #28's fix), flipped 6 existing assertions from 'expect bug' to 'expect fix', added 4 new scenarios (heterogeneous siblings in category, mixed depth-1+depth-3, array-in-category-not-dropping-siblings, array-sibling-in-leaf), removed bug-class repro that passed identically on old and new code. Final test count: 10 in NestedPreferencesBugReproTest.java, all green. Yedidyah (I540109) approved same day. CHUB Bot flagged 4 review issues (2 moderate: diagnostic_printChildClasses no-assertion test + mixedDepth1AndDepth3 untethered scenario; 2 low: arrayInCategoryNode label vs actual coverage gap + FakeRecord null-return stubs). Replied with reasoning to all 4 inline, no code changes per user directive. Merge attempt failed with 405 'conversation must be resolved before merge' — discovered the repo rule requires explicit resolve_thread per thread, not just replies. Resolved all 4 threads via mcp__github-tools__pull_request_review_write method:resolve_thread, then merged successfully. Production verification re-run: pre-deploy 35,379 WARN/30d on Valio Oy → 0 post-deploy across all tenants on idx-cdp 1.0.2578. New memory: feedback-resolve-threads-before-merge documents the threadId resolve pattern. Session also did the GitHub PAT rotation (token expired email → new ghp_* in ~/.claude/settings.json line 13 githubToolsToken).",
+      "tags": [
+        "cxcdp-38893",
+        "idx-cdp",
+        "pr-29",
+        "regression-tests",
+        "chub-review",
+        "github-rules",
+        "milestone"
+      ]
+    }
+  ]
+}
