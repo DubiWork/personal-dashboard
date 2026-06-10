@@ -25,6 +25,24 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "d605232d-3449-4d90-8fa1-c52b20f0ef5b"
+    },
+    {
+      "sessionId": "2026-06-09-c4c-cloudevents",
+      "category": "SAP",
+      "title": "C4C V3 CloudEvents — all 3 sync listeners verified end-to-end + ApplicationService cleanup PR",
+      "summary": "Closed the CloudEvents milestone for CXCDP-36055. Brendan confirmed C4C autoflow (Send Event Notification action) is the V3 sync mechanism — not Communication Configuration template per docs. Created UpsertCDPAccount autoflow rule + verified Contoso Corp name update propagated end-to-end. ContactSync needed its OWN Communication System (got 403 with shared OAuth despite docs). Hit + fixed: data.beforeImage=null on Create (oneOf null), recordsLocatorPath import validator (revert to $ — framework doesn't resolve $ref), code-list silent drops (LeaveAsIs vs Ignore), infinite loop between C4C and CDP (autoflow filter on dataContext.requestedByUser, stopped at 20 ingests). User verified IndivCustomerSync end-to-end. ContactSync mapping uses 3 target blocks (Profile + Org Relationship + Organization). Investigated ApplicationService /dataevents/odmevents hardcode — DataEventCredentialsServiceGrain.cs:38 + IsOdmWebhook trigger (configValues has businessPartnerType AND NOT messageType). Created sub-task CXCDP-39706 + draft PR #20 (commit 3f1dea3b, -53 lines, 6 files). Connector workaround: messageType config opts V3 listeners out of legacy URL without code deploy. Brendan confirmed relationships flow through Account+Contact events (no standalone CloudEvent); mapped hasContactPersons[] → Organization.contacts[] (NOT Org Relationship — per-Profile single-row, wrong target). Logged ~62h across 12 sub-tasks via Playwright Edge agents (had to discover playwright-2/3/4 fresh-profile MCPs after default playwright-1 stuck on Chrome). Filed CX Flow empty fieldCondition UX bug draft for Yedidyah. Demo invitation drafted. Memory: reference-c4c-v3-cloudevents-gotchas captures all the hard-won gotchas for QA handoff.",
+      "tags": [
+        "c4c",
+        "cxcdp-36055",
+        "cxcdp-39706",
+        "cloudevents",
+        "organizationsync",
+        "contactsync",
+        "individualcustomersync",
+        "autoflow",
+        "applicationservice",
+        "milestone"
+      ]
     }
   ]
 }
