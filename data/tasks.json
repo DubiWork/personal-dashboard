@@ -275,6 +275,18 @@
       "description": "",
       "createdAt": "2026-05-26T08:44:38.107Z",
       "updatedAt": "2026-05-26T08:44:38.107Z"
+    },
+    {
+      "id": "010aceee-b652-4dbc-bcf8-b3e51b66d874",
+      "title": "ApplicationService",
+      "project": "ApplicationService",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-06-10T08:10:10.404Z",
+      "updatedAt": "2026-06-10T08:10:10.404Z"
     }
   ]
 }
