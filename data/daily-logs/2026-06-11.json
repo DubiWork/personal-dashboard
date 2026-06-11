@@ -110,6 +110,25 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+    },
+    {
+      "timestamp": "18:45",
+      "duration": 900,
+      "category": "personal",
+      "project": "video-analyzer-skill",
+      "summary": "Published /analyze skill to private GitHub repo for friend handoff",
+      "accomplishments": [
+        "Created private GitHub repo at github.com/DubiWork/Video-Analyzer and pushed local skill (no prior remote, was local-only since v0.1.0 ship)",
+        "Switched origin from HTTPS to SSH (git@github.com:DubiWork/Video-Analyzer.git) to use existing DubiWork keyring login — avoided needing the new PAT",
+        "Discovered GITHUB_TOKEN env var holds an invalid token; gh keyring + SSH still works when env var is unset per-command — saved as memory `reference-gh-cli-keyring-vs-env-token`",
+        "Token leaked once into Claude conversation, rotated immediately at github.com/settings/tokens",
+        "Documented friend setup steps: clone repo, pip install requirements, install ffmpeg+yt-dlp, configure ~/.config/video-analyzer/.env with their LiteLLM proxy URL/key/model"
+      ],
+      "nextSteps": [
+        "Get friend's GitHub username and run `unset GITHUB_TOKEN && gh api -X PUT repos/DubiWork/Video-Analyzer/collaborators/<username> -f permission=pull` to send the read-only collaborator invite",
+        "Optional cleanup: find where GITHUB_TOKEN env var is set (Windows User Environment Variables or shell rc) and remove the invalid value"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
