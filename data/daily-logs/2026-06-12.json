@@ -300,6 +300,47 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "35536d70-d774-4e1b-a50c-965fc981f9aa"
+    },
+    {
+      "timestamp": "07:00",
+      "duration": 14400,
+      "category": "personal",
+      "project": "video-analyzer-skill",
+      "summary": "Published /analyze to private GitHub for friend handoff and deployed self-hosted Firecrawl",
+      "accomplishments": [
+        "Pushed local /analyze repo to new private GitHub at github.com/DubiWork/Video-Analyzer (was local-only since v0.1.0 ship); switched origin from HTTPS to SSH to use existing keyring login",
+        "Discovered GITHUB_TOKEN env var is invalid; gh keyring + SSH still works when env var is unset per-command — saved memory `reference-gh-cli-keyring-vs-env-token`",
+        "Rotated leaked PAT immediately after one slipped into Claude conversation",
+        "Deployed self-hosted Firecrawl at localhost:3002 via Docker (5-container stack: api, playwright-service, rabbitmq, redis, nuq-postgres) — saved memory `reference-firecrawl-self-hosted`",
+        "Verified Firecrawl bypasses Cloudflare 403 on https://webapp.farmmanager.cc/ that WebFetch couldn't reach"
+      ],
+      "nextSteps": [
+        "Get friend's GitHub username and run `unset GITHUB_TOKEN && gh api -X PUT repos/DubiWork/Video-Analyzer/collaborators/<username> -f permission=pull` for read-only invite",
+        "Optional: clean up invalid GITHUB_TOKEN env var from Windows User Environment Variables"
+      ],
+      "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "11:00",
+      "duration": 18000,
+      "category": "personal",
+      "project": "farm-manager-2026",
+      "summary": "Per-field crop optimization across 3 farms (22 fields) via Farm Manager calculator",
+      "accomplishments": [
+        "Captured all 22 field sizes across 3 farms: Buzzing Grass Dam (10), Shnoozy Pitman (4), Brookside Orchid Ter (8)",
+        "Recorded full per-crop suitability data for #Alpha (Buzzing) and Brookside (all fields share one suitability)",
+        "Recorded all 46 crops' Value Rating + seed/ha + yield/seed economics from in-game seed shop",
+        "Computed best plantable crop per field bucket: small=Sweet Potato $78K/hr, medium=Barley $174K/hr, large=Cabbage $404K/hr (~140ha), 150ha=Sunflower $226K/hr",
+        "Identified crop silo (294,000 kg) as binding constraint blocking Tomato/Cabbage/Beetroot/Onion/Pumpkin on most large fields — upgrading would lift profit/hr ceiling ~60%+",
+        "Discovered calculator does NOT factor harvest timing (raw $/hr only) and enforces Pesticides XOR Insecticides constraint",
+        "Saved feedback memory `feedback-one-agent-per-task` after dispatching 13+ redundant agents for the same #G query — one returned hallucinated stub from disconnected browser"
+      ],
+      "nextSteps": [
+        "Get Shnoozy Pitman suitability screenshot to finalize per-field plan for that farm's 4 fields",
+        "Buy seeders from Dealership for Brookside Orchid Ter (currently 0 units, blocking 8 fields worth ~$2M/hr potential)",
+        "Consider crop silo upgrade — biggest profit unlock vs equipment upgrades"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
