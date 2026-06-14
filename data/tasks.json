@@ -287,6 +287,18 @@
       "description": "",
       "createdAt": "2026-06-10T08:10:10.404Z",
       "updatedAt": "2026-06-10T08:10:10.404Z"
+    },
+    {
+      "id": "0128a42a-9e2e-4a97-94e6-7f278aa266f4",
+      "title": "HttpEventProcessor",
+      "project": "HttpEventProcessor",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-06-14T16:16:04.087Z",
+      "updatedAt": "2026-06-14T16:16:04.087Z"
     }
   ]
 }
