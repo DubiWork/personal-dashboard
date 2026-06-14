@@ -299,6 +299,18 @@
       "description": "",
       "createdAt": "2026-06-14T16:16:04.087Z",
       "updatedAt": "2026-06-14T16:16:04.087Z"
+    },
+    {
+      "id": "5532df5f-8780-48b1-a6d3-4f4078c2325d",
+      "title": "HttpEventProcessor.UnitTests",
+      "project": "HttpEventProcessor.UnitTests",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-06-14T17:09:52.266Z",
+      "updatedAt": "2026-06-14T17:09:52.266Z"
     }
   ]
 }

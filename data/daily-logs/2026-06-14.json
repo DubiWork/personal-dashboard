@@ -45,6 +45,16 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+    },
+    {
+      "timestamp": "20:09",
+      "duration": 224,
+      "category": "work",
+      "project": "HttpEventProcessor.UnitTests",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "5532df5f-8780-48b1-a6d3-4f4078c2325d"
     }
   ]
 }
