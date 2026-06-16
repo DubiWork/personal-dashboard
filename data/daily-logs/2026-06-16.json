@@ -2,6 +2,13 @@
   "date": "2026-06-16",
   "sessions": [
     {
+      "session_id": "2026-06-16-103900",
+      "category": "SAP",
+      "yesterday": "Three CDP investigations on TestLookalike4 (callIDs 365110ee, 0c78ca41, 5b38e8d0). Wrap session: board updated, CXCDP-39706 closed Done. Default mappings completed for c4cV3-Connector across 3 listeners + 6 actions. Mapping review email sent to Brendan + Tamar.",
+      "today": "SBOM verification check for CDP Connectors project board rows 105-108. Verified MilestoneJourneyService #89 + SchemaManagementService #67 have explicit 'SBOM' stage green on develop. PackagesService #138 + S4ProcessorService #30 have green builds but pipelines lack the dedicated SBOM stage (only Mend + BlackDuck standalone). User triggered fresh CI on the 2 missing-SBOM services. Set up Atlas Jenkins API token at ~/.atlas-jenkins-token (had to fix PowerShell UTF-16 BOM encoding). Created Obsidian concept notes for SBOM Verification + Atlas Jenkins.",
+      "blockers": "PackagesService + S4ProcessorService Jenkinsfiles need pipeline-template upgrade to include explicit SBOM stage like MilestoneJourneyService/SchemaManagementService. User triggered builds — re-check pending after they complete."
+    },
+    {
       "session_id": "2026-06-16-102632",
       "category": "SAP",
       "yesterday": "Completed default mappings across 3 sync listeners + 6 actions on c4cV3-Connector.json. Demo June 10 with Brendan/Tamar/Ola/Alex passed end-to-end. CXCDP-39706 closed Done — kept backward compat via connector messageType workaround instead of ApplicationService code change. 22h Jira worklogs distributed across 13 entries on CXCDP-36055. Mapping review email sent to Brendan + Tamar.",
