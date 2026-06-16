@@ -16,6 +16,13 @@
       "blockers": "stream-idr eu5-prod stall recovery is on R&D / on-call. Three CDP-investigate-knowledge case branches need PRs opened (repo requires PRs, no direct push). Customer-side fix needed for sender UUIDv7 regeneration OR new match-rule on stable attribute."
     },
     {
+      "session_id": "2026-06-16-141500",
+      "category": "SAP",
+      "yesterday": "Saved CDP investigation cases to shared knowledge base; first Connectors Vault troubleshooting note merged via PR #20.",
+      "today": "V2→V3 default-mappings regression audit on c4cV2/c4cV3 connector files (1.3MB / 1.5MB). Built reusable diff-mappings.py script that normalizes V2 OData and V3 CloudEvents envelope prefixes so wrapper changes don't show as regressions. Found 42 risks (18 REMOVED + 24 CHANGED) all in 2 entity listeners (Get new/updated individual customer + Get new/updated organization). 7 outbound Create actions, 3 new Update actions, and all 9 activity listeners have ZERO regressions. Spot-checked Get email interaction activity field-by-field: 24 mappings V2/V3, 0 changes confirmed. Top concerns: IC listener silently dropped postalCode + houseNumber (Org kept them — likely accidental); Org dropped isBlocked / lifecycleStatus.code / organization.legalForm / addresses.regionCode with no V3 replacement; Org houseNumber source moved to $.houseId which may be internal ID not visible house number; Org customerABCClassification source moved to a different value space. legacyDefaultMappings:null on every V3 entity listener — no V2 fallback preserved. Saved second Connectors Vault troubleshooting note 'duplicate-profiles-same-customer' via PR #21 (squash-merged). New memory entry 'connector-rewrite-mapping-audit'. Updated C4C epic Current State + Changelog with audit findings; board push-blocker now requires both review + 7 regression decisions.",
+      "blockers": "Cannot push 3 connector commits + uncommitted work on us/CXCDP-36055_new_connecotr_v3 until Brendan/Tamar review approved AND 7 V2→V3 regression decisions resolved. Audit script + output saved at C:/SAPDevelop/sap-sales-cloud-and-sap-service-cloud-version-2/diff-mappings.py and diff-output.txt for re-run."
+    },
+    {
       "timestamp": "12:15",
       "duration": 2415,
       "category": "work",
