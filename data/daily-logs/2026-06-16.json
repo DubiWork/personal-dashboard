@@ -7,6 +7,13 @@
       "yesterday": "Completed default mappings across 3 sync listeners + 6 actions on c4cV3-Connector.json. Demo June 10 with Brendan/Tamar/Ola/Alex passed end-to-end. CXCDP-39706 closed Done — kept backward compat via connector messageType workaround instead of ApplicationService code change. 22h Jira worklogs distributed across 13 entries on CXCDP-36055. Mapping review email sent to Brendan + Tamar.",
       "today": "Wrap session — board updated (CXCDP-39706 → Done), epic note Current State refreshed, journal entries posted, backlink queue appended.",
       "blockers": "Awaiting Brendan/Tamar mapping review feedback before pushing 3 commits + uncommitted work on us/CXCDP-36055_new_connecotr_v3. CXCDP UI bug filing deferred to Friday cron reminder (MCP plugin bug with customfield_10131 blocks API issue creation)."
+    },
+    {
+      "session_id": "2026-06-15-121600",
+      "category": "SAP",
+      "yesterday": "Wrap session for prior C4C V2 epic work — board, journal, daily log all current.",
+      "today": "Three CDP investigations on tenant TestLookalike4 (BU 4_C3CTErUSLY2WUN5MB8gmPA, eu5 prod): callID 365110ee — PreProcessService rejected webhook with errCode 400 (JSON schema validation, encrypted payload); callID 0c78ca41 — group not in Hades, root cause was eu5-prod stream-idr stalled at 12:10 UTC with kafka_consumergroup_lag spiking 0 → 1.08M+ on eu5-prod-IDRBus, NOT tenant misconfig; callID 5b38e8d0 — customer reported same contact ingested 487 times, real cause is sender regenerating UUIDv7 as crmId per webhook (492 distinct profiles all firstName irenaTestContact4, each different crmId), CDP dedupe correct. Saved 3 cases + 3 generic learnings to ~/.cdp-investigate-knowledge as branches. Saved troubleshooting note 'HEP publishes but downstream silent' to Connectors Vault PR #20 (squash-merged). Created new CDP/Pipeline/ sub-subject in shared vault. Two new memory entries (lag-vs-misconfig, duplicate-customer-diagnosis).",
+      "blockers": "stream-idr eu5-prod stall recovery is on R&D / on-call. Three CDP-investigate-knowledge case branches need PRs opened (repo requires PRs, no direct push). Customer-side fix needed for sender UUIDv7 regeneration OR new match-rule on stable attribute."
     }
   ]
 }
