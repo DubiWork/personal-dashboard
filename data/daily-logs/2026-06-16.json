@@ -14,6 +14,18 @@
       "yesterday": "Wrap session for prior C4C V2 epic work — board, journal, daily log all current.",
       "today": "Three CDP investigations on tenant TestLookalike4 (BU 4_C3CTErUSLY2WUN5MB8gmPA, eu5 prod): callID 365110ee — PreProcessService rejected webhook with errCode 400 (JSON schema validation, encrypted payload); callID 0c78ca41 — group not in Hades, root cause was eu5-prod stream-idr stalled at 12:10 UTC with kafka_consumergroup_lag spiking 0 → 1.08M+ on eu5-prod-IDRBus, NOT tenant misconfig; callID 5b38e8d0 — customer reported same contact ingested 487 times, real cause is sender regenerating UUIDv7 as crmId per webhook (492 distinct profiles all firstName irenaTestContact4, each different crmId), CDP dedupe correct. Saved 3 cases + 3 generic learnings to ~/.cdp-investigate-knowledge as branches. Saved troubleshooting note 'HEP publishes but downstream silent' to Connectors Vault PR #20 (squash-merged). Created new CDP/Pipeline/ sub-subject in shared vault. Two new memory entries (lag-vs-misconfig, duplicate-customer-diagnosis).",
       "blockers": "stream-idr eu5-prod stall recovery is on R&D / on-call. Three CDP-investigate-knowledge case branches need PRs opened (repo requires PRs, no direct push). Customer-side fix needed for sender UUIDv7 regeneration OR new match-rule on stable attribute."
+    },
+    {
+      "timestamp": "12:15",
+      "duration": 2415,
+      "category": "work",
+      "project": "chub-slack-bot",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Pushed. Opening mega-PR to master:"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
     }
   ]
 }
