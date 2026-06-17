@@ -311,6 +311,18 @@
       "description": "",
       "createdAt": "2026-06-14T17:09:52.266Z",
       "updatedAt": "2026-06-14T17:09:52.266Z"
+    },
+    {
+      "id": "a9bf4003-ad77-41cb-9d9d-d0b171da6b09",
+      "title": "0eaa57f4",
+      "project": "0eaa57f4",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-06-17T06:07:01.434Z",
+      "updatedAt": "2026-06-17T06:07:01.434Z"
     }
   ]
 }
