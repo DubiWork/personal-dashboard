@@ -12,6 +12,18 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "a9bf4003-ad77-41cb-9d9d-d0b171da6b09"
+    },
+    {
+      "timestamp": "09:07",
+      "duration": 2436,
+      "category": "personal",
+      "project": "0eaa57f4",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Done. Phase 3: report."
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "a9bf4003-ad77-41cb-9d9d-d0b171da6b09"
     }
   ]
 }
