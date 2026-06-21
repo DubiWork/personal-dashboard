@@ -10,6 +10,14 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+    },
+    {
+      "category": "personal",
+      "project": "VIRE",
+      "title": "Sprint 1 push — SOFI fix + doctrine reason text + 482 tests passing",
+      "yesterday": "Council deliverable #47 shipped: /check/<TICKER> renders Roni's Take pane + convergence banner. AMD convergence test verified with real data. 2026-06-20 audit caught false-positive: banner fired when doctrine=UNKNOWN; patched with regression test.",
+      "today": "Bug: SOFI valuation crashed with KeyError: 'scenarios' — fintech-FCF degeneracy path returned error dict but downstream subscripted scenarios unconditionally. Fixed in step6 _compute_roni_model with structured skip return (reason + applicable_method_hint), markdown builder guards on skipped flag, doctrine_gate reason text names the specific skip reason instead of leaking internal ticket numbers. New hints point at P/B method for banks/fintech, earnings × P/E for pre-profit. 6 + 2 new tests, 482 passing.",
+      "blockers": "None. Sprint 1 last task: #52-B (NotebookLM architecture fix + finish 4 stragglers from Phase A that were blocked by Claude Code auto-mode permission classifier)."
     }
   ]
 }
