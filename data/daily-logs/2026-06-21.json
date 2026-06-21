@@ -1,0 +1,15 @@
+{
+  "date": "2026-06-21",
+  "sessions": [
+    {
+      "timestamp": "10:15",
+      "duration": 6671,
+      "category": "work",
+      "project": "chub-slack-bot",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+    }
+  ]
+}
