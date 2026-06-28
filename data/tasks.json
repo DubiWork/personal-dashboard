@@ -323,6 +323,18 @@
       "description": "",
       "createdAt": "2026-06-17T06:07:01.434Z",
       "updatedAt": "2026-06-17T06:07:01.434Z"
+    },
+    {
+      "id": "555cbebb-07b3-4d79-ab63-8a500d0a1a23",
+      "title": ".cdp-connectors-team-knowledge",
+      "project": ".cdp-connectors-team-knowledge",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-06-28T11:58:29.357Z",
+      "updatedAt": "2026-06-28T11:58:29.357Z"
     }
   ]
 }
