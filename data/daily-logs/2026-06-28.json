@@ -2,24 +2,10 @@
   "date": "2026-06-28",
   "sessions": [
     {
-      "timestamp": "11:50",
-      "duration": 10181,
-      "category": "work",
-      "project": "chub-slack-bot",
-      "summary": "Session activity",
-      "accomplishments": [],
-      "tasksWorkedOn": [],
-      "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
-    },
-    {
-      "timestamp": "12:01",
-      "duration": 10190,
-      "category": "work",
-      "project": "chub-slack-bot",
-      "summary": "Session activity",
-      "accomplishments": [],
-      "tasksWorkedOn": [],
-      "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+      "category": "SAP",
+      "yesterday": "PR #17 (Astra Contract Tests) was draft-clear, all 10 review threads resolved; pending Jenkins PR-merge to land before marking ready",
+      "today": "Investigated INC27080102 pushback from Levente — pulled live mappingsV2 for both data events on Astra BU, confirmed original (HAQqryo7RH5EqMMvNPvJZg) has 5 arrayItemsProvider while parallel/fixed one (HOuCVCw6dT-CxBg5uCebQg) has 0; decrypted recent Gator payload confirming Udil's example had hobby lists populated; drafted customer reply at ~/.cdp-connectors-team-knowledge/Drafts/INC27080102-reply-to-levente.md; created concept notes for arrayItemsProvider, MAPPING_GUIDE, Cdp.Mapping, PR-17, CDP Credentials Setup; added CDP API Credentials section + mapping-engine reference rule to global CLAUDE.md; saved 3 memory rules (mapping guide, credentials setup, pull mappings on pushback); PR #17 merge attempted but blocked on Jenkins PR-merge build #5 (il3-cdp-itg1 infra: CFHS 503, unrelated to PR)",
+      "blockers": "il3-cdp-itg1 infra outage blocking Jenkins PR-merge on PR #17 — awaiting infra recovery to retrigger"
     }
   ]
 }
