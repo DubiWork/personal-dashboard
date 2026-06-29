@@ -1,0 +1,16 @@
+{
+  "date": "2026-06-29",
+  "sessions": [
+    {
+      "title": "ConnectorVersion=0 bug diagnosis for Eliav",
+      "category": "SAP",
+      "summary": "Root-caused ConnectorVersion always-0 on GET /applications list endpoint to ToMinimalModel projection drift in ApplicationService grain state. One-line fix. Replied to Eliav, named the bug pattern (Minimal Projection Drift), added Obsidian concept notes + memory rule.",
+      "outcomes": [
+        "ApplicationState.cs: ToMinimalModel omits ConnectorVersion field, defaults to 0",
+        "ToModel correctly includes it, so single-app GET works",
+        "Verdict: bug, fix is one line",
+        "Pattern named and documented for future investigations"
+      ]
+    }
+  ]
+}
