@@ -112,6 +112,16 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "1a2d879e-d32a-4feb-a719-ba89ca567d53"
+    },
+    {
+      "timestamp": "18:13",
+      "duration": 54,
+      "category": "personal",
+      "project": "cdp-connectors-plugins",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "1a2d879e-d32a-4feb-a719-ba89ca567d53"
     }
   ]
 }
