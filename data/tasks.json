@@ -335,6 +335,18 @@
       "description": "",
       "createdAt": "2026-06-28T11:58:29.357Z",
       "updatedAt": "2026-06-28T11:58:29.357Z"
+    },
+    {
+      "id": "1a2d879e-d32a-4feb-a719-ba89ca567d53",
+      "title": "cdp-connectors-plugins",
+      "project": "cdp-connectors-plugins",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-07-06T15:09:18.760Z",
+      "updatedAt": "2026-07-06T15:09:18.760Z"
     }
   ]
 }
