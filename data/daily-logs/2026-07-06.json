@@ -190,6 +190,16 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "35536d70-d774-4e1b-a50c-965fc981f9aa"
+    },
+    {
+      "timestamp": "13:25",
+      "duration": 10144,
+      "category": "work",
+      "project": "chub-slack-bot",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
     }
   ]
 }
