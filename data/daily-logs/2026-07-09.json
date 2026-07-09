@@ -10,6 +10,18 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "35536d70-d774-4e1b-a50c-965fc981f9aa"
+    },
+    {
+      "timestamp": "10:31",
+      "duration": 736,
+      "category": "personal",
+      "project": "edgar-miner-ui",
+      "summary": "Session activity",
+      "accomplishments": [
+        "live web version"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
     }
   ]
 }

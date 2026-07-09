@@ -347,6 +347,18 @@
       "description": "",
       "createdAt": "2026-07-06T15:09:18.760Z",
       "updatedAt": "2026-07-06T15:09:18.760Z"
+    },
+    {
+      "id": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638",
+      "title": "edgar-miner-ui",
+      "project": "edgar-miner-ui",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-07-09T07:31:52.883Z",
+      "updatedAt": "2026-07-09T07:31:52.883Z"
     }
   ]
 }
