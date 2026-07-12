@@ -2,120 +2,20 @@
   "date": "2026-07-09",
   "sessions": [
     {
-      "timestamp": "10:00",
-      "duration": 25760,
-      "category": "personal",
-      "project": "I543234",
-      "summary": "Session activity",
-      "accomplishments": [],
-      "tasksWorkedOn": [],
-      "taskId": "35536d70-d774-4e1b-a50c-965fc981f9aa"
-    },
-    {
-      "timestamp": "10:31",
-      "duration": 736,
-      "category": "personal",
-      "project": "edgar-miner-ui",
-      "summary": "Session activity",
-      "accomplishments": [
-        "live web version"
-      ],
-      "tasksWorkedOn": [],
-      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
-    },
-    {
-      "timestamp": "10:32",
-      "duration": 730,
-      "category": "personal",
-      "project": "edgar-miner-ui",
-      "summary": "Session activity",
-      "accomplishments": [
-        "live web version"
-      ],
-      "tasksWorkedOn": [],
-      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
-    },
-    {
-      "timestamp": "10:32",
-      "duration": 730,
-      "category": "personal",
-      "project": "edgar-miner-ui",
-      "summary": "Session activity",
-      "accomplishments": [
-        "live web version"
-      ],
-      "tasksWorkedOn": [],
-      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
-    },
-    {
-      "timestamp": "10:32",
-      "duration": 730,
-      "category": "personal",
-      "project": "edgar-miner-ui",
-      "summary": "Session activity",
-      "accomplishments": [
-        "live web version"
-      ],
-      "tasksWorkedOn": [],
-      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
-    },
-    {
-      "timestamp": "10:33",
-      "duration": 729,
-      "category": "personal",
-      "project": "edgar-miner-ui",
-      "summary": "Session activity",
-      "accomplishments": [
-        "live web version"
-      ],
-      "tasksWorkedOn": [],
-      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
-    },
-    {
-      "timestamp": "10:34",
-      "duration": 729,
-      "category": "personal",
-      "project": "edgar-miner-ui",
-      "summary": "Session activity",
-      "accomplishments": [
-        "live web version"
-      ],
-      "tasksWorkedOn": [],
-      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
-    },
-    {
-      "timestamp": "10:34",
-      "duration": 731,
-      "category": "personal",
-      "project": "edgar-miner-ui",
-      "summary": "Session activity",
-      "accomplishments": [
-        "live web version"
-      ],
-      "tasksWorkedOn": [],
-      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
-    },
-    {
-      "timestamp": "10:36",
-      "duration": 731,
-      "category": "personal",
-      "project": "edgar-miner-ui",
-      "summary": "Session activity",
-      "accomplishments": [
-        "live web version"
-      ],
-      "tasksWorkedOn": [],
-      "taskId": "3eeb0fb4-c2c1-44d5-8c71-c1f90a93b638"
-    },
-    {
-      "timestamp": "16:21",
-      "duration": 2989,
-      "category": "work",
       "project": "chub-slack-bot",
-      "summary": "Session activity",
-      "accomplishments": [],
-      "tasksWorkedOn": [],
-      "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+      "ticket": "CXCDP-39490",
+      "summary": "Shipped v1.2 #120 Slack response redesign: 11 message classes backed by a shared buildReviewSummary pure fn in new messages.js. Single-sourced all Slack review-message surfaces. Fixed architect-flagged verdict drift (countBySeverity now uses display_severity so GitHub header and Slack summary agree). 423/423 tests. Merged squash 55d1238, bot restarted PID 73084.",
+      "done": [
+        "3-gate review (syntax/security/architect) with 2 fix rounds",
+        "Closed residual verdict drift in countBySeverity",
+        "Merged PR #42 to master after jira-validation green",
+        "Restarted bot on master with CATCHUP_DEDUP_ENABLED + SECURITY_SCAN_ON_CAP"
+      ],
+      "next": [
+        "#65 v2.0 4-checkbox re-eval (cron 2026-08-07)",
+        "#83 5-PR PM dogfooding (user-blocked)",
+        "#100 2-3 /ask interviews (user-blocked)"
+      ]
     }
   ]
 }
