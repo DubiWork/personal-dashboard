@@ -1,0 +1,23 @@
+{
+  "date": "2026-07-14",
+  "sessions": [
+    {
+      "project": "chub-slack-bot",
+      "ticket": "CXCDP-39490",
+      "summary": "Shipped bot supervision after a 3rd silent network-drop death. WS-B #124 added an in-process reconnect watchdog; its first version false-killed a healthy idle bot (keyed off event-silence, which conflates dead with idle). #125 redesigned it to a connection-state gate (arm only while reconnecting, clear on connected) and fixed an architect-caught wiring-order blind window. Bot now runs under pm2 + pm2-windows-startup (three-layer supervision: watchdog=stuck socket, pm2=process death, startup=reboot). 511 tests. Also shipped earlier same block: D2 #121 truncation-safety + D1 #122 See-see (already logged 2026-07-12).",
+      "done": [
+        "PM re-ranked supervision over #123 after the outage",
+        "Architect: watchdog not backoff-loop (SDK self-reconnects)",
+        "#124 watchdog shipped, then false-killed idle bot",
+        "#125 connection-state gate redesign, 3-gate incl adversarial architect re-review",
+        "Fixed wiring-order blind window (register before start())",
+        "Installed pm2 + pm2-windows-startup, bot supervised + reboot-persistent",
+        "Verified pm2 auto-restarted bot twice (self-heal proven)"
+      ],
+      "next": [
+        "#123 chunk-and-review — unblocked, architect-designed, effort M",
+        "#65/#83/#100 user/date-blocked"
+      ]
+    }
+  ]
+}
