@@ -15,8 +15,23 @@
         "Verified pm2 auto-restarted bot twice (self-heal proven)"
       ],
       "next": [
-        "#123 chunk-and-review — unblocked, architect-designed, effort M",
+        "#123 chunk-and-review \u00e2\u20ac\u201d unblocked, architect-designed, effort M",
         "#65/#83/#100 user/date-blocked"
+      ]
+    },
+    {
+      "project": "chub-slack-bot",
+      "ticket": "CXCDP-39490",
+      "summary": "Shipped #123 chunk-and-review (squash 0d1bb64): replaced the 60KB diff cut with token-budgeted file batching (splitDiffIntoChunks, 100K-token budget, chars/4, no tokenizer dep). 60KB was 6.7x below the model window so most PRs review in 1 chunk same-cost; large PRs now genuinely reviewed. runFullReview runs agents per-chunk then flat-merges; A3/dedup/validFiles stay per-PR; D2 marker demoted to last-resort via per-file truncatedFileMap. Architect adversarial verify confirmed the bytes/tokens + findings-loss regression classes absent; caught+fixed a mixed-truncation wrong-drop edge case. First impl agent died on API ConnectionRefused, reset+re-ran clean. 525 tests. Bot restarted under pm2.",
+      "done": [
+        "PM confirmed #123 + guardrails from this session's 2 review misses",
+        "Architect design-review REVISE->sound (fixed 2 vacuous ACs pre-code)",
+        "Implemented chunk-and-review; recovered from mid-work API crash",
+        "3-gate: architect confirmed prior regression classes absent, fixed mixed-truncation edge case",
+        "Merged PR #47, restarted bot under pm2"
+      ],
+      "next": [
+        "#65/#83/#100 user/date-blocked; CHUB backlog otherwise clear"
       ]
     }
   ]
