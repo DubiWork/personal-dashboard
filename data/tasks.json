@@ -359,6 +359,18 @@
       "description": "",
       "createdAt": "2026-07-09T07:31:52.883Z",
       "updatedAt": "2026-07-09T07:31:52.883Z"
+    },
+    {
+      "id": "5b0cc069-eba3-43ab-8072-e59eec4faa6b",
+      "title": "Valuation Course - Roni",
+      "project": "Valuation Course - Roni",
+      "category": "personal",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-07-17T11:43:19.369Z",
+      "updatedAt": "2026-07-17T11:43:19.369Z"
     }
   ]
 }
