@@ -84,6 +84,19 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+    },
+    {
+      "id": "2026-07-19-073218",
+      "category": "SAP",
+      "duration_hours": 3,
+      "summary": "Audited C4C V3 connector DRAFT help docs page-by-page for V2/ODM contamination. Prepared comment set for Ola: delete stale Relationship EVENT page (schema stays), fix event count 12->11, add 3 Update actions to landing table, rewrite ODM default-mapping Note, Registered-Product Profile anchor, Org-page pasted-note + wrong-URL, Update-Account addresses/isMain, B2B default-scope note. Verified all anchor claims against the connector default mappings; confirmed reporter.id=contact with Irena. Learned SAP Help SPA silently redirects bad slugs.",
+      "tickets": [
+        "CXCDP-34849",
+        "CXCDP-36055"
+      ],
+      "notes_updated": [
+        "C4C V2 Connector Epic — CXCDP-34849"
+      ]
     }
   ]
 }
