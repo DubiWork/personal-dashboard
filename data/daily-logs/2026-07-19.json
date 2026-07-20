@@ -97,6 +97,17 @@
       "notes_updated": [
         "C4C V2 Connector Epic — CXCDP-34849"
       ]
+    },
+    {
+      "id": "2026-07-19-084000",
+      "category": "SAP",
+      "duration_hours": 3,
+      "summary": "WICO test-fail investigation. Traced adaptive-merge journey test TriggerAdaptiveJourney_MergeTwoProfiles (eu5-st4, buId 4_rC5K_ucMyVVJpMPP56i2jg, 5 ingests). Confirmed JourneyService fires invoke steps correctly; expected downstream action never reaches mock. Leading hypothesis = adult segment not computed for merged profile so WaitFor never releases, but could NOT prove from cdp-logs (no segment trace). Every adaptive step logs 'No context found in StepToContextKeyMap'. Retracted earlier duplicate-JourneyBus-publish and Cdp.Rule.Helper theories as unproven. Wrote honest Slack draft for data-infra separating facts from hypothesis. Learned Kibana3 LeaseId Logdog query pattern + cdp-logs MCP resolution.",
+      "tickets": [],
+      "notes_updated": [
+        "Adaptive Journey Segment Recalc",
+        "WICO Test Duty 2026-05-05"
+      ]
     }
   ]
 }
