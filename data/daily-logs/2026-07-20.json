@@ -1,0 +1,17 @@
+{
+  "date": "2026-07-20",
+  "sessions": [
+    {
+      "project": "chub-slack-bot",
+      "ticket": "CXCDP-39490",
+      "summary": "Closed #83 dogfooding acceptance. Operator feared the bot wasn't helping (near-zero reactions despite team knowing it exists). Rather than shut it down on silence, sent one blunt direct ask to the team — result: 8 likes, 0 dislikes. Silence was low-effort non-response, not disinterest; bot is wanted, keep it. Acceptance evidence = organic sample of ~20 real reviews across 8 repos (mechanics all proven). Opened #127 (GEN-BUG 57%-of-findings precision audit) as a non-blocking quality follow-up. Recorded the lesson: silence is ambiguous, ask before killing.",
+      "done": [
+        "Sent team a direct 'do you read the bot's comments?' ask → 8 likes / 0 dislikes",
+        "Closed #83 as accepted with the organic dogfooding sample as evidence",
+        "Opened #127 GEN-BUG precision audit as non-blocking follow-up",
+        "Saved memory lesson: low engagement is ambiguous, ask before killing"
+      ],
+      "next": ["#127 GEN-BUG audit (low priority); #65 cron Aug 7; #100 /ask interviews"]
+    }
+  ]
+}
