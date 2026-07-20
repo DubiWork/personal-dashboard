@@ -124,6 +124,16 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "35536d70-d774-4e1b-a50c-965fc981f9aa"
+    },
+    {
+      "id": "2026-07-20-132432",
+      "category": "SAP",
+      "duration_hours": 2,
+      "summary": "Investigated INC30922739 (Delek prod, eu5-prod not il3): C4C source per-minute dataflow reported 'not triggering'. Reframed as worker-stall-at-pickup, not scheduler-miss: scheduler fired (job 470786ec 07-08 06:28:56), idx worker froze ~6s in emitting zero logs, 15-min heartbeat watchdog force-stopped it (Stopped, 0 records). Root cause = idx pod memory pressure (~500 restarts/day, ~147 OOMKill/day 07-05..08); Yedidyah's memory fix ~07-07/08 dropped restarts 528->0-1/day (proven via Prometheus). Posted vague customer reply per Yedidyah. Open internally: post-fix silence gaps persist through 07-20 from separate sibling-dataflow slot contention (unverified across all gaps). Learned cdp-logs query-string doesn't tokenize keyword fields (use execute_custom_query term/filter).",
+      "tickets": [],
+      "notes_updated": [
+        "INC30922739"
+      ]
     }
   ]
 }
