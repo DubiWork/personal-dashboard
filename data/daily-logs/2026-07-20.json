@@ -4,9 +4,9 @@
     {
       "project": "chub-slack-bot",
       "ticket": "CXCDP-39490",
-      "summary": "Closed #83 dogfooding acceptance. Operator feared the bot wasn't helping (near-zero reactions despite team knowing it exists). Rather than shut it down on silence, sent one blunt direct ask to the team \u00e2\u20ac\u201d result: 8 likes, 0 dislikes. Silence was low-effort non-response, not disinterest; bot is wanted, keep it. Acceptance evidence = organic sample of ~20 real reviews across 8 repos (mechanics all proven). Opened #127 (GEN-BUG 57%-of-findings precision audit) as a non-blocking quality follow-up. Recorded the lesson: silence is ambiguous, ask before killing.",
+      "summary": "Closed #83 dogfooding acceptance. Operator feared the bot wasn't helping (near-zero reactions despite team knowing it exists). Rather than shut it down on silence, sent one blunt direct ask to the team â€” result: 8 likes, 0 dislikes. Silence was low-effort non-response, not disinterest; bot is wanted, keep it. Acceptance evidence = organic sample of ~20 real reviews across 8 repos (mechanics all proven). Opened #127 (GEN-BUG 57%-of-findings precision audit) as a non-blocking quality follow-up. Recorded the lesson: silence is ambiguous, ask before killing.",
       "done": [
-        "Sent team a direct 'do you read the bot's comments?' ask \u00e2\u2020\u2019 8 likes / 0 dislikes",
+        "Sent team a direct 'do you read the bot's comments?' ask â†’ 8 likes / 0 dislikes",
         "Closed #83 as accepted with the organic dogfooding sample as evidence",
         "Opened #127 GEN-BUG precision audit as non-blocking follow-up",
         "Saved memory lesson: low engagement is ambiguous, ask before killing"
@@ -138,12 +138,12 @@
     {
       "project": "chub-slack-bot",
       "ticket": "CXCDP-39490",
-      "summary": "Shipped #128 (squash ed00ec5): re-review now works on FAILED reviews. A teammate's review failed (transient AI proxy 503) on Cdp.Mapping.Config#13 and 're-review' did nothing \u2014 root cause: savePRCursor ran only on success, so a failed review saved no cursor for the re-review trigger to match. Fix saves a minimal cursor on failure + routes handleReReviewTrigger around the null-SHA delta path. Architect caught 2 defects IN the fix (prMeta TDZ in catch, cursor-clobber on merge) \u2014 both fixed. 546 tests. A [DBG] tracer proved the bot receives the reply; #13 is a pre-fix ORPHAN (failed before deploy \u2192 no cursor, needs a fresh PR-link re-post). Also diagnosed #129 CRITICAL: learning state inert since May 12 \u2014 signal logged but never persisted, so rules can't promote.",
+      "summary": "Shipped #128 (squash ed00ec5): re-review now works on FAILED reviews. A teammate's review failed (transient AI proxy 503) on Cdp.Mapping.Config#13 and 're-review' did nothing — root cause: savePRCursor ran only on success, so a failed review saved no cursor for the re-review trigger to match. Fix saves a minimal cursor on failure + routes handleReReviewTrigger around the null-SHA delta path. Architect caught 2 defects IN the fix (prMeta TDZ in catch, cursor-clobber on merge) — both fixed. 546 tests. A [DBG] tracer proved the bot receives the reply; #13 is a pre-fix ORPHAN (failed before deploy → no cursor, needs a fresh PR-link re-post). Also diagnosed #129 CRITICAL: learning state inert since May 12 — signal logged but never persisted, so rules can't promote.",
       "done": [
         "Diagnosed transient AI-proxy 503 (not a bot bug) on Mapping.Config#13",
         "Shipped #128 re-review-on-failure fix, 3-gate review (2 architect-caught defects fixed)",
         "Instrument-first proved #13 is a pre-fix orphan; gave one-time unblock",
-        "Diagnosed #129 CRITICAL \u2014 learning write-back dead since May 12"
+        "Diagnosed #129 CRITICAL — learning write-back dead since May 12"
       ],
       "next": [
         "re-post #13 PR link to unblock (user)",
@@ -157,10 +157,24 @@
       "ticket": "CXCDP-41301",
       "duration_hours": 1,
       "summary": "Shipped jira plugin v1.4.0: /jira:log-work now falls back to session elapsed time for the Recommended worklog bucket when there are no git commits, fixing the 2h-floor that pre-selected on every investigation day. New elapsedCapHours config (default 8); git path still capped at capHours 4, so full days suggest 8h. Plugin PR #11 + marketplace PR #105 merged, installed + reloaded live. Hit a phantom squash-merge conflict on #11 (branch cut from pre-squash v1.3.0 parent) — fixed via git rebase --onto origin/main. Ordering gotcha: marketplace bump merged first made /plugin update refuse to advance until plugin main carried 1.4.0.",
-      "tickets": ["CXCDP-41301"],
+      "tickets": [
+        "CXCDP-41301"
+      ],
       "notes_updated": [
         "jira plugin",
         "CXCDP-41301"
+      ]
+    },
+    {
+      "id": "2026-07-21-102635",
+      "category": "SAP",
+      "duration_hours": 3,
+      "summary": "INC31657102 (CompuGroup, eu5-prod): SSCV2 lead creation via Audience Activation fails PKIX TLS handshake; CX Flow + Postman work. Proved root cause end-to-end: idx audience-activation writer (CDPAudienceCustomHttpWriter) pinned to JKS /idx/etc/kafka-cert/cacerts (secret cacerts-jks) that has ISRG Root X1 but not X2 (ECDSA); C4C endpoint chains to X2; openssl/CX-Flow work via OS store /etc/ssl/certs. ~8.4k PKIX/day fleet-wide. Established cacerts-jks is a kubectl-applied cluster secret (no meta.helm.sh), not idx Helm chart. DevOps filed CXCDP-42155; added correction comment (Helm upgrade won't update it). Non-technical customer reply drafted. Prior art: Yedidyah Tchibo/DevIT cert incident.",
+      "tickets": [
+        "CXCDP-42155"
+      ],
+      "notes_updated": [
+        "INC31657102"
       ]
     }
   ]
