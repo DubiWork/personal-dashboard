@@ -150,6 +150,18 @@
         "#129 inert-learning fix (CRITICAL)",
         "#127 GEN-BUG audit (blocked by #129)"
       ]
+    },
+    {
+      "id": "2026-07-20-jira-140",
+      "category": "SAP",
+      "ticket": "CXCDP-41301",
+      "duration_hours": 1,
+      "summary": "Shipped jira plugin v1.4.0: /jira:log-work now falls back to session elapsed time for the Recommended worklog bucket when there are no git commits, fixing the 2h-floor that pre-selected on every investigation day. New elapsedCapHours config (default 8); git path still capped at capHours 4, so full days suggest 8h. Plugin PR #11 + marketplace PR #105 merged, installed + reloaded live. Hit a phantom squash-merge conflict on #11 (branch cut from pre-squash v1.3.0 parent) — fixed via git rebase --onto origin/main. Ordering gotcha: marketplace bump merged first made /plugin update refuse to advance until plugin main carried 1.4.0.",
+      "tickets": ["CXCDP-41301"],
+      "notes_updated": [
+        "jira plugin",
+        "CXCDP-41301"
+      ]
     }
   ]
 }
