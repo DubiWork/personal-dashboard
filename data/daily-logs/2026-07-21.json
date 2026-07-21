@@ -27,6 +27,16 @@
       "project": "VoiceBox Voice",
       "summary": "Gave Claude Code a spoken voice: English replies via Roni's cloned voice (VoiceBox/Kokoro), Hebrew via Microsoft Asaf. Global Stop hook with language auto-routing, mute toggle, and built-in voice dictation enabled.",
       "category": "Personal"
+    },
+    {
+      "timestamp": "18:12",
+      "duration": 94,
+      "category": "personal",
+      "project": ".cdp-connectors-team-knowledge",
+      "summary": "Session activity",
+      "accomplishments": [],
+      "tasksWorkedOn": [],
+      "taskId": "555cbebb-07b3-4d79-ab63-8a500d0a1a23"
     }
   ]
 }
