@@ -6,11 +6,19 @@
       "duration": 1175,
       "category": "work",
       "project": "chub-slack-bot",
-      "summary": "Session activity",
+      "summary": "Ship CHUB #130 (re-review failed-cursor routing) + #131 (graceful AI-proxy-outage handling) to close the DoD-0 -> #130 -> #131 goal on CXCDP-39490",
       "accomplishments": [
-        "Merged (`6486255`). Sync, verify, restart:"
+        "Shipped #130: re-review now routes failed cursors on cursor.status not SHA-nullness, fixing the live '0 addressed' bug on ApplicationService#45 (PR #50, squash 6486255)",
+        "Shipped #131: graceful AI-proxy-outage handling — pause notice + soft per-PR replies, durable queue, health-poll recovery, auto-review as fresh (PR #51, squash 484dcef); new proxy-state.js + proxy-health-poll.js",
+        "Ran full flow per goal: PM/DoD -> architect design -> javascript-pro implement -> syntax + architect 3-gate -> merge -> pm2 restart for each",
+        "Architect caught + fixed a blocking recovery-notice channel fragility (stored announced channel in proxy-state) and a backoff off-by-one; discipline gate met via real AggregateError-ECONNREFUSED Test 8",
+        "Verified deploy: OS process pid 51384 alive, [RECONNECT] connected logged post-restart, 577/577 tests green, catch-up clean"
       ],
-      "tasksWorkedOn": [],
+      "nextSteps": [
+        "#129 CRITICAL: learning state inert since May 12 (signal logged but never persisted) — the real 'rules won't promote' root cause, blocks #127",
+        "PM roadmap directions deferred: reader-reads-project-docs, team-vault consolidation, multi-model diversity (SAP-compliance gated)"
+      ],
+      "tasksWorkedOn": ["CXCDP-39490"],
       "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
     }
   ]
