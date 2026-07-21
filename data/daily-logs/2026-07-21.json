@@ -18,8 +18,15 @@
         "#129 CRITICAL: learning state inert since May 12 (signal logged but never persisted) — the real 'rules won't promote' root cause, blocks #127",
         "PM roadmap directions deferred: reader-reads-project-docs, team-vault consolidation, multi-model diversity (SAP-compliance gated)"
       ],
-      "tasksWorkedOn": ["CXCDP-39490"],
+      "tasksWorkedOn": [
+        "CXCDP-39490"
+      ],
       "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+    },
+    {
+      "project": "VoiceBox Voice",
+      "summary": "Gave Claude Code a spoken voice: English replies via Roni's cloned voice (VoiceBox/Kokoro), Hebrew via Microsoft Asaf. Global Stop hook with language auto-routing, mute toggle, and built-in voice dictation enabled.",
+      "category": "Personal"
     }
   ]
 }
