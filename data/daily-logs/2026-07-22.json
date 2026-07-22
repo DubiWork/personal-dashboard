@@ -1,0 +1,16 @@
+{
+  "date": "2026-07-22",
+  "sessions": [
+    {
+      "id": "2026-07-22-090000",
+      "category": "SAP",
+      "ticket": "INC31707215",
+      "duration_hours": 1,
+      "summary": "INC31707215 (Covestro, eu5-prod): activities via 'Get Opportunity data' (schema activity_opportunity, buId 4_Q3nyaIwT4MTfar5AshZKCw) frequently discarded ACTIVITY_DISCARDED_OUTDATED. Customer confused why a payload with later display time (06:18:20 vs 06:18:18) was discarded. Proved the rule from source (cdp-data develop): profilecombiner DefaultMutableActivityHandler.canMutateActivity mode Full discards only when STORED activityTime is strictly after incoming (equal = accepted). activityTime = ActivityDataDal.getActivityTime = UpdatedField ?? CreatedField, compared at full Instant sub-second precision. No activity-date field mapped -> created/updated default to ingestion instant, so ordering is by CDP receive-time not payload display time. Constant 23004, category Profile Merge, severity INFO. Kibana VPN-blocked so per-record activityTime proof not pulled; framed leading out-of-order-ingestion hypothesis as unverified. Handed off to data-infra (owns profilecombiner) with 4 asks; they own empirical proof + customer reply. Draft: Drafts/INC31707215-handoff-data-infra.md.",
+      "tickets": [],
+      "notes_updated": [
+        "INC31707215"
+      ]
+    }
+  ]
+}
