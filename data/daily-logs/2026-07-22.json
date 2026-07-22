@@ -23,6 +23,17 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "dfb1357c-1c94-4d32-baf1-f4d4c7793a69"
+    },
+    {
+      "id": "2026-07-22-093000",
+      "category": "Personal",
+      "project": "Claude Code Tooling",
+      "duration_hours": 1,
+      "summary": "Shipped /wrap skill v2.1.0: compact-at-wrap. Added Step 0 (one-line heads-up at start that the wrap will run /compact at the end; default proceed, user-vetoable at any point) and a final Compact step that runs /compact after the Output Report unless vetoed. Added a Compact line to the Output Report format. Bumped CHANGELOG to 2.1.0 with the cost rationale: a long-lived single 'CDP investigator' session accrues cache-read cost with no residual value once /wrap persists findings to disk (cost-coach session 701acc40: ~58% of cost was cache-read from monotonic session growth). Thread 2 (INC31634525 investigation) explicitly dropped by user.",
+      "tickets": [],
+      "notes_updated": [
+        "Claude Code Tooling"
+      ]
     }
   ]
 }
