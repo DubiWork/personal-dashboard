@@ -34,6 +34,17 @@
       "notes_updated": [
         "Claude Code Tooling"
       ]
+    },
+    {
+      "id": "2026-07-22-160000",
+      "category": "SAP",
+      "ticket": "INC31634525",
+      "duration_hours": 3,
+      "summary": "INC31634525 (Messe Frankfurt, eu5-prod): SC V2->CDP 'Create/update individual customer' ODM event; deleting Primary Email throws CS00090 'String \\'\\' does not validate against format email' (callID 39be4fbf389149b0b8081eb00ff08724). Deep investigation with 5 csharp-developer subagents (worktrees). KEY RESULT: the error is NOT reproducible with the real userEvent+runtime-mapping the user provided -- that payload has email ABSENT -> Cdp.Mapping omits primaryEmail -> Cdp.JsonVerifier passes (wiring proven via firstName->'Adam TEST'). Proved CS00090 requires primaryEmail='' in the mapped object, which needs source CalculatedAttributes.PrimaryEmail present-but-EMPTY '' (StringToLower/Ignore passes '' through; Ignore skips only null/missing). Ruled out as the '' writer: S4ProcessorService (S/4 IDoc shape, throws on ODM), CdflIngestAdapterService (leaves absent), Cdp.Mapping engine (omits), PreProcessService/IngestorService (no ODM calc, odmevents is pass-through). Reversed root-cause 3x by reasoning ahead of tests (S4-seeds-'' -> phantom-path -> SCV2-sends-''), all refuted; conclusion = provided payload is not the failing input. PAUSED: escalating to Yedidyah; awaiting customer callIDs for phone-stale + first-name-'(empty)' (both unproven). Repro project C:/SAPDevelop/inc31634525-repro/. Also ran cost-coach (session 701acc40: 3875 turns, ~$3047, 1.76B cache-read = ~58% of cost).",
+      "tickets": [],
+      "notes_updated": [
+        "INC31634525"
+      ]
     }
   ]
 }
