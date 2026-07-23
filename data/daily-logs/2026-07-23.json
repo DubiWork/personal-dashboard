@@ -49,6 +49,25 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "555cbebb-07b3-4d79-ab63-8a500d0a1a23"
+    },
+    {
+      "timestamp": "14:00",
+      "duration": 1800,
+      "category": "work",
+      "project": "cdp-investigation",
+      "summary": "Verify and root-cause CDP error 400124 'Limit Reached' for callID testd7b4d78504045b89919fc95622399, and check the dataflow-cleanup flag",
+      "accomplishments": [
+        "Root-caused error 400124 to CdpIDXService ValidateRestriction (licensed dataflow cap), correcting the original finding that blamed Gator and called it a rate/quota limit",
+        "Proved the 404 side-span is a normal idx_config/restriction fallback lookup (no per-partner override), not a downstream failure caused by the limit",
+        "Confirmed via Hades that partner 45575247 (test BU 4_4GbWZTHLVoqwj0ZXkUv7yQ, eu5) has exactly 5000 dataflows and 0 scheduling docs — orphaned UNIVERSE E2E profile-export flows",
+        "Found the documented cleanup (wiki GIGYA/3792914291): per-site CleanDataflows flag purging orphans older than 2 weeks on a 24h cycle",
+        "Determined CleanDataflows is NOT enabled: flag absent from all reachable config surfaces AND zero cleanup logs in 30 days across 124 indices"
+      ],
+      "nextSteps": [
+        "User to decide whether to enable CleanDataflows for site 107013844995",
+        "Durable fix: UNIVERSE E2E suite should tear down export dataflows after each run"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
