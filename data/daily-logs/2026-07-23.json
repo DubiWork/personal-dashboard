@@ -86,6 +86,24 @@
         "First live exercise: after this /wrap creates skills-engineering.md, run /clear and confirm the hook auto-reinjects it"
       ],
       "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "15:46",
+      "duration": 900,
+      "category": "personal",
+      "project": "I543234",
+      "summary": "Live-verify the session primer re-injects on /clear, and settle the fear that /clear randomizes the session name and breaks the primer",
+      "accomplishments": [
+        "Live-verified: the SessionStart hook fired on source=clear and re-injected the skills-engineering primer into context (first real end-to-end confirmation)",
+        "Traced name persistence: $WT_SESSION survives /clear (process never restarts), so hooks/sessions/$WT_SESSION.txt stays intact and the primer chain resolves",
+        "Established the 'random name after /clear' is cosmetic CLI/tab state, not the .txt file; statusline.sh never reads the session name",
+        "Located the only .txt clobber in .bashrc claude() (fresh-launch auto-name overwrite), and proved it is never hit by /clear or the /resume-based topic-continuation workflow",
+        "Decided to leave .bashrc untouched since the clobber path is never exercised; updated the skills-engineering primer to mark the exercise done"
+      ],
+      "nextSteps": [
+        "Completed - primer system verified end-to-end for the /resume workflow"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
