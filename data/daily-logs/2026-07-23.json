@@ -104,6 +104,27 @@
         "Completed - primer system verified end-to-end for the /resume workflow"
       ],
       "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "16:30",
+      "duration": 3600,
+      "category": "work",
+      "project": "cdp-investigation",
+      "summary": "Investigate the EMS consent-sync case for Bence, and read the CleanDataflows cleaner code to settle why Kata's cleanup 'worked' while partner 45575247 stayed at 5000",
+      "accomplishments": [
+        "EMS consent case resolved: CDP sends consent to Emarsys on the cdfl.profile.change message (decrypted payload showed marketing.email + marketing.newsletter, status true), NOT on cdfl.schema.change which carries only customFields + businessAreas by design",
+        "Proved the 'no default fields in schema message' symptom was a red herring (wrong message) — action mappings, purpose marketing.email, and config all equivalent to a working BU",
+        "Fixed a callID keyword-field false-negative: search_logs_by_callid returned 0 for d84517214..., execute_custom_query with a term match on callID found all 242 hits",
+        "Read AudienceService BusinessUnitDataFlowCleaner: CleanDataflows flag is checked per-siteId (FeatureOn(siteId)), but deletion is scoped per the job's apiKey — not partner-wide",
+        "Reconciled Kata's report: partner 45575247's 5000 dataflows span 10+ sites; her flagged site 474525036573 holds only 329, still present with 0 cleaner logs — likely her success was a different BU/env",
+        "Confirmed eu5-prod flags.config has no CleanDataflows entry (falls back to _global Disabled); il3 itg1-5 have it Enabled",
+        "Corrected the earlier same-session claim that orphans live on site 107013844995 (only 607 of 5000; dominated by 303031715292=1093 and 295543634786=1009)"
+      ],
+      "nextSteps": [
+        "Kata to provide the success-test callID tomorrow → trace env/siteId/apiKey to confirm why her cleanup worked",
+        "EMS: EC/product-side question whether Engagement Cloud applies received consents (profile.change had consentVersion 0) + Bence's consent-visibility question"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
