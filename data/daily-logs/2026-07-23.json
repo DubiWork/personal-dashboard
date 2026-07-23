@@ -68,6 +68,24 @@
         "Durable fix: UNIVERSE E2E suite should tear down export dataflows after each run"
       ],
       "tasksWorkedOn": []
+    },
+    {
+      "timestamp": "14:30",
+      "duration": 3600,
+      "category": "personal",
+      "project": "I543234",
+      "summary": "Build a per-session-name primer system so /clear gives a light-but-oriented fresh start, and update the /wrap reset step to offer /compact vs /clear",
+      "accomplishments": [
+        "Reworked /wrap's final step from compact-only to a /compact-vs-/clear choice with an explainer, recommending /clear since durable state is already flushed",
+        "Built primer-loader.sh (SessionStart hook): injects ~/.claude/primers/<slug>.md on fresh/clear starts, skips auto-named sessions and --resume",
+        "Verified /clear fires SessionStart with source=clear in this build via a real-session diagnostic log line, then removed the log",
+        "Found and fixed the /rename divergence: it updates CLI state not $WT_SESSION.txt; /wrap now resolves the name from the system-reminder and writes it back",
+        "Added /wrap step 2f2 (Session Primer Merge) — curated in-place rewrite keyed on slugified display name"
+      ],
+      "nextSteps": [
+        "First live exercise: after this /wrap creates skills-engineering.md, run /clear and confirm the hook auto-reinjects it"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
