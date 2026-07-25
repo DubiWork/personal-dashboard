@@ -1,0 +1,26 @@
+{
+  "date": "2026-07-26",
+  "sessions": [
+    {
+      "project": "Edgar Value Miner",
+      "summary": "Shipped v1.2 to production and validated it live; scoped the next milestone.",
+      "done": [
+        "Merged data-correctness fixes #197-200 (PR #209) — revenue tag recency, FY dedup, margin same-year guard, CI correctness regressions",
+        "Repaired CI infra (PR #207): functions test job, root vitest exclude, functions PostCSS, e2e base-path + prod-proxy mocks",
+        "Fixed sanitization (#212/#213) and SSRF via endpoint-key refactor (#215/#218) — the version CodeQL accepts",
+        "Released v1.2 to production (PR #214 develop->main); frontend live and AAPL prod-validated ($416.2B FY2025, 46.9% margin, no dup years, L1 cache confirmed)",
+        "Split branch-protection rulesets per-branch (develop vs main)"
+      ],
+      "blockers": [
+        "Prod Cloud Functions deploy failed (npx firebase can't resolve firebase-tools); SSRF fix not yet live in functions — fix in PR #220",
+        "Bot ClaudeCodeAgentDubi not a member of Project #5 — blocks board Status automation"
+      ],
+      "next": [
+        "Board-hygiene pass (close stale #190/#193/#208, close Phase 1 milestone, de-orphan issues)",
+        "Code review of this session's shipped code (automated + secProxy security deep-dive)",
+        "Finish v1.2: merge PR #220, promote, verify prod functions deploy",
+        "Plan Phase 1.5 — UX-led, all report data visualized (iCharts-style)"
+      ]
+    }
+  ]
+}
