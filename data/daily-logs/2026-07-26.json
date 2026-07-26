@@ -5,21 +5,21 @@
       "project": "Edgar Value Miner",
       "summary": "Shipped v1.2 to production and validated it live; scoped the next milestone.",
       "done": [
-        "Merged data-correctness fixes #197-200 (PR #209) — revenue tag recency, FY dedup, margin same-year guard, CI correctness regressions",
+        "Merged data-correctness fixes #197-200 (PR #209) \u00e2\u20ac\u201d revenue tag recency, FY dedup, margin same-year guard, CI correctness regressions",
         "Repaired CI infra (PR #207): functions test job, root vitest exclude, functions PostCSS, e2e base-path + prod-proxy mocks",
-        "Fixed sanitization (#212/#213) and SSRF via endpoint-key refactor (#215/#218) — the version CodeQL accepts",
+        "Fixed sanitization (#212/#213) and SSRF via endpoint-key refactor (#215/#218) \u00e2\u20ac\u201d the version CodeQL accepts",
         "Released v1.2 to production (PR #214 develop->main); frontend live and AAPL prod-validated ($416.2B FY2025, 46.9% margin, no dup years, L1 cache confirmed)",
         "Split branch-protection rulesets per-branch (develop vs main)"
       ],
       "blockers": [
-        "Prod Cloud Functions deploy failed (npx firebase can't resolve firebase-tools); SSRF fix not yet live in functions — fix in PR #220",
-        "Bot ClaudeCodeAgentDubi not a member of Project #5 — blocks board Status automation"
+        "Prod Cloud Functions deploy failed (npx firebase can't resolve firebase-tools); SSRF fix not yet live in functions \u00e2\u20ac\u201d fix in PR #220",
+        "Bot ClaudeCodeAgentDubi not a member of Project #5 \u00e2\u20ac\u201d blocks board Status automation"
       ],
       "next": [
         "Board-hygiene pass (close stale #190/#193/#208, close Phase 1 milestone, de-orphan issues)",
         "Code review of this session's shipped code (automated + secProxy security deep-dive)",
         "Finish v1.2: merge PR #220, promote, verify prod functions deploy",
-        "Plan Phase 1.5 — UX-led, all report data visualized (iCharts-style)"
+        "Plan Phase 1.5 \u00e2\u20ac\u201d UX-led, all report data visualized (iCharts-style)"
       ]
     },
     {
@@ -31,6 +31,22 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "35536d70-d774-4e1b-a50c-965fc981f9aa"
+    },
+    {
+      "project": "Claude Code Tooling",
+      "summary": "Cost-optimization session: trimmed MCP loadout and established the bootstrap-cost model; scoped a primer-loader redesign.",
+      "done": [
+        "Deleted stitch + chrome-devtools MCP servers (0 calls in the prior week) from settings.json and .claude.json",
+        "Disabled playwright + playwright-3..8; kept only playwright-2 (the server actually used, 37 calls/week)",
+        "Established cost model: cache-read is ~10%/turn not one-time, so idle MCP servers cost more than late registration",
+        "Clarified primer addresses re-explaining across /clear, NOT the bootstrap floor \u2014 two separate cost problems",
+        "Ran /cost-coach on the current session and the largest historical session (3,647 turns, ~$2,939)"
+      ],
+      "blockers": [],
+      "next": [
+        "New session: build primer-loader.sh redesign \u2014 inject a primer INDEX + offer-to-load based on first request",
+        "Adjust /wrap step 2f2 to AskUserQuestion for target primer when session is unnamed"
+      ]
     }
   ]
 }
