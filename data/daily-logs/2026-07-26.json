@@ -182,6 +182,25 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
+    },
+    {
+      "project": "CDP Dataflow Cleanup",
+      "summary": "Root-caused why a CDP partner at the 5000 dataflow cap cannot self-heal, and filed CXCDP-42264 with a fix plan.",
+      "done": [
+        "Traced two callIDs to sites/partners: failing testd7b4d7 = partner 45575247 at 5000 cap (siteId 107013844995, 10 apiKeys); passing test402cff = unrelated small partner (221 flows)",
+        "Confirmed the deadlock: cleaner triggers only on job-finish, but at cap AddDataflow throws 400124 before any job is enqueued so the cleaner never fires",
+        "Found the leak origin: JobComponent.FinalizeScheduling deletes scheduling on Once-completion but keeps the dataflow; every targeted delete path is guarded by if-SchedulingId-exists so orphans are unreachable",
+        "Traced the no-scheduling abort gate to a 2023 deserialization incident (successful query returned 0 -> mass-deleted customer dataflows); established that absence of a record can never authorize deletion",
+        "Verified delete-safety (UpsertDataFlow recreates-on-missing) and job-retention lifespan (20d vs 14d cleaner threshold => ~6d confirm window; existing 5000 have no surviving job)",
+        "Filed CXCDP-42264 (Bug, team CDP Connectors HUB, epic CXCDP-41085) with primary fix: piggyback orphan cleanup on the job-retention purge using the in-hand job record"
+      ],
+      "blockers": [],
+      "next": [
+        "Await user go-ahead to implement",
+        "Fix 1 pre-req: verify nothing reads a Once dataflow post-completion",
+        "One-time ops drain (ratio-guarded) for the existing 5000 whose jobs are purged",
+        "Decide whether to widen job retention beyond 20d at implementation"
+      ]
     }
   ]
 }
