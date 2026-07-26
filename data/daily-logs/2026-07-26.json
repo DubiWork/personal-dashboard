@@ -47,6 +47,21 @@
         "New session: build primer-loader.sh redesign \u2014 inject a primer INDEX + offer-to-load based on first request",
         "Adjust /wrap step 2f2 to AskUserQuestion for target primer when session is unnamed"
       ]
+    },
+    {
+      "project": "Session Primer System",
+      "summary": "Built the scoped primer-loader redesign end-to-end: index-injection loader, dual-write vault+cache storage, /wrap handoff writer.",
+      "done": [
+        "Rewrote primer-loader.sh to inject a primer INDEX from ~/.claude/primers/_index.md and ask which to load (name no longer gates); skips --resume; loader test suite passes all 3 cases",
+        "Adopted dual-write storage: Obsidian vault Primers/ route is source of truth, ~/.claude/primers/ is a rebuildable cache the hook reads",
+        "Rewrote /wrap 2f2 to a 5-step flow: inline six-lens handoff to Primers/Handoffs/ -> AskUserQuestion primer pick -> lean accumulative headline merge -> _index.md upsert -> cache refresh",
+        "Added summary: frontmatter to both existing primers and seeded _index.md; verified vault/cache parity and clear-start injection",
+        "Wrote design spec + implementation plan under ~/.claude/primers/docs/; executed via subagent-per-task"
+      ],
+      "blockers": [],
+      "next": [
+        "This /wrap is the first real exercise of the writer path (Steps A-E) against the dry-run checklist"
+      ]
     }
   ]
 }
