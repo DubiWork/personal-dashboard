@@ -69,6 +69,13 @@
       "yesterday": "Reviewed + rewrote domain-model.md and opened PR #86 into develop-lifecycle-upgrade.",
       "today": "Cleaned up PR #86, which showed a misleading 24-file diff. Root-caused it: the feature branch was created before develop-lifecycle-upgrade had picked up the 23 sibling epic docs, so those already-upstream files showed as additions. Verified all 23 already live on origin/develop-lifecycle-upgrade — only domain-model.md was genuinely new. Reset local develop-lifecycle-upgrade to origin and rebased the feature branch onto it; git dropped the duplicate docs commit (185feab9, 'previously applied'), leaving a one-file diff (domain-model.md +231). Per the user's preference, pushed to a new branch us/CXCDP-41655-domain-model, opened clean PR #88, and closed PR #86 with a pointer — no force-push. Confirmed the strict Jira-type gate only protects develop merges, not this epic-branch merge; read CXCDP-41655 (parent = User Story CXCDP-41425) directly via the sap-developer-plugin sap-jira MCP after a Playwright/Edge subagent hit an SSO wall. Corrected the stale 'route Jira through Playwright' rule in memory.",
       "blockers": "PR #88 awaiting an epic reviewer before merge into develop-lifecycle-upgrade."
+    },
+    {
+      "project": "edgar-value-miner",
+      "category": "personal",
+      "yesterday": "v1.2 shipped to production; prod Cloud Functions deploy failing.",
+      "today": "Reviewed edgar-value-miner PR #220 (fixes #219, prod Cloud Functions deploy). Ran a code-review pass, then iterated with the user on a v2 amendment. Corrected several wrong premises along the way — I had claimed the deploy step couldn't take working-directory:functions and that staging had an ordering bug; both were wrong (firebase walks up from functions/ to root firebase.json; staging was my evidence the pattern works). Confirmed the real root-cause fix is working-directory:functions resolving the local firebase-tools devDep, not the npm install -g in the PR description. Verified commit 87a711be correctly moved the functions build before the hosting deploy (fail-fast, no split-brain) and switched cd functions to working-directory. Noted the double-build (explicit step + firebase predeploy) is an intentional cheap gate, and flagged the pre-existing continue-on-error:true Lint step. Posted two COMMENT reviews via gh CLI (MCP github-tools can't resolve DubiWork repos).",
+      "blockers": "Abandoned posting reviews as the ClaudeCodeAgentDubi bot — no token authenticated in gh, and a repo-committed PAT would be a leaked secret. Reviews posted under DubiWork instead."
     }
   ]
 }
