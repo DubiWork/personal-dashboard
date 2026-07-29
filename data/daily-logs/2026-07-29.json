@@ -47,6 +47,13 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
+    },
+    {
+      "project": "inbox-watcher (personal Slack bot)",
+      "category": "personal",
+      "yesterday": "N/A",
+      "today": "Set up the inbox-watcher personal Claude Slack bot: created a Slack app, configured Socket Mode + bot scopes + event subscriptions, wrote .env, installed deps, started the bot (connected as U0BL38L7F7Z, DMs verified). Hit and documented two setup-skill errors (App-Level token is on Basic Information not Socket Mode; DMs blocked until the App Home Messages Tab is enabled). Skipped Jenkins MCP (package absent). Then contributed 6 setup-skill fixes upstream via fork-and-pull: forked I555958/inbox-watcher, branched, committed, pushed over HTTPS (SSH port 22 refused), filed issue #1 and opened PR #2. Also agreed a spoken-reply style rule for the VoiceBox hook (insights in explanatory mode, human prose otherwise).",
+      "blockers": "PR #2 awaiting Moshe's review/merge; can't request him as reviewer (cross-fork API restriction). Stashed package-lock.json change pending cleanup."
     }
   ]
 }
