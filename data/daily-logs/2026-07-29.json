@@ -61,6 +61,14 @@
       "yesterday": "N/A",
       "today": "Investigated why a contact ingested into CDP (EC 99d4176e…, TestLookalike BU 4_iWw03xI8s7jWHeAuswVMQQ, workspace 12207466, eu5-prod) never synced to Emarsys. Traced the full pipeline via cdp-kibana; the profile reached the CDFLDispatcher, resolved a valid ProfileSync vendor, then was dropped at message validation with 'Required properties are missing from object: businessAreas'. Corrected two of my own wrong diagnoses along the way (it was NOT a 'There is no action'/name-mismatch case — that log named a different app; and it was NOT a silent drop — the ERROR lived on the dispatcher pspanID, not the callID). Root cause: businessAreas is a required array<{BusinessArea:string}> on syncProfiles and the mapping didn't produce it. User found the fix I should have flagged first: map a plain STRING (the field holding the right business-area ID) into the array item — not an object, and not a StringToString default-if-empty (which can't build a row). Also observed a repeat ingest where the action had defaultMappings but no persisted custom mappings. Saved the case + reusable learning to the team KB (~/.cdp-investigate-knowledge).",
       "blockers": "Open thread: confirm why the custom mapping didn't persist to action HPmYYc… (save-path validation rejection suspected — the invalid BA1/externalBusinessArea item shape may have been dropped on save)."
+    },
+    {
+      "project": "Application Upgrade V2 (CXCDP-5279)",
+      "ticket": "CXCDP-41655",
+      "category": "sap",
+      "yesterday": "Reviewed + rewrote domain-model.md and opened PR #86 into develop-lifecycle-upgrade.",
+      "today": "Cleaned up PR #86, which showed a misleading 24-file diff. Root-caused it: the feature branch was created before develop-lifecycle-upgrade had picked up the 23 sibling epic docs, so those already-upstream files showed as additions. Verified all 23 already live on origin/develop-lifecycle-upgrade — only domain-model.md was genuinely new. Reset local develop-lifecycle-upgrade to origin and rebased the feature branch onto it; git dropped the duplicate docs commit (185feab9, 'previously applied'), leaving a one-file diff (domain-model.md +231). Per the user's preference, pushed to a new branch us/CXCDP-41655-domain-model, opened clean PR #88, and closed PR #86 with a pointer — no force-push. Confirmed the strict Jira-type gate only protects develop merges, not this epic-branch merge; read CXCDP-41655 (parent = User Story CXCDP-41425) directly via the sap-developer-plugin sap-jira MCP after a Playwright/Edge subagent hit an SSO wall. Corrected the stale 'route Jira through Playwright' rule in memory.",
+      "blockers": "PR #88 awaiting an epic reviewer before merge into develop-lifecycle-upgrade."
     }
   ]
 }
