@@ -5,8 +5,8 @@
       "project": "Application Upgrade V2 (CXCDP-5279)",
       "ticket": "CXCDP-41655",
       "yesterday": "Resolved the 5-domain model and per-entity change-closure; drafted domain-model.md.",
-      "today": "Ran a full section-by-section adversarial review of domain-model.md, then verified every finding in code via 4 parallel agents before editing (Kafka emissions, scopeless config + x-cdp, upgrade reconciliation, Polling/TrustedDomains). Rewrote the doc: corrected Kafka from one-terminal-door to per-entity mid-flight emission, redefined the change-closure as storage+emission, added scopeless-config and TrustedDomains-preserve and x-cdp placements, introduced custodian/owner vocabulary and a modeling-rules block. Two of my own critiques were reversed by evidence (mapping-clobber, separate-auth-publish). Doc done and reviewed, pending commit.",
-      "blockers": "None. domain-model.md fully edited on branch, pending user review then commit + PR into develop-lifecycle-upgrade."
+      "today": "Ran a full section-by-section adversarial review of domain-model.md, then verified every finding in code via 4 parallel agents before editing (Kafka emissions, scopeless config + x-cdp, upgrade reconciliation, Polling/TrustedDomains). Rewrote the doc: corrected Kafka from one-terminal-door to per-entity mid-flight emission, redefined the change-closure as storage+emission, added scopeless-config and TrustedDomains-preserve and x-cdp placements, introduced custodian/owner vocabulary and a modeling-rules block. Two of my own critiques were reversed by evidence (mapping-clobber, separate-auth-publish). Then committed (2aec8fc0) and opened PR #86 into develop-lifecycle-upgrade for epic review (not merged); raised CXCDP-42409 (defer Kafka emissions to a success-gated end stage) under Lane 3b; recovered a Windows git branch case-collision (Us/ vs us/) without data loss.",
+      "blockers": "PR #86 awaiting an epic reviewer before merge. Slack post to #application-lifecycle-upgrade-backend handed to user (configured webhook targets the Connectors workflow, not that channel)."
     },
     {
       "timestamp": "09:55",
