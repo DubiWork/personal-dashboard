@@ -6,6 +6,12 @@
       "ticket": null,
       "summary": "EMS businessAreas schema lookup — confirmed multi-BA allowed, corrected schema from {BusinessArea:string} to object-array with configurable dimensions; updated primer and memory",
       "duration_minutes": 30
+    },
+    {
+      "type": "code-review",
+      "ticket": "CXCDP-41656",
+      "summary": "PR #61 severity-map walkthrough with user, §1-§8 (concept-first, one section at a time). Banked 4 review comments: §2 dependency rule needs post-upgrade-state evaluation; §3.1 drop the IgnoreCheckConflictOnRemoveConfigProperty flag (precise post-state search, never silent); §2/§5 Predefined-Components Modified Warning->Info (overwrites only connector default template, not live mappings); §6 SchemaFetchFailed reuse-of-MappingChanged as a question. Remaining: §8-tail + §9 + §10, post comments, formal verdict, then PR #73",
+      "duration_minutes": 120
     }
   ]
 }
