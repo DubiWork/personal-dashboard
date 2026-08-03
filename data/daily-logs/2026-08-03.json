@@ -19,6 +19,28 @@
       "blockers": [
         "PR #88 Jira validation blocked — CXCDP-41655 is type Task (needs Bug/User Story/Epic/Activity)"
       ]
+    },
+    {
+      "focus": "Review Lane 3a upgrade PR stack #91/#92/#93 (CXCDP-41495/42143/42144) on ApplicationService",
+      "done": [
+        "Reviewed PR #91 (UpgradeGrain skeleton + IUpgradeRunner saga-extraction): posted 2 inline comments (doc/signature mismatch, runner null-guard)",
+        "Reviewed PR #92 (MySQL keep-alive reminder): found orphan-reminder bug, latent there",
+        "Verified #93 is a git superset of #91->#92 (pr-92 ancestor of pr-93); asked author to close #91/#92 and land the stack via #93",
+        "Found orphan-reminder bug is LIVE in #93: crash between terminal WriteStateAsync and TearDown leaves _reminder null on reactivation, DisposeReminder early-returns, reminder never unregistered",
+        "Found Apply-ordering stuck-run bug: Set(Applying) persists before CreateReminder; noted author's c76b8d35 reorder did not fix it",
+        "Found uncapped retry: retryable Fail re-runs head domain every 15s forever once Lane 3b handlers land; recommended RetryDeadline+RetryCount on UpgradeState",
+        "Checked design docs: version-match gate retired for entityHash compare (no already-upgraded short-circuit); retracted/reframed the re-Apply 'skips domains' finding as an open question",
+        "Ran a collaborative round-robin walkthrough of #93 per user preference (Apply -> timer tick -> runner walk -> reminder lifecycle)",
+        "Reviewed a parallel Codex review of #93 — it caught 2 higher-severity bugs (stuck-after-crash, re-Apply) my ad-hoc subagent passes missed"
+      ],
+      "next": [
+        "Consider consolidating Lane-3b hand-off traps (retry cap, ctx/plan nulls, CurrentDomains reset) into one summary comment on #93",
+        "Author to close #91/#92, land stack via #93, fix orphan + Apply-ordering",
+        "Run the mandated syntax->security->architect reviewer sequence (skipped this session)"
+      ],
+      "blockers": [
+        "All three PRs carry the same Jira-type gate (Task) as #88"
+      ]
     }
   ]
 }
