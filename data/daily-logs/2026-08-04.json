@@ -22,6 +22,26 @@
       ]
     },
     {
+      "timestamp": "14:00",
+      "duration": 45,
+      "category": "work",
+      "project": "Emarsys",
+      "summary": "Advisory session on Emarsys Engagement Cloud businessAreas multi-BA schema model",
+      "accomplishments": [
+        "Clarified: each businessAreas object = one Business Area (not a concatenated multi-BA string)",
+        "Confirmed: EC concatenates dimension values (e.g. FR-Nespresso) EC-side, not CDP emitting multiple BAs as one string",
+        "Validated response to Dragos: multi-BA support is a connector implementation question, schema already models it correctly",
+        "Identified open question: does connector currently emit multiple businessAreaIds entries for multi-BA profiles",
+        "Updated Emarsys.md concept note with session findings",
+        "Created businessAreas.md concept note with full schema model documentation",
+        "Updated arrayItemsProvider.md: $.addresses-driven provider yields 0 rows on no-address profiles"
+      ],
+      "nextSteps": [
+        "Verify whether EC connector implementation correctly emits multiple businessAreaIds entries for profiles with multiple BA objects (Kedar's example)"
+      ],
+      "tasksWorkedOn": []
+    },
+    {
       "timestamp": "11:05",
       "duration": 30,
       "category": "personal",
