@@ -8,16 +8,38 @@
       "project": "chub-slack-bot",
       "summary": "Fix startup catch-up silently dropping missed PRs when AI proxy unreachable at boot",
       "accomplishments": [
-        "Diagnosed: 'fetch failed' is Node 18+ native fetch surface for ECONNREFUSED — isProxyDownError missed it",
+        "Diagnosed: 'fetch failed' is Node 18+ native fetch surface for ECONNREFUSED \u00e2\u20ac\u201d isProxyDownError missed it",
         "Fixed proxy-state.js: isProxyDownError now matches 'fetch failed' exactly in addition to ECONNREFUSED",
         "Fixed catchup.js: enqueues failed candidate + all remaining unprocessed candidates on proxy-down detection",
         "Added proxyDownDetected flag to break outer channel loop and prevent cascading failures",
         "Merged PR #54 to master (CXCDP-39490), all 615 tests passing, bot restarted via pm2"
       ],
       "nextSteps": [
-        "Completed — no follow-up needed; verify on next PC startup that missed PRs are auto-reviewed on proxy recovery"
+        "Completed \u00e2\u20ac\u201d no follow-up needed; verify on next PC startup that missed PRs are auto-reviewed on proxy recovery"
       ],
-      "tasksWorkedOn": ["CXCDP-39490"]
+      "tasksWorkedOn": [
+        "CXCDP-39490"
+      ]
+    },
+    {
+      "timestamp": "10:34",
+      "duration": 30,
+      "category": "personal",
+      "project": "I543234",
+      "summary": "Run /doctor health check and clean up Claude Code tooling: agents, plugins, MCP servers, and allow rules",
+      "accomplishments": [
+        "Deleted 66 .bak agent backup files from ~/.claude/agents/",
+        "Removed duplicate mcp__plugin_context7_context7__* allow rule from settings.json",
+        "Disabled playwright-2 and voicebox MCP servers (settings.json + ~/.claude.json)",
+        "Suppressed cdp-investigate.bak skill via skillOverrides",
+        "Confirmed 14+ zero-usage plugins already disabled in enabledPlugins \u2014 no changes needed"
+      ],
+      "nextSteps": [
+        "Investigate slow SessionStart hooks (~3s avg) \u2014 consider caching or async",
+        "Completed \u2014 no follow-up needed otherwise"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "1032d43d-b2ba-4f4d-935a-354d76008a40"
     }
   ]
 }
