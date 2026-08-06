@@ -112,6 +112,23 @@
         "Application Upgrade V2"
       ],
       "taskId": "2026-08-06-090000"
-    }
-  ]
-}
+    },
+    {
+      "timestamp": "09:05",
+      "duration": null,
+      "category": "personal",
+      "project": "iCharts Phase 1.5 Planning",
+      "summary": "iCharts full UI recon completion + session wrap",
+      "accomplishments": [
+        "Completed full iCharts recon: 9 analysis tabs + global pages across 60+ screenshots",
+        "Corrected documentation errors: Income tab has Chart Type on ALL charts; Balance Sheet tab has only 3 charts",
+        "Verified chart colors, View options per tab, mini-chart interactivity rules",
+        "Created iCharts concept note with specification summary (reference for Phase 1.5 design)",
+        "Updated Phase 1.5 concept note with recon findings and next steps",
+        "Queued /grill-with-docs for CONTEXT.md build from recon + product vision",
+        "Executed mechanical session wrap: board moved, journal appended, backlink queue updated"
+      ],
+      "tasksWorkedOn": [
+        "iCharts Phase 1.5 Planning"
+      ],
+      "taskId": "2026-08-06-090528"
