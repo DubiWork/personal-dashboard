@@ -22,6 +22,18 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "35536d70-d774-4e1b-a50c-965fc981f9aa"
+    },
+    {
+      "timestamp": "09:41",
+      "duration": 1087,
+      "category": "work",
+      "project": "ApplicationService",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Done. Ready for issue 2?"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "010aceee-b652-4dbc-bcf8-b3e51b66d874"
     }
   ]
 }
