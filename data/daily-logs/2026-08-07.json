@@ -41,16 +41,21 @@
       "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
     },
     {
-      "timestamp": "17:25",
-      "duration": 1023,
-      "category": "personal",
-      "project": "edgar-value-miner",
-      "summary": "Session activity",
-      "accomplishments": [
-        "Committed as `3497d9e` on `docs/phase-1.5-planning` (2 files, 218 insertions). Not pushed — say the word if you want it on the remote."
+      "id": "2026-08-07-113404",
+      "category": "Personal",
+      "title": "Architecture doc durability + ADR formalization",
+      "summary": "Created CONTEXT.md at repo root (full product-context onboarding) and docs/adr/0001-vire-web-architecture.md (authoritative decision record from #247 grilling). Resolved #247 as CLOSED. Captured all architecture findings: two-systems/one-engine, three data tiers, freshness metadata, static AI cost lever, append-only reasoning trail, provider abstraction requirement. Board updated: Wayfinder now shows #247 resolved, unblocks Wayfinder #242–246. Next: domain modeling over CONTEXT.md/ADR-0001 (Company, Insight, ReasoningTrail entities) → /to-spec → /to-tickets. Commit 3497d9e landed, NOT pushed.",
+      "entities": [
+        "edgar-value-miner",
+        "CONTEXT.md",
+        "ADR-0001",
+        "Wayfinder Map",
+        "Matt Pocock flow"
       ],
-      "tasksWorkedOn": [],
-      "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
+      "facts_count": 13,
+      "board_moves": 1,
+      "concept_notes_created": 2,
+      "concept_notes_updated": 1
     }
   ]
 }
