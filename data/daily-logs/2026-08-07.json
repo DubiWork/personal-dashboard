@@ -6,11 +6,29 @@
       "category": "Personal",
       "title": "edgar-value-miner product orientation + roadmap",
       "summary": "Audited current codebase (SPA, 3 charts, no routing), reviewed 22 open issues, discovered VIRE local pipeline, articulated product vision (3 principles + investor lifecycle), created Wayfinder Map (#241) with 6 decision tickets.",
-      "entities": ["edgar-value-miner", "VIRE", "Wayfinder Map", "Phase 1.5", "Bull vs Bear Debate"],
+      "entities": [
+        "edgar-value-miner",
+        "VIRE",
+        "Wayfinder Map",
+        "Phase 1.5",
+        "Bull vs Bear Debate"
+      ],
       "facts_count": 19,
       "board_moves": 1,
       "concept_notes_created": 3,
       "concept_notes_updated": 2
+    },
+    {
+      "timestamp": "13:27",
+      "duration": 785,
+      "category": "personal",
+      "project": "edgar-value-miner",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Done. The mentor voices requirement is now part of #247 with the key constraints captured — two-layer split (Buffett public, Ronnie private), ingestion over time, contextual surfacing at research time."
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
     }
   ]
 }
