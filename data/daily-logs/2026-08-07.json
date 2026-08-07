@@ -39,6 +39,18 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
+    },
+    {
+      "timestamp": "17:25",
+      "duration": 1023,
+      "category": "personal",
+      "project": "edgar-value-miner",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Committed as `3497d9e` on `docs/phase-1.5-planning` (2 files, 218 insertions). Not pushed — say the word if you want it on the remote."
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "1039e8ce-fa07-4a1c-b9e1-aa828421aa6c"
     }
   ]
 }
