@@ -34,18 +34,18 @@
       "accomplishments": [
         "Implemented CXCDP-42409 emission deferral from scratch on us/CXCDP-41496_CXCDP-42409_lane_3b_kafka_emit_deferral_v2",
         "Fixed singleton race: EmissionCollector as per-call local variable in AdvanceAsync, not instance field",
-        "Emissions drain to state.PendingEmissions per-entity inside Success() — same WriteStateAsync as apply record",
-        "RevertAsync clears state.PendingEmissions on terminal revert — partial-apply reverts leave no stale emissions",
-        "DiscardEmissions clears state.PendingEmissions on permanent failure — all-or-nothing AC3 enforcement",
+        "Emissions drain to state.PendingEmissions per-entity inside Success() \u2014 same WriteStateAsync as apply record",
+        "RevertAsync clears state.PendingEmissions on terminal revert \u2014 partial-apply reverts leave no stale emissions",
+        "DiscardEmissions clears state.PendingEmissions on permanent failure \u2014 all-or-nothing AC3 enforcement",
         "Security fix: IEmissionPayload + TypeNameHandling.Auto removed, replaced with string PayloadJson (CHUB gadget-chain finding)",
-        "Crash-resume on Applied state with non-empty PendingEmissions correctly calls FinalizeAsync — test added",
+        "Crash-resume on Applied state with non-empty PendingEmissions correctly calls FinalizeAsync \u2014 test added",
         "Three review rounds: mattpocock-skills, dotnet-review, orleans-specialist caught singleton race, RevertAsync missing clear, security issue"
       ],
       "nextSteps": [
         "PR #109 awaiting code review",
-        "CXCDP-41603 (Lane 6 FinalizeAsync) — wire real Kafka/auth publish + clear PendingEmissions",
-        "PR #97 (Vladislav) — still REQUEST_CHANGES, 8 issues unfixed",
-        "PR #104 (Arthur) — awaiting re-review"
+        "CXCDP-41603 (Lane 6 FinalizeAsync) \u2014 wire real Kafka/auth publish + clear PendingEmissions",
+        "PR #97 (Vladislav) \u2014 still REQUEST_CHANGES, 8 issues unfixed",
+        "PR #104 (Arthur) \u2014 awaiting re-review"
       ],
       "tasksWorkedOn": [
         "CXCDP-42409 Lane 3b emission deferral"
@@ -60,10 +60,10 @@
       "summary": "PR #109 review comments resolved; EmissionKind split to file, IEmissionCollector/factory declined",
       "accomplishments": [
         "Reviewer I762051 posted 4 comments on PR #109; all resolved or addressed",
-        "EmissionKind split to separate file per request — accepted and implemented; committed and pushed",
-        "IEmissionCollector interface extraction declined — rationale: accumulator ≠ service; interface adds no value",
-        "Factory pattern for EmissionCollector declined — rationale: no deps, no construction variance; pure ceremony",
-        "Three prior bot threads (TypeNameHandling N/A, retryable GC N/A, test count N/A) resolved with 👍",
+        "EmissionKind split to separate file per request \u2014 accepted and implemented; committed and pushed",
+        "IEmissionCollector interface extraction declined \u2014 rationale: accumulator \u2260 service; interface adds no value",
+        "Factory pattern for EmissionCollector declined \u2014 rationale: no deps, no construction variance; pure ceremony",
+        "Three prior bot threads (TypeNameHandling N/A, retryable GC N/A, test count N/A) resolved with \ud83d\udc4d",
         "All 7 PR #109 threads now resolved; CI check ua-text-review in_progress"
       ],
       "nextSteps": [
@@ -74,6 +74,36 @@
         "CXCDP-42409 PR #109 review comments"
       ],
       "taskId": "2026-08-10-pr109-review-comments"
+    },
+    {
+      "timestamp": "16:00",
+      "duration": 45,
+      "category": "sap",
+      "project": "ApplicationService",
+      "summary": "Full code reviews of PR #97 (CheckOnly DAG) and PR #113 (LIFO revert) \u2014 scope creep and critical defects identified",
+      "accomplishments": [
+        "PR #97 (CXCDP-41504) full .NET code review using mattpocock-skills:code-review + dotnet-review skill",
+        "Found 3 naming violations: ctx/ct \u2192 upgradeContext/cancellationToken, ToWireItem/ext \u2192 ToResponseItem/checkFinding, UpgradeCheckItemExtended \u2192 CheckFindingDetail",
+        "Found null! suppressor on ConnectorMetadata (AC requires grain fetch, impl reads Model.Connector \u2014 deferral not flagged)",
+        "Found AC gaps: 4-handler test required (unit test uses 0), contract test missing, per-domain assertions missing",
+        "Found scope creep: IsRunning guard in Check() and WriteStateAsync in Check() are not in AC",
+        "Moved PR #97 to Draft per findings; awaiting author implementation completion",
+        "PR #113 (CXCDP-41500 LIFO revert) full .NET code review",
+        "Found 3 critical defects: (1) RevertAsync stub doesn't clear state.PendingEmissions (AC3 violation), (2) FinishRevert false-Partial detection includes apply-phase failures, (3) missing DeleteOriginalsSweepAsync call",
+        "Found patterns: IList<string> for RevertList (Stack<T> deserialization reverses on crash-resume), deliberate Retryable asymmetry (needs comment), RevertMode assignment (use ternary)",
+        "REQUEST_CHANGES posted with inline comments; awaiting author fixes",
+        "Board updated: PR #109 to CI Pending, PR #97 to Draft, PR #113 added as REQUEST_CHANGES"
+      ],
+      "nextSteps": [
+        "PR #109: wait for I587375 thread + CI green, then merge",
+        "PR #113: author to fix 3 critical defects + batch-per-tick refinement",
+        "PR #97: author to complete WIP implementation and address review findings"
+      ],
+      "tasksWorkedOn": [
+        "CXCDP-41504 CheckOnly DAG review",
+        "CXCDP-41500 LIFO revert review"
+      ],
+      "taskId": "2026-08-10-pr-reviews-97-113"
     }
   ]
 }
