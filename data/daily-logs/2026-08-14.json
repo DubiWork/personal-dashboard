@@ -6,6 +6,12 @@
       "time": "00:00",
       "duration": "session",
       "work": "edgar-value-miner board triage + cleanup: triaged 41 issues, set milestone/label/priority/parent-epic on all, Epic 1→19 children, Epic 2→#248→#249–#261, Ready for Dev: #248/#249/#250, remaining in Grooming/Backlog, sprint setup deferred"
+    },
+    {
+      "category": "Personal",
+      "time": "09:00",
+      "duration": "session",
+      "work": "Sprint 1/2 iteration setup + #249 normalizer spike + #250 latestFiledDate; Sprint 1 (Aug 14–27) and Sprint 2 (Aug 28–Sep 10) created on EDGAR board; #249 (M, 3pt) and #250 (XS, 1pt) groomed and fanned to agents; PR #263 (#250) and PR #264 (#249 spike findings) opened; spike findings unblock #251–#252 grooming"
     }
   ]
 }
