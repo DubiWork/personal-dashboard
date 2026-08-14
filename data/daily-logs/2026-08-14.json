@@ -2,10 +2,10 @@
   "date": "2026-08-14",
   "sessions": [
     {
-      "id": "2026-08-14-session-chub-slack-bot",
       "category": "Personal",
-      "title": "chub-slack-bot maintenance — PM2 autorestart disabled",
-      "summary": "Bot stopped via PM2 due to token budget concerns. Reconfigured ecosystem.config.cjs with autorestart=false for manual-start-only operation."
+      "time": "00:00",
+      "duration": "session",
+      "work": "edgar-value-miner board triage + cleanup: triaged 41 issues, set milestone/label/priority/parent-epic on all, Epic 1→19 children, Epic 2→#248→#249–#261, Ready for Dev: #248/#249/#250, remaining in Grooming/Backlog, sprint setup deferred"
     }
   ]
 }
