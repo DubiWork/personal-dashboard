@@ -1,0 +1,18 @@
+{
+    "date":  "2026-08-16",
+    "sessions":  [
+                     {
+                         "time":  "2026-08-16-125341",
+                         "category":  "SAP",
+                         "summary":  "Reviewed ApplicationService PR #120/CXCDP-41505 for Upgrade V2; posted findings on Apply-from-Failed hash-gate blocking, unreachable revert, SeedQueue replay risk, UpgradeChecker guard gaps, and DiffSchemaProperties blind spots.",
+                         "hours":  4,
+                         "focus":  [
+                                       "Application Upgrade V2",
+                                       "ApplicationService",
+                                       "CXCDP-41505",
+                                       "UpgradeGrain",
+                                       "UpgradeChecker"
+                                   ]
+                     }
+                 ]
+}
