@@ -15,5 +15,12 @@
       "work": "SRP refactor on CXCDP-41578: split validator into two focused methods + shared helper, 3 review rounds, PR #121 pushed",
       "hours": 4
     },
+    {
+      "id": "2026-08-17-000000",
+      "start": "2026-08-17T00:00:00Z",
+      "category": "Personal",
+      "work": "edgar-value-miner #251 tag normalization: Fix 1 (stitchTimeSeriesData) + Fix 2 (bank revenue tags SOFI correction) via TDD; PR #268 in review; #267 SHOP 40-F spike created",
+      "hours": 3
+    }
   ]
 }
