@@ -9,14 +9,11 @@
       "hours": 2
     },
     {
-      "timestamp": "16:03",
-      "duration": 135,
-      "category": "work",
-      "project": "ApplicationService",
-      "summary": "Session activity",
-      "accomplishments": [],
-      "tasksWorkedOn": [],
-      "taskId": "010aceee-b652-4dbc-bcf8-b3e51b66d874"
-    }
+      "id": "2026-08-17-130336",
+      "start": "2026-08-17T13:03:36Z",
+      "category": "SAP",
+      "work": "SRP refactor on CXCDP-41578: split validator into two focused methods + shared helper, 3 review rounds, PR #121 pushed",
+      "hours": 4
+    },
   ]
 }
