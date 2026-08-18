@@ -52,6 +52,24 @@
         "Restart bot when needed: cd /c/SAPDevelop/chub-slack-bot && npm run start:pm2",
         "Resolve im:write scope to unblock PRs #133/#134"
       ]
-    }
+    {
+      "session_id": "2026-08-18-134953",
+      "category": "SAP",
+      "start_time": "13:49",
+      "duration_minutes": 120,
+      "summary": "Design session for CXCDP-43299 Action handler (IUpgradeDomainHandler). /grill-with-docs session with user settled scope (design-only), posture (V2 done-right, not V1 refactor), and key decisions: ActionsHandler is template for other handlers; enriching events in action closure; deletion first-class; emissions flow-aware (defer upgrade, inline normal); x-cdp preservation explicit AC; characterization-tests-first blocking gate. Wrote action-handler-design.md (14 sections, 4+14 risks, 5 findings). Empirical exploration: ApplicationBuilder purpose-release (ActionGrain.cs:268-287), refcount guard (ActionServiceGrain.cs:1804-1812), Emarsys fixtures (V8-to-V16, V26-to-EmsV3).",
+      "artifacts": [
+        "CXCDP-43299.md concept note (created)",
+        "ActionsHandler.md concept note (created)",
+        "action-handler-design.md concept note (created)",
+        "docs/epics/CXCDP-5279-application-upgrade/action-handler-design.md (design doc, 14 sections)"
+      ],
+      "next_steps": [
+        "Escalate PR #118 (CXCDP-43186 ConfigurationHandler) review to REQUEST_CHANGES",
+        "Draft implementation User Story + sub-tasks for Action domain",
+        "Get product sign-off on deletion/rename UX (S7/S8) and EmissionKind addition",
+        "Design review scheduled 2026-08-20"
+      ]
+    },
   ]
 }
