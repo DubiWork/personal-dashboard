@@ -2,6 +2,24 @@
   "date": "2026-08-18",
   "sessions": [
     {
+      "session_id": "2026-08-18-130000",
+      "category": "SAP",
+      "start_time": "13:00",
+      "duration_minutes": 60,
+      "summary": "Planning session for Application Upgrade V2 design work. Confirmed skill workflow: /grill-with-docs (design vehicle) → /to-spec → /to-tickets → /implement per ticket. Design ticket CXCDP-43299 created (10 story points, review Thu 2026-08-20, 2-day estimation) under epic CXCDP-5279 for Domain.Action handler. Reference implementation: CXCDP-43186 (ConfigurationHandler). MCP lesson: SAP Jira User Story creation requires both Epic Link and Team fields; Team field cannot be set as plain string via MCP — ticket created manually.",
+      "artifacts": [
+        "CXCDP-43299.md concept note (new)",
+        "IUpgradeDomainHandler.md concept note (new)",
+        "Domain.Action.md concept note (new)",
+        "Application Upgrade V2.md concept note (new)",
+        "UpgradeRunner.md concept note (new)"
+      ],
+      "next_steps": [
+        "Start fresh session, run /grill-with-docs on IUpgradeDomainHandler.cs + UpgradeRunner.cs",
+        "After design: create implementation story + sub-tickets under CXCDP-43299"
+      ]
+    },
+    {
       "session_id": "2026-08-18-100000",
       "category": "Personal",
       "start_time": "10:00",
