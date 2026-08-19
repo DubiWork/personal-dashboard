@@ -21,6 +21,45 @@
         "Stale UpgradeJsonHelper class doc",
         "EntityHash only set by ConfigurationHandler"
       ]
+    },
+    {
+      "id": "2026-08-19-080000",
+      "category": "SAP",
+      "duration_minutes": 480,
+      "summary": "Design review and ticket creation for ActionsHandler V2 (CXCDP-43299 / CXCDP-43325)",
+      "work_items": [
+        {
+          "key": "CXCDP-43299",
+          "title": "Design: Action handler for application upgrade V2",
+          "status": "Done",
+          "type": "design-review"
+        },
+        {
+          "key": "CXCDP-43325",
+          "title": "Implement ActionsHandler V2",
+          "status": "To Do",
+          "type": "user-story"
+        },
+        {
+          "key": "CXCDP-43326",
+          "title": "Spike D-Q14 flow-aware emission suppression",
+          "status": "To Do",
+          "type": "spike"
+        },
+        {
+          "key": "CXCDP-43327",
+          "title": "Phase 0 characterization suite",
+          "status": "To Do",
+          "type": "task"
+        }
+      ],
+      "findings": [
+        "5 blocking findings (B1–B5): D-Q14 prerequisite, entity-id placeholder, ApplyAsync idempotency, S8 delete conflict, F3 schema ownership",
+        "7 high findings (H1–H7): revert contamination, orphan-sweep, emissions seam, partial-write, incomplete backup fields, missing IGrainFactory, CDFL scoping",
+        "5 medium findings (M1–M5): EntityHash recursion, BackupKey sealing, SetMappings pairing, BatchSize livelock, EmissionKind undefined",
+        "User Story CXCDP-43325 created with 23 sub-tasks (CXCDP-43326–CXCDP-43348) totaling 156h / 42 SP",
+        "Two unblocked sub-tasks: D-Q14 spike, Phase 0 characterization tests"
+      ]
     }
   ]
 }
