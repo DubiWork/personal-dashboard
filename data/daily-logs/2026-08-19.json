@@ -1,0 +1,26 @@
+{
+  "date": "2026-08-19",
+  "sessions": [
+    {
+      "id": "2026-08-19-130000",
+      "category": "SAP",
+      "duration_minutes": 120,
+      "summary": "Round 2 code review on PR #122 (CXCDP-41505 per-handler entityHash)",
+      "work_items": [
+        {
+          "key": "CXCDP-41505",
+          "title": "Replace whole-shape hash with per-handler before-schema hash",
+          "status": "In Review",
+          "type": "code-review"
+        }
+      ],
+      "findings": [
+        "AC2 cache-hit missing (UpgradeGrain.Check() unconditionally re-runs)",
+        "HTTP status 400 vs 412 on hash mismatch",
+        "Null-hash guard comment contradicts behavior",
+        "Stale UpgradeJsonHelper class doc",
+        "EntityHash only set by ConfigurationHandler"
+      ]
+    }
+  ]
+}
