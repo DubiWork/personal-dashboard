@@ -1,0 +1,28 @@
+{
+  "date": "2026-08-20",
+  "sessions": [
+    {
+      "id": "2026-08-20-160000",
+      "category": "SAP",
+      "duration_minutes": 240,
+      "focus": "CXCDP-43326 spike completion + CXCDP-43325 User Story setup",
+      "accomplishments": [
+        "D-Q14 spike (CXCDP-43326) completed: five-agent review finalized EmissionCollector? design decision",
+        "PR #125 squash-merged; PR #126 opened (draft)",
+        "CXCDP-43369 created (S8 delete model investigation, blocks CXCDP-43339)",
+        "Action/DataEvent grain lifecycle hazards documented",
+        "EmitOrDefer design finalized (Task-returning wrapper, pre-write/pre-delete placement preservation)"
+      ],
+      "entities": [
+        "CXCDP-43325",
+        "CXCDP-43326",
+        "CXCDP-43369",
+        "ActionsHandler",
+        "EmissionCollector",
+        "EmitOrDefer"
+      ],
+      "jira_keys": ["CXCDP-43325"],
+      "pr_keys": ["PR#125", "PR#126"]
+    }
+  ]
+}
