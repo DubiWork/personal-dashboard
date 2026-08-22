@@ -1,0 +1,25 @@
+{
+  "date": "2026-08-22",
+  "sessions": [
+    {
+      "id": "2026-08-22-191500",
+      "category": "Personal",
+      "project": "edgar-value-miner",
+      "summary": "Shipped currency normalization (#252) to production via PR #275 after discovering it was on develop but not main. Completed SHOP 40-F spike (#267) — discovered companyconcept API returns 40-F revenue data back to 2017 while companyfacts blob excludes it entirely. Implemented fullHistory flag (#253) and removed client-side Firestore writes (#256). Created sub-issues #277/#278 for 40-F implementation. Fixed GITHUB_TOKEN mistake (must stay set for DubiWork ops).",
+      "work_items": [
+        "#252 — currency normalization production shipped",
+        "#267 — SHOP 40-F spike research completed",
+        "#253 — fullHistory flag implementation (PR #279)",
+        "#256 — remove client Firestore writes (PR #280)",
+        "#277 — fetchCompanyConcept (created)",
+        "#278 — extend ANNUAL_FORMS (created)"
+      ],
+      "key_decisions": [
+        "GITHUB_TOKEN env var must stay set for DubiWork org operations",
+        "companyconcept API is authoritative for 40-F revenue data",
+        "fullHistory flag defers UI wiring to #260"
+      ],
+      "blockers": []
+    }
+  ]
+}
