@@ -1,0 +1,21 @@
+{
+  "date": "2026-08-30",
+  "sessions": [
+    {
+      "session_id": "2026-08-30-091500",
+      "project": "edgar-value-miner",
+      "category": "Personal",
+      "duration_minutes": 120,
+      "summary": "#261 (background staleness check) 3-agent review completed with 5 findings fixed; retroactive mattpocock-skills:code-review run on #258–#260 (workflow violation discovered); workflow rule established: code-review mandatory before squash; epic/248 branch pushed with 5 squash commits; 4 sub-issues remain before epic PR opens",
+      "key_changes": [
+        "#261 invalidateCache wrapped in try/catch",
+        "zero-cache window documented",
+        "arrow function parens fixed",
+        "mattpocock-skills:code-review rule added to mistakes-lessons.md",
+        "#258–#261 squashed to epic/248-full-history-data-layer"
+      ],
+      "test_results": "57 passed, 1 skipped",
+      "blockers": []
+    }
+  ]
+}
