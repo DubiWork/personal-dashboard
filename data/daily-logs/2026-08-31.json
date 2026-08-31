@@ -8,6 +8,14 @@
       "duration_minutes": 60,
       "work_type": "review",
       "jira_key": "CXCDP-43571"
+    },
+    {
+      "id": "2026-08-31-000000",
+      "category": "SAP",
+      "summary": "Security audit (SDOL-011) of Ontology Editor codebase: 9-area review covering JWT auth layer, API endpoints, HANA SQL patterns, SPARQL construction, AI Core prompts, external connectors, frontend XSS surface, and existing security controls. Key findings: auth solid (parameterized SQL, XSUAA, role Depends); MCP_AUTH_DISABLED lacks CF production guard; /query/sparql endpoint lacks rate limiting and complexity cap; SPARQL FILTER escaping incomplete; user input injected raw into NL-to-SPARQL LLM prompt. Audit artifact saved to docs/documents/security/SDOL-011-security-audit.md.",
+      "duration_minutes": 120,
+      "work_type": "security_audit",
+      "project": "Ontology Editor"
     }
   ]
 }
