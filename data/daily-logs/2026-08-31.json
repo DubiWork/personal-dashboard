@@ -4,18 +4,34 @@
     {
       "id": "2026-08-31-100000",
       "category": "SAP",
+      "summary": "Code review PR #189 (CXCDP-43572): CoreHandler DI wiring, CoreBackup class, ReadBackup helper for ApplicationUpgrade V2. Ran two-axis mattpocock code review (Standards + Spec) plus two specialist agents (Orleans + Security). Found 2 spec violations (EnrichmentPoints wrong type—data-integrity bug; PollingConfigurations collection type mismatch), 2 standards findings (dead Failure() helper, comment noise), 4 advisory findings (Orleans/security). REQUEST_CHANGES posted to GitHub.",
+      "duration_minutes": 120,
+      "work_type": "code_review",
+      "jira_key": "CXCDP-43572"
+    },
+    {
+      "id": "2026-08-31-000001",
+      "category": "SAP",
       "summary": "Code review PR #192 (doc-only: Visibility field + PersistenceGate decision on ApplicationUpgrade epic). Ran mattpocock-skills:code-review two-axis review. Standards found 2 findings (duplicated Visibility type, Divergent Change). Spec found 3 findings (undeclared file, test coverage gaps, missing comment). 3 review comments posted to PR #192 via gh CLI.",
       "duration_minutes": 60,
       "work_type": "review",
       "jira_key": "CXCDP-43571"
     },
     {
-      "id": "2026-08-31-000000",
+      "id": "2026-08-31-100002",
       "category": "SAP",
       "summary": "Security audit (SDOL-011) of Ontology Editor codebase: 9-area review covering JWT auth layer, API endpoints, HANA SQL patterns, SPARQL construction, AI Core prompts, external connectors, frontend XSS surface, and existing security controls. Key findings: auth solid (parameterized SQL, XSUAA, role Depends); MCP_AUTH_DISABLED lacks CF production guard; /query/sparql endpoint lacks rate limiting and complexity cap; SPARQL FILTER escaping incomplete; user input injected raw into NL-to-SPARQL LLM prompt. Audit artifact saved to docs/documents/security/SDOL-011-security-audit.md.",
       "duration_minutes": 120,
       "work_type": "security_audit",
       "project": "Ontology Editor"
+    },
+    {
+      "id": "2026-08-31-000000",
+      "category": "SAP",
+      "summary": "SDOL-011 secure-coding-guidelines PR: copied secure-coding-guidelines.md from narwhal-sdol to docs/documents/security/; created branch SDOL-011/secure-coding-guidelines on dev-velocity; opened PR on github.wdf.sap.corp. Addressed 4 review comments: validate_host_endpoint SSRF protection (scheme enforcement + IP range blocking), Section 8 /health disclosure rows, CORS config notes. Polish commit with improved comments. All commits pushed; PR reply posting manual-only (github-tools MCP host mismatch).",
+      "duration_minutes": 90,
+      "work_type": "feature",
+      "jira_key": "SDOL-011"
     }
   ]
 }
