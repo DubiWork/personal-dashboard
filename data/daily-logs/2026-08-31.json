@@ -32,6 +32,11 @@
       "duration_minutes": 90,
       "work_type": "feature",
       "jira_key": "SDOL-011"
+    {
+      "id": "2026-08-31-WRAP",
+      "category": "SAP",
+      "summary": "Session wrap: Committed PR #725 to SDOL-011/secure-coding-guidelines branch with .github/PULL_REQUEST_TEMPLATE.md checklist (security review for AI-generated code: hardcoded secrets, auth bypass, unvalidated inputs, insecure defaults, injection patterns, prompt injection). Updated narwhal-sdol Issue #15 with progress comment marking Task 3 complete; added PR link as tracking reference. Board moved SDOL-011 Task 3 from In Progress to Done (pending merge). Updated concept notes (SDOL-011, Ontology Editor) with 2026-08-31-WRAP changelog entries. Updated journal, backlink queue, and memory.",
+      "duration_minutes": 30,
+      "work_type": "session_wrap",
+      "jira_key": "SDOL-011"
     }
-  ]
-}
