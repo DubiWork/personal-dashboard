@@ -58,6 +58,50 @@
         "Both issues squashed into feature/782-threat-modeling"
       ],
       "blockers": []
+    },
+    {
+      "id": "2026-09-03-WRAP",
+      "category": "SAP",
+      "title": "SDOL-011 Host Endpoint SSRF Sub-Issues — Feature #782 Wrap",
+      "duration_minutes": 90,
+      "summary": "Wrapped session on issue #735 (host_endpoint SSRF protection) and completed sub-issue #788 (ingestion validator). Corrected #735 spec: RFC-1918/loopback/link-local IP blocklist, not HTTP scheme validation — host_endpoint is a TCP socket address, not HTTP client input. All connectors use bare hostnames; HANA strips https:// prefixes. DNS rebinding identified as attack vector. Sub-issue #788 implemented with Pydantic validators on ConnectionBase/ConnectionUpdate/TestConnectionRequest. Security review found IPv4-mapped IPv6 bypass (::ffff:10.x.x.x) and missing 0.0.0.0/8 — both fixed. 70 tests passing; squashed onto feature/782-threat-modeling. Sub-issues #789 (runtime DNS guard) and #790 (Dremio JDBC scheme) established as backlog. Issue #734 deferred for Beta. Concept notes created for #788/#789/#790; board updated; journal appended; 30 entities added to backlink queue.",
+      "entities": [
+        "SDOL-011",
+        "#735",
+        "#788",
+        "#789",
+        "#790",
+        "#734",
+        "#736",
+        "host_endpoint",
+        "BaseConnector",
+        "connection.py",
+        "_BLOCKED_NETWORKS",
+        "_SSRFBlockedError",
+        "DremioConnector",
+        "HANA",
+        "Snowflake",
+        "Databricks"
+      ],
+      "jira_keys": [],
+      "pr_references": ["feature/782-threat-modeling"],
+      "accomplishments": [
+        "Issue #735 spec corrected: RFC-1918/loopback/link-local blocklist",
+        "Sub-issue #788 fully implemented and merged",
+        "IPv4-mapped IPv6 bypass fixed",
+        "Missing 0.0.0.0/8 blocklist entry fixed",
+        "_SSRFBlockedError sentinel pattern implemented",
+        "3 concept notes created for #788/#789/#790",
+        "Board updated: #788 Done, #789 In Progress",
+        "70 tests passing after all review fixes",
+        "Session wrapped: 4 files written (notes + board + journal + queue)"
+      ],
+      "blockers": [
+        "#789 runtime DNS guard (concurrent.futures + getaddrinfo) in progress",
+        "#790 Dremio JDBC scheme guard backlog",
+        "#734 auth-disabled-default deferred for Beta",
+        "#736 still in PR feedback loop"
+      ]
     }
   ]
 }
