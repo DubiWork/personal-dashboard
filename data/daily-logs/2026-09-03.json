@@ -2,42 +2,35 @@
   "date": "2026-09-03",
   "sessions": [
     {
-      "id": "2026-09-02-140000",
+      "id": "2026-09-03-090000",
       "category": "SAP",
-      "summary": "Implemented per-IP rate limiting on Ontology Editor /query/sparql and /query/nl-query endpoints via slowapi. Full TDD cycle: 9 feature tests + 8 unit tests + 57 existing query tests passing. Conducted 3 code reviews (syntax, security, architect). PR #744 opened but closed as redundant when PR #720 (SEC-237) was discovered, which implements superior per-user XSUAA user_id keying for authenticated apps. Both GitHub issue #733 and narwhal-sdol #17 closed linking to PR #720. Identified process lesson: pre-implementation check for existing open PRs on target branch was missed.",
+      "title": "SDOL-011 Prompt Injection Mitigation — Feature #737",
+      "duration_minutes": 120,
+      "summary": "Completed prompt injection mitigation for NL-to-SPARQL pipeline (issue #737, sub-issues #778–#780). XML fencing added to prompts in NlToSparqlService; validate_operation() added to sparql_validator.py rejecting non-SELECT/ASK SPARQL at all 3 generation sites. Two test files updated/created with 10 total tests. Code reviews caught and fixed double regex call and retry-path silent break. Two open spec findings: possible WARNING log gap on allowlist fallback, stale spec wording on 'both retry prompts'. Branch hierarchy: feature/737 squashes into feature/782 squashes into feature/781-sdol-011.",
       "entities": [
-        "Ontology Editor",
         "SDOL-011",
-        "slowapi",
-        "rate_limit.py",
-        "PR-744",
-        "PR-720",
-        "SEC-237",
-        "issue-733",
-        "narwhal-sdol",
-        "TDD",
-        "pyproject.toml"
+        "Ontology Editor",
+        "NlToSparqlService",
+        "sparql_validator",
+        "validate_operation",
+        "prompt injection",
+        "XML fencing",
+        "SPARQL operation allowlist"
       ],
-      "outcomes": [
-        "Rate limiting completed with per-IP keying via slowapi",
-        "Full test coverage: 76 tests passing (9 feature + 8 unit + 57 query)",
-        "PR #744 closed in favour of PR #720 (superior per-user XSUAA approach)",
-        "Both GitHub and internal tracking issues closed",
-        "Process lesson: check for existing PRs before starting implementation"
-      ],
-      "duration_minutes": 240
-    },
-    {
-      "timestamp": "12:57",
-      "duration": 99,
-      "category": "work",
-      "project": "backend",
-      "summary": "Session activity",
+      "jira_keys": ["SDOL-011"],
+      "pr_references": ["feature/737-prompt-injection"],
       "accomplishments": [
-        "Done. What's next — labels for #734, #735, #736, #737, #738, or ready to implement?"
+        "Issue #737 moved to In Review",
+        "Sub-issues #778, #779, #780 completed",
+        "TestValidateOperation: 8 test cases",
+        "TestNlToSparqlServiceOperationGuard: 2 test cases",
+        "Code review findings fixed",
+        "Issue #784 moved to In Progress with PSR labels"
       ],
-      "tasksWorkedOn": [],
-      "taskId": "0a36f7c8-2ced-4ba4-bfce-706bc912bfac"
+      "blockers": [
+        "2 open spec findings on prompt injection safeguards",
+        "Matt Pocock TDD workflow violation (tests written without red-green loop)"
+      ]
     }
   ]
 }
