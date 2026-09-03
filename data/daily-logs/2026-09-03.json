@@ -31,6 +31,33 @@
         "2 open spec findings on prompt injection safeguards",
         "Matt Pocock TDD workflow violation (tests written without red-green loop)"
       ]
+    },
+    {
+      "id": "2026-09-03-140000",
+      "category": "SAP",
+      "title": "SDOL-011 Issues #737 & #738 Closed — Feature #782",
+      "duration_minutes": 120,
+      "summary": "Closed issues #737 (prompt injection) and #738 (CSP header) with squash commits into feature/782-threat-modeling. Prompt injection work completed: XML fencing, validate_operation() allowlist, PromptInjectionError exception class, wired at 3 LLM generation sites. Code review caught missing PromptInjectionError guard in convert_with_retry() first-gen block. CSP implementation: FastAPI security_headers middleware, style-src 'unsafe-inline' for React inline styles, connect-src https://*.hana.ondemand.com wildcard. CF staticfile_buildpack nginx header injection via location_include pattern (not bare nginx.conf). Both issues closed on WDF GitHub with status comments.",
+      "entities": [
+        "SDOL-011",
+        "Ontology Editor",
+        "NlToSparqlService",
+        "PromptInjectionError",
+        "Content-Security-Policy",
+        "CF staticfile_buildpack",
+        "feature/782-threat-modeling"
+      ],
+      "jira_keys": ["SDOL-011"],
+      "pr_references": ["feature/782-threat-modeling"],
+      "accomplishments": [
+        "Issue #737 closed on WDF GitHub",
+        "Issue #738 closed on WDF GitHub",
+        "Sub-issues #778, #779, #780 implemented and squashed",
+        "PromptInjectionError guards both convert() and convert_with_retry()",
+        "CSP header deployed to FastAPI + CF nginx",
+        "Both issues squashed into feature/782-threat-modeling"
+      ],
+      "blockers": []
     }
   ]
 }
