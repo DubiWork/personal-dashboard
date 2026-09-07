@@ -395,6 +395,18 @@
       "description": "",
       "createdAt": "2026-09-03T09:57:05.477Z",
       "updatedAt": "2026-09-03T09:57:05.477Z"
+    },
+    {
+      "id": "9570fea7-81b1-4e96-9bac-d6ef88f71354",
+      "title": "Ontology_Editor",
+      "project": "Ontology_Editor",
+      "category": "work",
+      "status": "in_progress",
+      "jiraId": "",
+      "tags": [],
+      "description": "",
+      "createdAt": "2026-09-07T09:17:46.578Z",
+      "updatedAt": "2026-09-07T09:17:46.578Z"
     }
   ]
 }
