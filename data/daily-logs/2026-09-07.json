@@ -79,6 +79,26 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "9570fea7-81b1-4e96-9bac-d6ef88f71354"
+    },
+    {
+      "timestamp": "session-wrap",
+      "duration": 0,
+      "category": "work",
+      "project": "Ontology_Editor",
+      "summary": "Session wrap: #734 MCP_AUTH_DISABLED CF guard completed",
+      "accomplishments": [
+        "Implemented full Matt Pocock workflow: grill → spec → TDD → dual-axis review → 3-agent review → fixes → squash",
+        "4 test cases covering 2×2 auth×CF matrix; all passing",
+        "Settings.is_cf_deployment property delegated CF check from server.py",
+        "PR #796 marked ready for review and squashed onto feature/782-threat-modeling",
+        "Board updated: #734 → Done",
+        "Concept note created: #734 MCP_AUTH_DISABLED CF guard"
+      ],
+      "tasksWorkedOn": [
+        "feature/734-mcp-auth-disabled-cf-guard",
+        "#734"
+      ],
+      "taskId": "session-wrap-2026-09-07-#734"
     }
   ]
 }
