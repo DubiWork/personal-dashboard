@@ -64,6 +64,21 @@
       ],
       "tasksWorkedOn": [],
       "taskId": "9570fea7-81b1-4e96-9bac-d6ef88f71354"
+    },
+    {
+      "timestamp": "16:33",
+      "duration": 47,
+      "category": "work",
+      "project": "Ontology_Editor",
+      "summary": "Session activity",
+      "accomplishments": [
+        "Pushed. Now mark PR #796 ready (remove draft) and squash onto parent.",
+        "Done. Here's what landed:",
+        "Added `Settings.is_cf_deployment` property to `config.py` (reads `VCAP_APPLICATION`)",
+        "Added startup guard in `lifespan()` in `server.py`: raises `RuntimeError` if `not settings.auth_required and settings.is_cf_deployment`"
+      ],
+      "tasksWorkedOn": [],
+      "taskId": "9570fea7-81b1-4e96-9bac-d6ef88f71354"
     }
   ]
 }
