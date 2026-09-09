@@ -60,6 +60,27 @@
         "Issue #777, #764, #807, #671, #685"
       ],
       "taskId": "session-wrap-2026-09-09-000000"
+    },
+    {
+      "timestamp": "session-wrap-3",
+      "duration": 60,
+      "category": "personal",
+      "project": "I543234",
+      "summary": "Full prompt-audit of personal Claude Code config: CLAUDE.md, rules/, and all 52 skill files",
+      "accomplishments": [
+        "Stripped pressure language (CAPS/NEVER/ALWAYS) from agent-directory.md and mistakes-lessons.md",
+        "Collapsed 5-step planning choreography and 8-step investigation script to plain prose",
+        "Removed Red Flags table, Rationalization Table, and WRONG/RIGHT examples from wrap/SKILL.md",
+        "Stripped MANDATORY caps from Phase 1/1.5/1.6 headers in wrap/SKILL.md",
+        "Stripped MANDATORY/DO NOT SKIP from 11 advisor/workflow skill headers",
+        "Moved llm-council inline worked example to references/example-session.md",
+        "Replaced project-workflow anti-pattern list with positive dispatcher scope",
+        "31 skills scanned clean; 5 high and 6 medium findings total applied"
+      ],
+      "nextSteps": [
+        "Completed — no follow-up needed"
+      ],
+      "tasksWorkedOn": []
     }
   ]
 }
