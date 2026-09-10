@@ -14,6 +14,23 @@
         "mattpocock code review clean",
         "All CI checks passing"
       ]
+    },
+    {
+      "id": "2026-09-10-140000",
+      "category": "SAP",
+      "title": "SDOL-018 audit log integration — code complete, compliance research",
+      "duration_hours": 4,
+      "summary": "Implemented full SAP BTP CF Audit Log Service integration for SDOL-018: created audit_log.py module with SEC-215-compliant payload, wired 19 emit() call sites across auth.py and 7 endpoint files, closed 3 issues (#801 SIEM, #805 retention, #807 AUTH_DISABLED), opened PR #819 draft. Researched and read SDOL-018, SEC-215, DPP-256 specs from product standards portal.",
+      "tickets": ["SDOL-018", "#808", "#819"],
+      "outcomes": [
+        "audit_log.py created: OAuth2 token fetch + POST to BTP CF v2 endpoint; payload {uuid, user, time, ip, data} per audit-spec/security-event-example-v2.json",
+        "19 emit() call sites wired: 4 in auth.py, 15 across 7 endpoint files; all pass source_ip=request.client.host",
+        "Issues #801 (SIEM auto), #805 (retention auto), #807 (AUTH_DISABLED removed) closed with evidence",
+        "PR #819 draft opened — blocked on #802 (GAA needed to provision auditlog service in BTP)",
+        "Confirmed: SAP Audit Log Service has no Python SDK on PyPI — REST only; ALS NG is separate future service",
+        "SDOL-018 SIEM compliance path confirmed: list in Audit Log Documentation index (Google Form) → no CFC onboarding needed",
+        "Message sent to find GAA holder to provision auditlog (plan: oauth2) in BTP subaccount"
+      ]
     }
   ]
 }
