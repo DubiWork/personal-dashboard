@@ -2,12 +2,46 @@
   "date": "2026-09-16",
   "sessions": [
     {
-      "id": "2026-09-15-080000",
+      "id": "2026-09-16-092756",
       "category": "SAP",
-      "duration_hours": 4,
-      "work": "SDOL-025 bot review fixes, malicious-package-checker vendoring, SonarQube refactoring; SDOL-018 rebase, Sonar fix, coverage tests; secret scanning blocker repo-wide",
-      "prs": ["PR #834", "PR #819"],
-      "tickets": ["SDOL-025", "SDOL-018"]
+      "title": "SDOL-018/025 CI Pipeline Fixes + smoke.py Validation",
+      "summary": "Fixed load-primer skill to accept free-text args. Rebased feature/sdol-018-audit-log-integration and feature/sdol-025-dependency-security onto dev-velocity, resolving TokenCache test failures. Discovered BTP CF Audit Log Service v2 IP validation constraint; applied 0.0.0.0 sentinel workaround. Smoke test confirmed full end-to-end chain. All CI green on both PRs; secret scanning false positive dismissed. PR #819 implementation complete, PR #834 Piper-GREEN, awaiting review/merge.",
+      "entities": [
+        "SDOL-018",
+        "SDOL-019",
+        "SDOL-025",
+        "PR-819",
+        "PR-834",
+        "PR-838",
+        "BTP CF Audit Log Service",
+        "feature/sdol-018-audit-log-integration",
+        "feature/sdol-025-dependency-security"
+      ],
+      "work_items": [
+        {
+          "type": "bug-fix",
+          "description": "BTP CF Audit Log Service v2 IP validation — use 0.0.0.0 for unavailable contexts"
+        },
+        {
+          "type": "feature",
+          "description": "load-primer skill accepts free-text argument to skip slug menu"
+        },
+        {
+          "type": "ci-fix",
+          "description": "Both branches rebased onto dev-velocity; all tests green; secret scanning resolved"
+        }
+      ],
+      "blockers": [
+        "PR #819 awaiting reviewer approval",
+        "PR #834 awaiting ready-for-review flip",
+        "PR #838 awaiting DevOps/Daniel merge"
+      ],
+      "next_actions": [
+        "SDOL-018 PR #819: merge after review approval",
+        "SDOL-025 PR #834: flip ready-for-review, merge after approval",
+        "SDOL-019: Product Owner contacts BISO, uploads onboarding email to Sirius",
+        "Delete smoke.py from app_code_root/backend/"
+      ]
     }
   ]
 }
