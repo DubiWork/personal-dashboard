@@ -1,0 +1,18 @@
+{
+  "date": "2026-09-22",
+  "sessions": [
+    {
+      "project": "Ontology Editor",
+      "summary": "Resolved merge conflicts on PR #819 (SDOL-018) and PR #834 (SDOL-025). Both accepted intentional deletions from dev-velocity. Closed issues #803 (audit log doc) and #763 (DPP-256 retention). Created PR #868 for retention policy doc. Scanned all logger call sites — found user.email in Splunk app logs (not in BTP audit payloads). Updated retention policy doc to separate BTP vs Splunk PII scope. Addressed hyperspace-pr-bot review comment.",
+      "tasks": [
+        "Resolved PR #834 merge conflict (BlackDuck CI deletion)",
+        "Resolved PR #819 merge conflict (access_control.py deletion)",
+        "Closed issue #803 — audit log documentation",
+        "Created PR #868 — audit log retention policy (DPP-256)",
+        "Closed issue #763 — DPP-256 log retention compliance",
+        "Scanned logger call sites for PII in Splunk logs",
+        "Updated retention policy doc — BTP vs Splunk PII separation"
+      ]
+    }
+  ]
+}
