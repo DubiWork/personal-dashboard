@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-06",
+  "sessions": [
+    {
+      "category": "SAP",
+      "title": "INC37613121 — Emarsys key_id consultation",
+      "summary": "Investigated customer inquiry from AL NABOODAH COMMERCIAL GROUP about changing Emarsys contact identifier from email (#3) to mobile (#37). Confirmed key_id is a plain config value with no CDP-side restriction. Drafted response with official doc link.",
+      "time_spent_hours": 0.5,
+      "outcome": "Drafted response, awaiting post"
+    }
+  ]
+}
