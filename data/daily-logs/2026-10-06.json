@@ -7,6 +7,13 @@
       "summary": "Investigated customer inquiry from AL NABOODAH COMMERCIAL GROUP about changing Emarsys contact identifier from email (#3) to mobile (#37). Confirmed key_id is a plain config value with no CDP-side restriction. Drafted response with official doc link.",
       "time_spent_hours": 0.5,
       "outcome": "Drafted response, awaiting post"
+    },
+    {
+      "category": "SAP",
+      "title": "INC37675140 — Covestro Emarsys OAuth2 migration action mismatch",
+      "summary": "Investigated email activity ingestion failures for Covestro after switching Emarsys connector auth from WSSE to OAuth2. Root cause: CX flow actions not auto-migrated to OAuth2-compatible v3 endpoint variants. Confirmed token URL is static https://auth.emarsys.net/oauth2/token (no tenant ID). 429 rate-limit errors self-resolved after 1 hour. 299 events need re-ingestion from Emarsys side.",
+      "time_spent_hours": 1,
+      "outcome": "Root cause identified, solution documented"
     }
   ]
 }
