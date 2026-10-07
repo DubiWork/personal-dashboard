@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-07",
+  "sessions": [
+    {
+      "category": "SAP",
+      "title": "INC37675140 — Covestro Emarsys OAuth2 migration root-cause follow-up",
+      "summary": "Complete investigation of INC37675140 follow-up. Traced 2 callIDs through full Kibana pipeline and confirmed ingestion pipeline was fully healthy (errCode 0 all the way through stream-combiner, HEP, dispatcher). 299 failures were NOT ingestion failures but CX Flow action failures. Root cause: old WSSE CX flow and new OAuth2 CX flow ran concurrently for 73 minutes (07:10–08:23 UTC on 2026-10-06), flooding Emarsys token endpoint with 429 rate-limit errors. The concurrent flows disabled one flow and enabled the other without overlap prevention. 299 activity records are already stored in CDP. Remediation: audience activation against OAuth2 action. Prevention: disable old flow before enabling replacement.",
+      "time_spent_hours": 2,
+      "outcome": "Investigation complete, root cause identified, remediation path documented, draft answer ready"
+    }
+  ]
+}
