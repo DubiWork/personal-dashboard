@@ -6,6 +6,12 @@
       "summary": "Covestro INC37675140 follow-up: email activity ingestion succeeded; failures were outbound CX Flow sync during concurrent WSSE+OAuth2 overlap (73min). OAuth2 token endpoint flooded with 429s from dual-flow architecture. Identified documentation gap: public SAP Help Portal lacks explicit warning to disable old CX flows before migration. Created concept notes: INC37675140 (Changelog entry), Emarsys OAuth2 Migration (new note on doc gap).",
       "entities": ["INC37675140", "Covestro", "Emarsys", "OAuth2", "WSSE", "CX Flow", "CDFLDispatcherService", "CdpPublisherService"],
       "outcome": "Consultation session resolved; remediation path (audience re-activation) confirmed idempotent; doc gap flagged for team awareness"
+    },
+    {
+      "category": "SAP",
+      "summary": "SAP IT Business Systeme INC37704892: two activity attributes (externalDataController, leadDescription) under newly-enabled Outbound Data Governance intermittently not sent to BTP during Oct 1 15:00–15:07 UTC and Oct 6 13:50–13:55 UTC windows. Traced drop to activation/governance mapping stage (not HTTP send). Source data present; profile stores extDataCntr_CF array; DataSync purpose granted. Root cause hypothesis: governance layer performs live getConsents check at activation time; endpoint timed out during both windows causing field nulling (fail-closed behavior). Escalated to R&D data team with full handoff detailing trace steps and hypothesis. Created concept notes: INC37704892 (incident), Outbound Data Governance (feature concept).",
+      "entities": ["INC37704892", "SAP IT Business Systeme", "Outbound Data Governance", "Lead data to BTP", "getConsents", "cdp-connectors", "DataSync purpose"],
+      "outcome": "Investigation traced drop location; escalated to R&D for code-level confirmation on getConsents timeout failure mode"
     }
   ]
 }
