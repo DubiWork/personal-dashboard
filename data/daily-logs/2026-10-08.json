@@ -12,6 +12,12 @@
       "summary": "SAP IT Business Systeme INC37704892: two activity attributes (externalDataController, leadDescription) under newly-enabled Outbound Data Governance intermittently not sent to BTP during Oct 1 15:00–15:07 UTC and Oct 6 13:50–13:55 UTC windows. Traced drop to activation/governance mapping stage (not HTTP send). Source data present; profile stores extDataCntr_CF array; DataSync purpose granted. Root cause hypothesis: governance layer performs live getConsents check at activation time; endpoint timed out during both windows causing field nulling (fail-closed behavior). Escalated to R&D data team with full handoff detailing trace steps and hypothesis. Created concept notes: INC37704892 (incident), Outbound Data Governance (feature concept).",
       "entities": ["INC37704892", "SAP IT Business Systeme", "Outbound Data Governance", "Lead data to BTP", "getConsents", "cdp-connectors", "DataSync purpose"],
       "outcome": "Investigation traced drop location; escalated to R&D for code-level confirmation on getConsents timeout failure mode"
+    },
+    {
+      "category": "SAP",
+      "summary": "Investigated INC34694385 (SAP IT Business Systeme eu5 prod): activePipelineCount field dropped from AEP S3 audience export when account lacks matching activity. Traced full outbound pipeline (idx-cdp reader, Cdp.Mapping TargetBuilder, Cdp.JsonVerifier, QueryService ProfileMapper, AudienceService) and empirically ruled out file-writer null-stripping, schema validation drop, and CSV/compliment gating using real exported file. Localized defect to QueryService V2 mapping: ReplaceEmptyWithNull nulls missing Data-schema fields but not ActivityIndicators-sourced fields. Built failing unit test on current github/develop branch bug/CXCDP-45262-activity-indicator-null-drop with fixture Data/inc34694385/. Filed Jira Bug CXCDP-45262 under epic CXCDP-44866, assigned to CDP Data Management (Orit Yafe). Also edited cdp-investigate skill Step 0 to load primers + search team KB before investigating.",
+      "entities": ["INC34694385", "CXCDP-45262", "CXCDP-44866", "QueryService", "ProfileMapper", "Cdp.Mapping", "Cdp.JsonVerifier", "AudienceService", "idx-cdp"],
+      "outcome": "Root cause localized to QueryService V2 mapping logic; failing repro test built; bug filed and handed to Orit Yafe for implementation"
     }
   ]
 }
