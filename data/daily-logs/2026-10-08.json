@@ -1,0 +1,11 @@
+{
+  "date": "2026-10-08",
+  "sessions": [
+    {
+      "category": "SAP",
+      "summary": "Covestro INC37675140 follow-up: email activity ingestion succeeded; failures were outbound CX Flow sync during concurrent WSSE+OAuth2 overlap (73min). OAuth2 token endpoint flooded with 429s from dual-flow architecture. Identified documentation gap: public SAP Help Portal lacks explicit warning to disable old CX flows before migration. Created concept notes: INC37675140 (Changelog entry), Emarsys OAuth2 Migration (new note on doc gap).",
+      "entities": ["INC37675140", "Covestro", "Emarsys", "OAuth2", "WSSE", "CX Flow", "CDFLDispatcherService", "CdpPublisherService"],
+      "outcome": "Consultation session resolved; remediation path (audience re-activation) confirmed idempotent; doc gap flagged for team awareness"
+    }
+  ]
+}
