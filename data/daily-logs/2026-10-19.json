@@ -42,6 +42,24 @@
       "accomplishments": [],
       "tasksWorkedOn": [],
       "taskId": "010aceee-b652-4dbc-bcf8-b3e51b66d874"
+    },
+    {
+      "category": "SAP",
+      "start_time": "2026-10-19T14:32:43Z",
+      "duration_minutes": 15,
+      "ticket": "CXCDP-45470",
+      "summary": "V2 enrichment mapping connector fixture; wrote and removed unit test for parameter pass-through validation",
+      "deliverables": [
+        "Unit test CreateApplicationDataEvents_WithV2EnrichmentReference_PassesV2ReferenceToBinding added then removed",
+        "Confirmed architectural pass-through: BindingContext + EnrichmentPointReference preserved through call chain",
+        "Clarified test scope boundary: full E2E mapping validation requires API/E2E tests, not functional unit tests"
+      ],
+      "tags": [
+        "enrichment-v2-creation-flow",
+        "testing",
+        "test-scope-decision",
+        "jira-worklog"
+      ]
     }
   ]
 }
