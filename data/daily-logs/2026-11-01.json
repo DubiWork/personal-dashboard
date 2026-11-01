@@ -7,6 +7,13 @@
       "entities": ["INC39517025", "Covestro", "C4C", "CDP", "Custom Connector", "mTLS"],
       "summary": "Investigated ITSM incident INC39517025 (Covestro, CDP→C4C integration). Customer requests certificate-based auth (mTLS) instead of username/password. Standard CDP C4C connector supports only username/password; mTLS is NOT available. Feature request, not roadmapped.",
       "concepts_touched": ["INC39517025"]
+    },
+    {
+      "time_start": "2026-11-01T09:00:00Z",
+      "category": "SAP",
+      "entities": ["CXCDP-46058", "ApplicationService", "V2Binding", "EnrichmentUpgradeSync", "ApplyExecutor", "Application Upgrade V2"],
+      "summary": "Implemented CXCDP-46058 test-first: connector upgrade refreshes retained V2 enrichment bindings via UpdateBinding. Added empty-mapping rejection on update, failure reason in upgrade message, rollback verified. 3 commits, functional tests green. Epic-owner review doc prepared.",
+      "concepts_touched": ["CXCDP-46058"]
     }
   ]
 }
