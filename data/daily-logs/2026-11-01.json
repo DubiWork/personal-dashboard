@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-01",
+  "sessions": [
+    {
+      "time_start": "2026-11-01T00:00:00Z",
+      "category": "SAP",
+      "entities": ["INC39517025", "Covestro", "C4C", "CDP", "Custom Connector", "mTLS"],
+      "summary": "Investigated ITSM incident INC39517025 (Covestro, CDP→C4C integration). Customer requests certificate-based auth (mTLS) instead of username/password. Standard CDP C4C connector supports only username/password; mTLS is NOT available. Feature request, not roadmapped.",
+      "concepts_touched": ["INC39517025"]
+    }
+  ]
+}
