@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-02",
+  "sessions": [
+    {
+      "time_start": "2026-11-02T12:29:44Z",
+      "category": "SAP",
+      "entities": ["ApplicationService", "CdpExtensionConfigService", "SchemaManagementService", "ConfigureBindingService", "CXCDP-44759", "CXCDP-44758", "CXCDP-46058", "CXCDP-46059", "CXCDP-46060", "CXCDP-46061", "CXCDP-44757", "CXCDP-42241", "Enrichment Bindings", "Orleans", "CouchDB", "Jira"],
+      "summary": "Refined enrichment binding requirements across CXCDP-44759, 44758, 46058 and 44757. Request mappings are optional; response mappings must contain real instructions, validated consistently across create, update, Check and Apply. Upgrade needs V1-to-V2 normalization, exact rollback, non-blocking warning for missing retained bindings, and typed errors for transient vs deterministic failures. Docs pushed as c77d2306b. Downstream V2 evidence recorded from fcd150ded; response-only runtime demo still pending. Board and concept notes updated; Jira worklogs split 8h across 5 tickets.",
+      "concepts_touched": ["CXCDP-44759", "CXCDP-44758", "CXCDP-44757", "CXCDP-46058", "ApplicationService", "CdpExtensionConfigService", "Enrichment Bindings"]
+    }
+  ]
+}
